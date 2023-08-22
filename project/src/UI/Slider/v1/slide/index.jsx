@@ -12,14 +12,14 @@ export default ({ slider }) => {
 							<h2 className="mb-4 text-2xl sm:text-5xl tracking-tight font-display font-extrabold text-gray-900 dark:text-white">
 								{slider.title}
 							</h2>
-							<p className="mb-6 max-w-xl text-sm sm:text-base font-light text-gray-500 md:text-lg dark:text-gray-400">
+							<p className="md:mb-6 max-w-xl text-sm sm:text-base font-light text-gray-500 md:text-lg dark:text-gray-400">
 								{slider.description}
 							</p>
 						</div>
 						<img
 							className="hidden mx-auto md:flex"
 							src={slider.image}
-							alt="mobile app"
+							alt="фото рубрики"
 						/>
 					</div>
 				</div>
