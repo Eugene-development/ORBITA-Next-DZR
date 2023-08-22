@@ -2,12 +2,12 @@ import { Suspense } from 'react'
 
 import { getCatalog } from './server'
 export const metadata = {
-  title: 'Фабрика',
-  description: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-  robots: {
-    index: false
-  },
-};
+	title: 'Фабрика',
+	description: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+	robots: {
+		index: false
+	}
+}
 export default async function page() {
 	const catalog = await getCatalog()
 

@@ -1,7 +1,5 @@
-import { Cart } from "@/UI"
+import { Cart } from '@/UI'
 
 export default function page() {
-  return (
-    <Cart/>
-  )
+	return <Cart />
 }

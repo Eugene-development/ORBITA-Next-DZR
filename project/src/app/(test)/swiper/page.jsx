@@ -5,12 +5,12 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 // Import Swiper styles
 import 'swiper/css'
 export const metadata = {
-  title: 'Фабрика',
-  description: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-  robots: {
-    index: false
-  },
-};
+	title: 'Фабрика',
+	description: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+	robots: {
+		index: false
+	}
+}
 export default () => {
 	return (
 		<Swiper

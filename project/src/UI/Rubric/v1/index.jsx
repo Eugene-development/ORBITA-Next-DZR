@@ -13,7 +13,7 @@ export default function index({ catalog }) {
 				</div>
 				<p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
 					Купите с нашего склада в Дзержинске товар "{catalog.catalog_one.value}" по
-						низкой цене и с доставкой или самовывозом своим транспортом
+					низкой цене и с доставкой или самовывозом своим транспортом
 				</p>
 				<div className="grid gap-8 my-12 lg:mb-16 md:grid-cols-2">
 					{catalog.catalog_one.rubric.map((item) => (

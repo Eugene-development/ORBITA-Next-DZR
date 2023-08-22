@@ -2,12 +2,12 @@
 
 import { useEffect } from 'react'
 export const metadata = {
-  title: 'Фабрика',
-  description: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-  robots: {
-    index: false
-  },
-};
+	title: 'Фабрика',
+	description: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+	robots: {
+		index: false
+	}
+}
 function OutsideClickHandler({ onOutsideClick, children }) {
 	useEffect(() => {
 		function handleClickOutside(event) {
