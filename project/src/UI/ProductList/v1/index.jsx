@@ -29,9 +29,9 @@ export default ({ category }) => {
 							key={product.id}
 							className="group relative border-b border-r border-gray-200 p-4 sm:p-6"
 						>
-							<div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg group-hover:opacity-75">
+							<div className="aspect-h-1 aspect-w-1 overflow-hidden  group-hover:opacity-75">
 								<img
-									src={`https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${product.image.hash}`}
+									src={product.image ? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${product.image.hash}` : 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'}
 									alt={product.value}
 									className="h-full w-full object-contain object-center"
 								/>
@@ -44,7 +44,7 @@ export default ({ category }) => {
 									</Link>
 								</h3>
 								<div className="mt-3 flex flex-col items-center">
-									<p className="sr-only">{product.rating} out of 5 stars</p>
+									{/* <p className="sr-only">{product.rating} out of 5 stars</p> */}
 									<div className="flex items-center">
 										{[0, 1, 2, 3, 4].map((rating) => (
 											<StarIcon
