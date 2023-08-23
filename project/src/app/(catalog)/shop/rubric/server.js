@@ -7,6 +7,9 @@ const ONE_CATALOG = gql`
 			rubric {
 				value
 				slug
+				category {
+					value
+				}
 			}
 			text {
 				value

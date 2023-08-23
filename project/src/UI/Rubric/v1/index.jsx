@@ -20,24 +20,27 @@ export default function index({ catalog }) {
 						<Link key={item.value} href={`/shop/category/${item.slug}`}>
 							<div className="items-center  rounded-lg sm:flex dark:bg-gray-800 dark:border-gray-700 shadow-lg">
 								<img
-									className="hidden md:block w-64 rounded-lg sm:rounded-none sm:rounded-l-lg"
-									src="https://stroyrem-nn.ru/files/resized/files/categories/1_big_130_70.png"
+									className="hidden lg:block w-36 p-4 rounded-lg sm:rounded-none sm:rounded-l-lg"
+									src="https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/logo/logo.png"
 									alt="Bonnie Avatar"
 								/>
 
 								<div className="p-5">
-									<h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-										<span>{item.value}</span>
+									<h3 className="flex text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+										<span>{item.value} ({item.category.length}) </span><ChevronDownIcon
+											className="h-5 w-5  flex-none text-red-800"
+											aria-hidden="true"
+										/>
 									</h3>
-									<div className="flex mt-1">
+									{/* <div className="flex mt-1">
 										<span className="text-gray-500 dark:text-gray-400">
-											12 категорий
+											{item.category.length} 
 										</span>
 										<ChevronDownIcon
 											className="h-5 w-5 m-0.5 flex-none text-red-800"
 											aria-hidden="true"
 										/>
-									</div>
+									</div> */}
 
 									<p className="mt-4 mb-4 font-light text-gray-500 dark:text-gray-400">
 										Bonnie drives the technical strategy of the flowbite
