@@ -101,7 +101,7 @@ export default () => {
 		setShowServices(false)
 	}
 	return (
-		<header className="bg-white">
+		<header className="bg-white sticky top-0 z-50 shadow-xl">
 			<nav
 				className="mx-auto flex max-w-full items-center justify-between p-2 lg:px-10"
 				aria-label="Global"

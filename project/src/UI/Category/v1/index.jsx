@@ -1,61 +1,10 @@
 'use client'
-import { useState } from 'react'
-import { RadioGroup } from '@headlessui/react'
-import { CheckIcon } from '@heroicons/react/20/solid'
-
-const frequencies = [
-	{ value: 'monthly', label: 'Monthly', priceSuffix: '/month' },
-	{ value: 'annually', label: 'Annually', priceSuffix: '/year' }
-]
-const items = [
-	{
-		name: 'Доска обрезная обработанная',
-		id: 'item-freelancer',
-		href: '#',
-		price: { monthly: '$15', annually: '$144' },
-		description: 'The essentials to provide your best work for clients.',
-		features: [
-			'5 products',
-			'Up to 1,000 subscribers',
-			'Basic analytics',
-			'48-hour support response time'
-		],
-		mostPopular: false
-	},
-	{
-		name: 'Доска обрезная обработанная',
-		id: 'item-startup',
-		href: '#',
-		price: { monthly: '$30', annually: '$288' },
-		description: 'A plan that scales with your rapidly growing business.',
-		features: ['25 поз. товара', 'Оптовикам скидки', 'Нал и безнал', 'Доставка'],
-		mostPopular: false
-	},
-	{
-		name: 'Enterprise',
-		id: 'item-enterprise',
-		href: '#',
-		price: { monthly: '$60', annually: '$576' },
-		description: 'Dedicated support and infrastructure for your company.',
-		features: [
-			'Unlimited products',
-			'Unlimited subscribers',
-			'Advanced analytics',
-			'1-hour, dedicated support response time',
-			'Marketing automations',
-			'Custom reporting tools'
-		],
-		mostPopular: false
-	}
-]
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
 export default function Example({ rubric }) {
-	const [frequency, setFrequency] = useState(frequencies[0])
-
 	return (
 		<div className="bg-white py-16 sm:py-24">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8 font-display">

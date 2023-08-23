@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function index() {
 	return (
 		<>
@@ -156,6 +154,107 @@ export default function index() {
 					</div>
 				</div>
 			)}
+
+			<div className="m-8 text-right">
+				<span className="inline-flex  rounded-md bg-cyan-100 px-3.5 py-1 text-xs font-medium text-cyan-800 sm:text-base">
+					ИТОГО (с учётом скидки 5%): xxx руб.
+				</span>
+			</div>
+
+			<form className="m-8 space-y-6 rounded-md border-2 border-slate-100 bg-gray-50">
+				<div className="px-4 py-5 shadow sm:rounded-lg sm:p-6">
+					<div className="md:grid md:grid-cols-3 md:gap-6">
+						<div className="md:col-span-1">
+							<h3 className="text-lg font-medium leading-6 text-gray-900">
+								Дополнительная информация
+							</h3>
+							<p className="mt-1 text-sm text-gray-500">Укажите ваши данные.</p>
+						</div>
+						<div className="mt-5 md:col-span-2 md:mt-0">
+							<div className="mb-8 grid grid-cols-6 gap-6">
+								<div className="col-span-6 ">
+									<label
+										className="block text-sm font-medium text-gray-700"
+										htmlFor="first_name"
+									>
+										Ваше имя:
+									</label>
+									<input
+										type="text"
+										required
+										id="first_name"
+										className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-800 focus:ring-red-800 sm:text-sm"
+										name="first_name"
+									/>
+								</div>
+								<div className="col-span-6">
+									<label
+										className="block text-sm font-medium text-gray-700"
+										htmlFor="phone"
+									>
+										Телефон:
+									</label>
+									<input
+										type="text"
+										required
+										id="phone"
+										className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-800 focus:ring-red-800 sm:text-sm"
+										name="phone"
+									/>
+									<div className="col-span-6 mt-6">
+										<label
+											className="block text-sm font-medium text-gray-700"
+											htmlFor="street_address"
+										>
+											Адрес доставки:
+										</label>
+										<input
+											type="text"
+											id="street_address"
+											className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-800 focus:ring-red-800 sm:text-sm"
+											name="street_address"
+										/>
+									</div>
+									<div className="col-span-6 mt-6">
+										<label
+											className="block text-sm font-medium text-gray-700"
+											htmlFor="comments"
+										>
+											Комментарий:
+										</label>
+										<input
+											type="text"
+											id="comments"
+											className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-800 focus:ring-red-800 sm:text-sm"
+											name="comments"
+										/>
+									</div>
+								</div>
+							</div>
+
+							<label>
+								<span className="text-red-700">Оплатить картой: </span>
+								<input className="text-red-800" type="checkbox" />
+							</label>
+
+							{true && (
+								<p className="mt-2">
+									После отправки заказа вы будете направлены на страницу оплаты.
+								</p>
+							)}
+						</div>
+					</div>
+
+					<div className="mt-8 flex justify-end">
+						<button
+							type="submit"
+							className="ml-3 inline-flex justify-center rounded-md border border-transparent bg-red-800 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-red-800 focus:ring-offset-2"
+						>
+							Отправить менеджеру
+						</button>
+					</div>
+				</div>
+			</form>
 		</>
 	)
 }

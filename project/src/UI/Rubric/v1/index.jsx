@@ -17,7 +17,7 @@ export default function index({ catalog }) {
 				</p>
 				<div className="grid gap-8 my-12 lg:mb-16 md:grid-cols-2">
 					{catalog.catalog_one.rubric.map((item) => (
-						<Link href={`/shop/category/${item.slug}`}>
+						<Link key={item.value} href={`/shop/category/${item.slug}`}>
 							<div className="items-center  rounded-lg sm:flex dark:bg-gray-800 dark:border-gray-700 shadow-lg">
 								<img
 									className="hidden md:block w-64 rounded-lg sm:rounded-none sm:rounded-l-lg"
