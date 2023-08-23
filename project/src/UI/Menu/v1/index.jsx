@@ -28,37 +28,37 @@ function OutsideClickHandler({ onOutsideClick, children }) {
 const rubrics = [
 	{
 		name: 'Стройматериалы',
-		description: 'Get a better understanding of your traffic',
+		description: 'Для строительства и ремонта',
 		img: 'https://colorprofi.ru/wp-content/uploads/2022/09/klassifikaciya-strojmaterialov.jpg',
 		href: 'stroymaterialy'
 	},
 	{
 		name: 'Изоляция',
-		description: 'Speak directly to your customers',
-		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/a12adc654dac54907a50bc61812e8093.jpg',
+		description: 'Для защиты от влаги, шума и ветра',
+		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B8%D0%B7%D0%BE%D1%84%20%D1%84%D0%BE%D0%BB%D1%8C%D0%B3%D0%B0.jpg',
 		href: 'izolyatsiya'
 	},
 	{
 		name: 'Отделка',
-		description: 'Your customers’ data will be safe and secure',
-		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B8%D1%81.jpg',
+		description: 'Для внутренних отделочных работ',
+		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/akvateks_-_ekstra_belyj_0_8_l_13845.jpg',
 		href: 'otdelka'
 	},
 	{
 		name: 'Инструмент',
-		description: 'Connect with third-party tools',
+		description: 'Для автоматизации и облегчения труда',
 		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/mQ6tGoRY6s1SvjONBPrzIYmA5YrbTKfudwyMv63i.png',
 		href: 'instrument'
 	},
 	{
 		name: 'Сантехника',
-		description: 'Build strategic funnels that will convert',
+		description: 'Для сантехнических и прочих работ',
 		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/SrrSRqPDaYGHpsFISosIAyp6dj6Z16Zz5evzuSJE.jpg',
 		href: 'santehnika'
 	},
 	{
 		name: 'Электротовары',
-		description: 'Build strategic funnels that will convert',
+		description: 'Для работ с электрикой и проводкой',
 		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/vl0Pq4TSaUvulSLZbkYoMZsx4ZjS515UrV0rOiZj.jpg',
 		href: 'elektrotovary'
 	}
@@ -71,23 +71,23 @@ const services = [
 	{
 		name: 'Оплата',
 		href: '/information/payment',
-		description: 'Learn more about our services values and mission to empower others'
+		description: 'Все доступные формы оплаты покупки для вашего удобства'
 	},
 	{
 		name: 'Доставка',
 		href: '/information/delivery',
-		description: 'Looking for you next career opportunity? See all of our open positions'
+		description: 'Услуга доставки собственным транспортом до вашего объекта'
 	},
 	{
 		name: 'Грузчики',
 		href: '/information/movers',
 		description:
-			'Get in touch with our dedicated support team or reach out on our community forums'
+			'Если вам необходимы разгрузо-погрузочные работы на вашем объекте'
 	},
 	{
 		name: 'Хранение',
 		href: '/information/storage',
-		description: 'Read our latest announcements and get perspectives from our team'
+		description: 'Предоставляем услугу хранения приобретённых вами стройматериалов'
 	}
 ]
 
