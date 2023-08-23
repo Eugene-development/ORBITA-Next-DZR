@@ -19,8 +19,8 @@ export default ({ category }) => {
 					</p>
 				</div>
 				<p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
-					Купите товар "{category.category_one.value}" в Дзержинске по низкой цене с доставкой
-					или самовывозом с нашего склада
+					Купите товар "{category.category_one.value}" по доступной цене с доставкой
+					или самовывозом с нашего склада в Дзержинске
 				</p>
 
 				<div className="mt-8 -mx-px grid grid-cols-2 border-l border-t border-gray-200 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
@@ -52,7 +52,7 @@ export default ({ category }) => {
 												className={classNames(
 													product.rating > rating
 														? 'text-yellow-400'
-														: 'text-gray-200',
+														: 'text-yellow-300',
 													'h-5 w-5 flex-shrink-0'
 												)}
 												aria-hidden="true"
@@ -64,7 +64,7 @@ export default ({ category }) => {
 									</p> */}
 								</div>
 								<p className="mt-4 text-base font-medium text-gray-900">
-									{product.price.value}
+									{product.price.value} руб{product.unit && <span>/</span> }{product.unit?.value}
 								</p>
 							</div>
 						</div>
