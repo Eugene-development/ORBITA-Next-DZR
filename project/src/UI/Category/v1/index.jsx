@@ -1,15 +1,15 @@
 'use client'
-
+import Link from "next/link"
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
-export default function Example({ rubric }) {
+export default ({ rubric }) => {
 	return (
 		<div className="bg-white py-16 sm:py-24">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8 font-display">
 				<div className="mx-auto max-w-4xl text-center">
-					<h2 className="text-base font-semibold leading-7 text-red-600">Категория</h2>
+					<h2 className="text-base font-semibold leading-7 text-red-600">Рубрика</h2>
 					<p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
 						{rubric.rubric_one.value}
 					</p>
@@ -48,8 +48,8 @@ export default function Example({ rubric }) {
                 <span className="text-4xl font-bold tracking-tight text-gray-900">{item.price[frequency.value]}</span>
                 <span className="text-sm font-semibold leading-6 text-gray-600">{frequency.priceSuffix}</span>
               </p> */}
-							<a
-								href={item.href}
+							<Link
+								href={`/shop/products/${item.slug}`}
 								aria-describedby={item.id}
 								className={classNames(
 									item.mostPopular
@@ -59,7 +59,7 @@ export default function Example({ rubric }) {
 								)}
 							>
 								Выбрать
-							</a>
+							</Link>
 							<ul
 								role="list"
 								className="mt-8 space-y-3 text-sm leading-6 text-gray-600 xl:mt-10"
