@@ -101,8 +101,8 @@ export default () => {
 		setShowServices(false)
 	}
 	return (
-		<header className="bg-white sticky top-0 z-50 shadow-xl">
-			<nav
+		<header className="bg-white sticky top-0 shadow-xl">
+			{!mobileMenuOpen && <nav
 				className="mx-auto flex max-w-full items-center justify-between p-2 lg:px-10"
 				aria-label="Global"
 			>
@@ -283,7 +283,7 @@ export default () => {
 						</span>
 					</a>
 				</div>
-			</nav>
+			</nav>}
 			{/* Mobile Menu */}
 			<Dialog
 				as="div"
@@ -291,10 +291,10 @@ export default () => {
 				open={mobileMenuOpen}
 				onClose={setMobileMenuOpen}
 			>
-				<div className="fixed inset-0 z-10" />
+				<div className="fixed inset-0 " />
 				<Dialog.Panel className="fixed inset-y-0 right-0 z-10 flex w-full flex-col justify-between overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
 					<div className="p-6">
-						<div className="flex items-center justify-between">
+						<div className="flex items-center justify-between z-20 relative">
 							<Link href="/" className="-m-1.5 p-1.5">
 								<span className="sr-only">Логотип</span>
 								<img
@@ -312,7 +312,7 @@ export default () => {
 								<XMarkIcon className="h-6 w-6" aria-hidden="true" />
 							</button>
 						</div>
-						<div className="mt-6 flow-root">
+						<div className="mt-6 flow-root z-30 ">
 							<div className="-my-6 divide-y divide-gray-500/10">
 								<div className="space-y-2 py-6">
 									{rubrics.map((item) => (
@@ -351,7 +351,7 @@ export default () => {
 							</div>
 						</div>
 					</div>
-					<div className="sticky bottom-0 grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50 text-center">
+					<div className="sticky bottom-0 grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50 text-center z-20">
 						{callsToAction.map((item) => (
 							<a
 								key={item.name}
