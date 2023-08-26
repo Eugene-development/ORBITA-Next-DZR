@@ -63,7 +63,7 @@ export default ({product}) => {
 					</nav>
 
 					<div className="mt-4">
-						<h1 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
+						<h1 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl first-letter:uppercase">
 							{product.product_one.value}
 						</h1>
 					</div>
@@ -102,7 +102,7 @@ export default ({product}) => {
 						</div>
 
 						<div className="mt-4 space-y-6">
-							<p className="text-base text-gray-500">{pr.description}</p>
+							<div className="text-base text-gray-500" dangerouslySetInnerHTML={{ __html: product.product_one.text.value }} />
 						</div>
 
 						<div className="mt-6 flex items-center">
@@ -111,7 +111,25 @@ export default ({product}) => {
 								aria-hidden="true"
 							/>
 							<p className="ml-2 text-sm text-gray-500">
-								Доставка до объекта с грузчиками
+								Доставка до объекта
+							</p>
+						</div>
+						<div className="mt-6 flex items-center">
+							<CheckIcon
+								className="h-5 w-5 flex-shrink-0 text-green-500"
+								aria-hidden="true"
+							/>
+							<p className="ml-2 text-sm text-gray-500">
+								Услуга грузчиков
+							</p>
+						</div>
+						<div className="mt-6 flex items-center">
+							<CheckIcon
+								className="h-5 w-5 flex-shrink-0 text-green-500"
+								aria-hidden="true"
+							/>
+							<p className="ml-2 text-sm text-gray-500">
+								Хранение
 							</p>
 						</div>
 					</section>
@@ -123,7 +141,7 @@ export default ({product}) => {
 						<img
 							src={product.product_one.image ? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${product.product_one.image.hash}` : 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'}
 							alt={product.product_one.value}
-							className="h-full w-full object-cover object-center"
+							className="h-full w-full object-contain object-center"
 						/>
 					</div>
 				</div>

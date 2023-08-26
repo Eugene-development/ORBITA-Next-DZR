@@ -29,7 +29,7 @@ export default ({ category }) => {
 							key={item.id}
 							className="group relative border-b border-r border-gray-200 p-4 sm:p-6"
 						>
-							<div className="aspect-h-1 aspect-w-1 overflow-hidden  group-hover:opacity-75">
+							<div className="aspect-h-1 aspect-w-1 overflow-hidden group-hover:opacity-75">
 								<img
 									src={item.image ? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${item.image.hash}` : 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'}
 									alt={item.value}
@@ -37,9 +37,9 @@ export default ({ category }) => {
 								/>
 							</div>
 							<div className="pb-4 pt-10 text-center">
-								<h3 className="text-sm font-medium text-gray-900">
+								<h3 className="text-sm font-medium text-gray-900 first-letter:uppercase">
 									<Link href={`/shop/product/${item.slug}`}>
-										<span aria-hidden="true" className="absolute inset-0" />
+										<span aria-hidden="true" className="absolute inset-0 " />
 										{item.value}
 									</Link>
 								</h3>
