@@ -70,7 +70,7 @@ export default ({product}) => {
 
 					<section aria-labelledby="information-heading" className="mt-4">
 						<h2 id="information-heading" className="sr-only">
-							Product information
+							Информация о продукте
 						</h2>
 
 						<div className="flex items-center">
@@ -102,7 +102,7 @@ export default ({product}) => {
 						</div>
 
 						<div className="mt-4 space-y-6">
-							<div className="text-base text-gray-500" dangerouslySetInnerHTML={{ __html: product.product_one.text.value }} />
+							<div className="text-sm text-gray-500" dangerouslySetInnerHTML={{ __html: product.product_one.text[0].value }} />
 						</div>
 
 						<div className="mt-6 flex items-center">
@@ -114,7 +114,7 @@ export default ({product}) => {
 								Доставка до объекта
 							</p>
 						</div>
-						<div className="mt-6 flex items-center">
+						{/* <div className="mt-6 flex items-center">
 							<CheckIcon
 								className="h-5 w-5 flex-shrink-0 text-green-500"
 								aria-hidden="true"
@@ -131,12 +131,12 @@ export default ({product}) => {
 							<p className="ml-2 text-sm text-gray-500">
 								Хранение
 							</p>
-						</div>
+						</div> */}
 					</section>
 				</div>
 
 				{/* Product image */}
-				<div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
+				<div className="mt-1 md:mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
 					<div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg">
 						<img
 							src={product.product_one.image ? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${product.product_one.image.hash}` : 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'}
@@ -147,17 +147,17 @@ export default ({product}) => {
 				</div>
 
 				{/* Product form */}
-				<div className="mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
+				<div className="mt-1 md:mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
 					<section aria-labelledby="options-heading">
 						<h2 id="options-heading" className="sr-only">
-							Product options
+							Payment options
 						</h2>
 
 						<form>
 							<div className="sm:flex sm:justify-between">
 								{/* Size selector */}
 								{/* <div className="block text-sm font-medium text-gray-700">Оплата</div> */}
-								<div className="mt-1 grid grid-cols-1 gap-4 sm:grid-cols-7">
+								<div className="mt-1 grid gap-4 grid-cols-7">
 									<div>
 										<img
 											src="https://design.megagroup.ru/static/design2018/img/payment-methods/mir_z1.png"
