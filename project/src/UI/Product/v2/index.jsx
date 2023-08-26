@@ -74,7 +74,7 @@ export default ({product}) => {
 						</h2>
 
 						<div className="flex items-center">
-							<p className="text-lg text-gray-900 sm:text-xl"> {product.product_one.price.value} &#8381;/{product.product_one.unit?.value || ''}</p>
+							<p className="text-sm text-gray-900 sm:text-lg"> {product.product_one.price.value} &#8381;{product.product_one.unit && <span>/</span>}{product.product_one.unit?.value}</p>
 
 							<div className="ml-4 border-l border-gray-300 pl-4">
 								<h2 className="sr-only">Reviews</h2>
@@ -120,11 +120,11 @@ export default ({product}) => {
 				{/* Product image */}
 				<div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
 					<div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg">
-						{/* <img
-							src={product.imageSrc}
-							alt={product.imageAlt}
+						<img
+							src={product.product_one.image ? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${product.product_one.image.hash}` : 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'}
+							alt={product.product_one.value}
 							className="h-full w-full object-cover object-center"
-						/> */}
+						/>
 					</div>
 				</div>
 
