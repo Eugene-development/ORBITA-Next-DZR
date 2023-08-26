@@ -91,41 +91,34 @@ const navigation = {
 export default () => {
 	return (
 		<>
-			<div className="bg-gray-50 py-10">
-				<div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5 grayscale">
+			<div className="bg-gray-50 py-10 px-2">
+				<div className="grid grid-cols-4 gap-4 grayscale">
 					<div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
 						<img
-							className="h-22"
+							className="h-10"
 							src="https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/brands/1.png"
 							alt="Tuple"
 						/>
 					</div>
 					<div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
 						<img
-							className="h-22"
+							className="h-10"
 							src="https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/brands/2.png"
 							alt="Mirage"
 						/>
 					</div>
 					<div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
 						<img
-							className="h-22"
+							className="h-10"
 							src="https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/brands/3.png"
 							alt="StaticKit"
 						/>
 					</div>
 					<div className="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
 						<img
-							className="h-22"
+							className="h-10"
 							src="https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/brands/4.png"
 							alt="Transistor"
-						/>
-					</div>
-					<div className="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
-						<img
-							className="h-22 "
-							src="https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/brands/5.png"
-							alt="Workcation"
 						/>
 					</div>
 				</div>
