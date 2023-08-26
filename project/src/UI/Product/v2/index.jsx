@@ -4,7 +4,7 @@ import { CheckIcon, QuestionMarkCircleIcon, StarIcon } from '@heroicons/react/20
 import { RadioGroup } from '@headlessui/react'
 import { ShieldCheckIcon } from '@heroicons/react/24/outline'
 
-const product = {
+const pr = {
 	name: 'Everyday Ruck Snack',
 	href: '#',
 	price: '$220',
@@ -28,8 +28,7 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
-	const [selectedSize, setSelectedSize] = useState(product.sizes[0])
+export default ({product}) => {
 
 	return (
 		<div className="bg-white">
@@ -38,7 +37,7 @@ export default function Example() {
 				<div className="lg:max-w-lg lg:self-end">
 					<nav aria-label="Breadcrumb">
 						<ol role="list" className="flex items-center space-x-2">
-							{product.breadcrumbs.map((breadcrumb, breadcrumbIdx) => (
+							{pr.breadcrumbs.map((breadcrumb, breadcrumbIdx) => (
 								<li key={breadcrumb.id}>
 									<div className="flex items-center text-sm">
 										<a
@@ -47,7 +46,7 @@ export default function Example() {
 										>
 											{breadcrumb.name}
 										</a>
-										{breadcrumbIdx !== product.breadcrumbs.length - 1 ? (
+										{breadcrumbIdx !== pr.breadcrumbs.length - 1 ? (
 											<svg
 												viewBox="0 0 20 20"
 												fill="currentColor"
@@ -64,8 +63,8 @@ export default function Example() {
 					</nav>
 
 					<div className="mt-4">
-						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							{product.name}
+						<h1 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
+							{product.product_one.value}
 						</h1>
 					</div>
 
@@ -75,7 +74,7 @@ export default function Example() {
 						</h2>
 
 						<div className="flex items-center">
-							<p className="text-lg text-gray-900 sm:text-xl"> 100 &#8381;</p>
+							<p className="text-lg text-gray-900 sm:text-xl"> {product.product_one.price.value} &#8381;/{product.product_one.unit?.value || ''}</p>
 
 							<div className="ml-4 border-l border-gray-300 pl-4">
 								<h2 className="sr-only">Reviews</h2>
@@ -103,7 +102,7 @@ export default function Example() {
 						</div>
 
 						<div className="mt-4 space-y-6">
-							<p className="text-base text-gray-500">{product.description}</p>
+							<p className="text-base text-gray-500">{pr.description}</p>
 						</div>
 
 						<div className="mt-6 flex items-center">
@@ -121,11 +120,11 @@ export default function Example() {
 				{/* Product image */}
 				<div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
 					<div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg">
-						<img
+						{/* <img
 							src={product.imageSrc}
 							alt={product.imageAlt}
 							className="h-full w-full object-cover object-center"
-						/>
+						/> */}
 					</div>
 				</div>
 

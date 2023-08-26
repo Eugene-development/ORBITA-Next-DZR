@@ -1,5 +1,9 @@
 import { Product } from '@/UI'
+import { getOneProduct } from '../server'
+
 
 export default async ({ params }) => {
-	return <Product />
+	const product = await getOneProduct(params)
+
+	return <Product product={product}/>
 }
