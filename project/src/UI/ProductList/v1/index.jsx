@@ -24,23 +24,23 @@ export default ({ category }) => {
 				</p>
 
 				<div className="mt-8 -mx-px grid grid-cols-2 border-l border-t border-gray-200 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
-					{category.category_one.product.map((product) => (
+					{category.category_one.product.map((item) => (
 						<div
-							key={product.id}
+							key={item.id}
 							className="group relative border-b border-r border-gray-200 p-4 sm:p-6"
 						>
 							<div className="aspect-h-1 aspect-w-1 overflow-hidden  group-hover:opacity-75">
 								<img
-									src={product.image ? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${product.image.hash}` : 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'}
-									alt={product.value}
+									src={item.image ? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${item.image.hash}` : 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'}
+									alt={item.value}
 									className="h-full w-full object-contain object-center"
 								/>
 							</div>
 							<div className="pb-4 pt-10 text-center">
 								<h3 className="text-sm font-medium text-gray-900">
-									<Link href={product.slug}>
+									<Link href={`/shop/product/${item.slug}`}>
 										<span aria-hidden="true" className="absolute inset-0" />
-										{product.value}
+										{item.value}
 									</Link>
 								</h3>
 								<div className="mt-3 flex flex-col items-center">
@@ -50,7 +50,7 @@ export default ({ category }) => {
 											<StarIcon
 												key={rating}
 												className={classNames(
-													product.rating > rating
+													item.rating > rating
 														? 'text-yellow-400'
 														: 'text-yellow-300',
 													'h-5 w-5 flex-shrink-0'
@@ -64,7 +64,7 @@ export default ({ category }) => {
 									</p> */}
 								</div>
 								<p className="mt-4 text-base font-medium text-gray-900">
-									{product.price.value} руб{product.unit && <span>/</span> }{product.unit?.value}
+									{item.price?.value} руб{item.unit && <span>/</span> }{item.unit?.value}
 								</p>
 							</div>
 						</div>
