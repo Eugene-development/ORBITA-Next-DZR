@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
+		<html lang="ru">
 			<head>
 				{/* <link rel="icon" href="../logo/favicon.ico" sizes="any" /> */}
 				<script src="//code.jivo.ru/widget/2EfbaT2QPD" async></script>
