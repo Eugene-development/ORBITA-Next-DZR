@@ -3,7 +3,6 @@ import { useInCart } from '@/app/(catalog)/shop/product/store'
 const { inCart } = useInCart
 
 export default ({productID}) => {
-	// const { setCurrentProductInCart } = inCart()
 	const { productsInCart, setCurrentProductInCart } = inCart()
   let isInCart = false
   if (productsInCart.includes(productID)) isInCart = true
