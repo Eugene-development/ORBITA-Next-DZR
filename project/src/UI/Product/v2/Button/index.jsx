@@ -4,24 +4,23 @@ const { inCart } = useInCart
 
 export default ({productID}) => {
 	// const { setCurrentProductInCart } = inCart()
-	const { productInCart, changeStatusButton, setCurrentProductInCart } = inCart()
+	const { productsInCart, setCurrentProductInCart } = inCart()
+  let isInCart = false
+  if (productsInCart.includes(productID)) isInCart = true
 
+console.log(productsInCart)
 
-    const handleClick = (event) => {
-    // event.preventDefault(); 
-    // changeStatusButton();
-    setCurrentProductInCart(productID);
-    console.log(productID);
+    const handleClick = () => {
+      setCurrentProductInCart(productID);
   };
-
-    
+  
   return (
     <button
         onClick={handleClick}
         type="button"
         className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
     >
-        {productInCart ? <span>Товар в корзине</span> : <span>В корзину</span>} 
+        {isInCart ? <span>Товар в корзине</span> : <span>В корзину</span>} 
     </button>
   )
 }

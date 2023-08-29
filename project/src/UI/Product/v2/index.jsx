@@ -1,8 +1,4 @@
-// 'use client'
-// import { useInCart } from '@/app/(catalog)/shop/product/store'
-// const { inCart } = useInCart
 
-import Test from './test'
 import Button from './Button'
 import { CheckIcon, QuestionMarkCircleIcon, StarIcon } from '@heroicons/react/20/solid'
 import { ShieldCheckIcon } from '@heroicons/react/24/outline'
@@ -32,8 +28,6 @@ function classNames(...classes) {
 }
 
 export default ({product}) => {
-
-// const { statusButton, changeStatusButton } = inCart()
 
 	return (
 		<div className="bg-white">
