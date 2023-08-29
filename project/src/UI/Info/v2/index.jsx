@@ -1,7 +1,9 @@
 'use client'
 import Link from 'next/link'
+import { useInCart } from '@/app/(catalog)/shop/product/store'
+const { inCart } = useInCart
 
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import {
 	Bars3Icon,
@@ -24,7 +26,15 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default () => {
+
+
+const { productsInCart } = inCart()
+// let count
+// useEffect(() => {
+//     count = productsInCart.length
+//   }, [productsInCart]);
+
 	return (
 		<div className="bg-white">
 			<header className="relative z-10">
@@ -110,8 +120,8 @@ export default function Example() {
 														className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
 														aria-hidden="true"
 													/>
-													<span className="ml-2 text-lg font-medium text-gray-500 group-hover:text-gray-800">
-														0
+													<span className="ml-2 text-2xl font-medium text-red-800 group-hover:text-gray-800">
+														{productsInCart.length}
 													</span>
 													<span className="sr-only">
 														количество в корзине

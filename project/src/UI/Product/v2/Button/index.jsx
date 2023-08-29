@@ -8,9 +8,7 @@ export default ({productID}) => {
   let isInCart = false
   if (productsInCart.includes(productID)) isInCart = true
 
-console.log(productsInCart)
-
-    const handleClick = () => {
+  const handleClick = () => {
       if (!productsInCart.includes(productID)) setCurrentProductInCart(productID);
   };
   
