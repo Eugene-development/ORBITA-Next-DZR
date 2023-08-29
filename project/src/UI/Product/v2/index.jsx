@@ -249,7 +249,7 @@ export default ({product}) => {
 					</section>
 				</div>
 			</div>
-			<Test />
+			<Test productID={product.product_one.id}/>
 		</div>
 	)
 }
