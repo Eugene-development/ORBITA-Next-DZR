@@ -3,6 +3,7 @@
 // const { inCart } = useInCart
 
 import Test from './test'
+import Button from './Button'
 import { CheckIcon, QuestionMarkCircleIcon, StarIcon } from '@heroicons/react/20/solid'
 import { ShieldCheckIcon } from '@heroicons/react/24/outline'
 
@@ -226,13 +227,7 @@ export default ({product}) => {
 									</a>
 								</div> */}
 							<div className="mt-10">
-								<button
-								    // onClick={() => console.log(product.product_one.id)}
-									type="submit"
-									className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
-								>
-									В корзину
-								</button>
+								<Button />
 							</div>
 							<div className="mt-6 text-center">
 								<div className="group inline-flex text-base font-medium">

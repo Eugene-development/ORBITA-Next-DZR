@@ -6,8 +6,8 @@ const inCart = create(
 	(set) => ({
 		// productsInCart: '',
 		// setCurrentProductInCart: () => set(() => ({ productsInCart: '4' })),
-		statusButton: true,
-		changeStatusButton: () => set(() => ({ statusButton: false }))
+		productInCart: false,
+		changeStatusButton: () => set(() => ({ productInCart: true }))
 	}),
 	{
 		name: 'cart'
