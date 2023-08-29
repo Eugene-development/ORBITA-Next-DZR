@@ -10,7 +10,6 @@ const { inCart } = useInCart
 export default function index({productID}) {
 
     const { statusButton, changeStatusButton } = inCart()
-console.log(statusButton)
   //   const [domLoaded, setDomLoaded] = useState(false);
 
   //     useEffect(() => {
