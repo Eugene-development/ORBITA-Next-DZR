@@ -11,7 +11,7 @@ export default ({productID}) => {
 console.log(productsInCart)
 
     const handleClick = () => {
-      setCurrentProductInCart(productID);
+      if (!productsInCart.includes(productID)) setCurrentProductInCart(productID);
   };
   
   return (
