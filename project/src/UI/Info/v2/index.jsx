@@ -30,11 +30,13 @@ export default () => {
 
 
 const { productsInCart } = inCart()
-// let count
-// useEffect(() => {
-//     count = productsInCart.length
-//   }, [productsInCart]);
 
+const [isClient, setIsClient] = useState(false)
+ 
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+  
 	return (
 		<div className="bg-white">
 			<header className="relative z-10">
@@ -121,7 +123,7 @@ const { productsInCart } = inCart()
 														aria-hidden="true"
 													/>
 													<span className="ml-2 text-2xl font-medium text-red-800 group-hover:text-gray-800">
-														{productsInCart.length}
+														{isClient && productsInCart.length}
 													</span>
 													<span className="sr-only">
 														количество в корзине
