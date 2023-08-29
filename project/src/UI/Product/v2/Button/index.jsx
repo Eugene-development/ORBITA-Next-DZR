@@ -2,13 +2,16 @@
 import { useInCart } from '@/app/(catalog)/shop/product/store'
 const { inCart } = useInCart
 
-export default () => {
+export default ({productID}) => {
 	// const { setCurrentProductInCart } = inCart()
-	const { productInCart, changeStatusButton } = inCart()
+	const { productInCart, changeStatusButton, setCurrentProductInCart } = inCart()
+
 
     const handleClick = (event) => {
-    event.preventDefault(); 
-    changeStatusButton();
+    // event.preventDefault(); 
+    // changeStatusButton();
+    setCurrentProductInCart(productID);
+    console.log(productID);
   };
 
     

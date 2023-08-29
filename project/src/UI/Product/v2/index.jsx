@@ -227,7 +227,7 @@ export default ({product}) => {
 									</a>
 								</div> */}
 							<div className="mt-10">
-								<Button />
+								<Button productID={product.product_one.id}/>
 							</div>
 							<div className="mt-6 text-center">
 								<div className="group inline-flex text-base font-medium">
@@ -244,7 +244,7 @@ export default ({product}) => {
 					</section>
 				</div>
 			</div>
-			<Test productID={product.product_one.id}/>
+			{/* <Test productID={product.product_one.id}/> */}
 		</div>
 	)
 }
