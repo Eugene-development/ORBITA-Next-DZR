@@ -1,7 +1,4 @@
-'use client'
-import { useState } from 'react'
 import { CheckIcon, QuestionMarkCircleIcon, StarIcon } from '@heroicons/react/20/solid'
-import { RadioGroup } from '@headlessui/react'
 import { ShieldCheckIcon } from '@heroicons/react/24/outline'
 
 const pr = {
@@ -28,7 +25,7 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
-export default ({product}) => {
+export default ({product, setCurrentProductInCart}) => {
 
 	return (
 		<div className="bg-white">
@@ -102,7 +99,7 @@ export default ({product}) => {
 						</div>
 
 						<div className="mt-4 space-y-6">
-							<div className="text-sm text-gray-500" dangerouslySetInnerHTML={{ __html: product.product_one.text[0].value }} />
+							<div className="text-sm text-gray-500" dangerouslySetInnerHTML={{ __html: product.product_one.text[0]?.value || '' }} />
 						</div>
 
 						<div className="mt-6 flex items-center">
@@ -210,16 +207,17 @@ export default ({product}) => {
 								</div>
 							</div>
 							{/* <div className="mt-4">
-                <a href="#" className="group inline-flex text-sm text-gray-500 hover:text-gray-700">
-                  <span>What size should I buy?</span>
-                  <QuestionMarkCircleIcon
-                    className="ml-2 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
-                    aria-hidden="true"
-                  />
-                </a>
-              </div> */}
+									<a href="#" className="group inline-flex text-sm text-gray-500 hover:text-gray-700">
+									<span>What size should I buy?</span>
+									<QuestionMarkCircleIcon
+										className="ml-2 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+										aria-hidden="true"
+									/>
+									</a>
+								</div> */}
 							<div className="mt-10">
 								<button
+								    // onClick={() => console.log(product.product_one.id)}
 									type="submit"
 									className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
 								>
@@ -233,7 +231,7 @@ export default ({product}) => {
 										aria-hidden="true"
 									/>
 									<span className="text-gray-500 hover:text-gray-700">
-										Предоставляем гарантии
+										Услуга ответственного хранения
 									</span>
 								</div>
 							</div>
