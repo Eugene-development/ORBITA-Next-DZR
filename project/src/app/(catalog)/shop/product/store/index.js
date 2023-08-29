@@ -5,7 +5,7 @@ const inCart = create(
 	persist(
 		(set) => ({
 			productsInCart: '',
-			setCurrentProductInCart: (p) => set(() => ({ productsInCart: p }))
+			setCurrentProductInCart: (id) => set(() => ({ productsInCart: id }))
 			// productInCart: false,
 			// changeStatusButton: () => set(() => ({ productInCart: true }))
 		}),
