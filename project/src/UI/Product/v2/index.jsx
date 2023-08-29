@@ -1,3 +1,8 @@
+// 'use client'
+// import { useInCart } from '@/app/(catalog)/shop/product/store'
+// const { inCart } = useInCart
+
+import Test from './test'
 import { CheckIcon, QuestionMarkCircleIcon, StarIcon } from '@heroicons/react/20/solid'
 import { ShieldCheckIcon } from '@heroicons/react/24/outline'
 
@@ -25,7 +30,9 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
-export default ({product, setCurrentProductInCart}) => {
+export default ({product}) => {
+
+// const { statusButton, changeStatusButton } = inCart()
 
 	return (
 		<div className="bg-white">
@@ -60,15 +67,18 @@ export default ({product, setCurrentProductInCart}) => {
 					</nav>
 
 					<div className="mt-4">
+						
 						<h1 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl first-letter:uppercase">
 							{product.product_one.value}
 						</h1>
-					</div>
+				</div>
 
 					<section aria-labelledby="information-heading" className="mt-4">
+						
 						<h2 id="information-heading" className="sr-only">
 							Информация о продукте
 						</h2>
+							
 
 						<div className="flex items-center">
 							<p className="text-sm text-gray-900 sm:text-lg"> {product.product_one.price.value} &#8381;{product.product_one.unit && <span>/</span>}{product.product_one.unit?.value}</p>
@@ -239,6 +249,7 @@ export default ({product, setCurrentProductInCart}) => {
 					</section>
 				</div>
 			</div>
+			<Test />
 		</div>
 	)
 }
