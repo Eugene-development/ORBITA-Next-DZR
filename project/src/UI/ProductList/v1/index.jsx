@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { StarIcon } from '@heroicons/react/20/solid'
-
+import Button from './Button'
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
@@ -39,7 +39,7 @@ export default ({ category }) => {
 							<div className="pb-4 pt-10 text-center">
 								<h3 className="text-sm font-medium text-gray-900 first-letter:uppercase">
 									<Link href={`/shop/product/${item.slug}`}>
-										<span aria-hidden="true" className="absolute inset-0 " />
+										<span aria-hidden="true" className=" inset-0 " />
 										{item.value}
 									</Link>
 								</h3>
@@ -67,6 +67,7 @@ export default ({ category }) => {
 									{item.price?.value} руб{item.unit && <span>/</span> }{item.unit?.value}
 								</p>
 							</div>
+							<Button />
 						</div>
 					))}
 				</div>
