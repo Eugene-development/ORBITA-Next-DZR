@@ -19,8 +19,8 @@ export default ({ category }) => {
 					</p>
 				</div>
 				<p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
-					Купите товар "{category.category_one.value}" по доступной цене с доставкой
-					или самовывозом с нашего склада в Дзержинске
+					Купите товар "{category.category_one.value}" по доступной цене с доставкой или
+					самовывозом с нашего склада в Дзержинске
 				</p>
 
 				<div className="mt-8 -mx-px grid grid-cols-2 border-l border-t border-gray-200 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
@@ -31,7 +31,11 @@ export default ({ category }) => {
 						>
 							<div className="aspect-h-1 aspect-w-1 overflow-hidden group-hover:opacity-75">
 								<img
-									src={item.image ? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${item.image.hash}` : 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'}
+									src={
+										item.image
+											? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${item.image.hash}`
+											: 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'
+									}
 									alt={item.value}
 									className="h-full w-full object-contain object-center"
 								/>
@@ -64,10 +68,11 @@ export default ({ category }) => {
 									</p> */}
 								</div>
 								<p className="mt-4 text-base font-medium text-gray-900">
-									{item.price?.value} руб{item.unit && <span>/</span> }{item.unit?.value}
+									{item.price?.value} руб{item.unit && <span>/</span>}
+									{item.unit?.value}
 								</p>
 							</div>
-							<Button />
+							<Button productID={item.id}/>
 						</div>
 					))}
 				</div>

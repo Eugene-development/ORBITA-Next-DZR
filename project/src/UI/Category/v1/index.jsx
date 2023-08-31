@@ -1,5 +1,5 @@
 'use client'
-import Link from "next/link"
+import Link from 'next/link'
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }

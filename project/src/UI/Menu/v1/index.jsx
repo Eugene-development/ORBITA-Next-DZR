@@ -81,8 +81,7 @@ const services = [
 	{
 		name: 'Грузчики',
 		href: '/information/movers',
-		description:
-			'Если вам необходимы разгрузо-погрузочные работы на вашем объекте'
+		description: 'Если вам необходимы разгрузо-погрузочные работы на вашем объекте'
 	},
 	{
 		name: 'Хранение',
@@ -102,196 +101,197 @@ export default () => {
 	}
 	return (
 		<header className="bg-white sticky top-0 z-50 shadow-xl">
-			{!mobileMenuOpen &&
-			<nav
-				className="mx-auto flex max-w-full items-center justify-between p-2 lg:px-10"
-				aria-label="Global"
-			>
-				<div className="flex lg:flex-1">
-					<Link href="/" className="-m-1.5 p-1.5">
-						<span className="sr-only">Орбита-строй</span>
-						<img
-							className="h-12 w-auto"
-							src="https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/logo/logo.png"
-							alt="Логотип"
-						/>
-					</Link>
-				</div>
-				<div className="flex lg:hidden">
-					<button
-						type="button"
-						className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-						onClick={() => setMobileMenuOpen(true)}
-					>
-						<span className="sr-only">Открыть меню</span>
-						<span className="mr-2">Меню</span>
-						<Bars3Icon className="h-6 w-6" aria-hidden="true" />
-					</button>
-				</div>
-				<Popover.Group className="hidden lg:flex lg:gap-x-12">
-					<Link
-						href="/"
-						className="text-base font-display font-semibold leading-6 text-gray-800"
-					>
-						Главная
-					</Link>
+			{!mobileMenuOpen && (
+				<nav
+					className="mx-auto flex max-w-full items-center justify-between p-2 lg:px-10"
+					aria-label="Global"
+				>
+					<div className="flex lg:flex-1">
+						<Link href="/" className="-m-1.5 p-1.5">
+							<span className="sr-only">Орбита-строй</span>
+							<img
+								className="h-12 w-auto"
+								src="https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/logo/logo.png"
+								alt="Логотип"
+							/>
+						</Link>
+					</div>
+					<div className="flex lg:hidden">
+						<button
+							type="button"
+							className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+							onClick={() => setMobileMenuOpen(true)}
+						>
+							<span className="sr-only">Открыть меню</span>
+							<span className="mr-2">Меню</span>
+							<Bars3Icon className="h-6 w-6" aria-hidden="true" />
+						</button>
+					</div>
+					<Popover.Group className="hidden lg:flex lg:gap-x-12">
+						<Link
+							href="/"
+							className="text-base font-display font-semibold leading-6 text-gray-800"
+						>
+							Главная
+						</Link>
 
-					<OutsideClickHandler onOutsideClick={handleOutsideClick}>
-						<Popover className="relative">
-							<Popover.Button
-								onClick={() => {
-									setShowCatalog(!showCatalog)
-									setShowServices(false)
-								}}
-								className="your-target-class outline-none font-display flex items-center gap-x-1 text-base font-semibold leading-6 text-gray-800"
-							>
-								Каталог
-								<ChevronDownIcon
-									className="h-5 w-5 flex-none text-red-800"
-									aria-hidden="true"
-								/>
-							</Popover.Button>
+						<OutsideClickHandler onOutsideClick={handleOutsideClick}>
+							<Popover className="relative">
+								<Popover.Button
+									onClick={() => {
+										setShowCatalog(!showCatalog)
+										setShowServices(false)
+									}}
+									className="your-target-class outline-none font-display flex items-center gap-x-1 text-base font-semibold leading-6 text-gray-800"
+								>
+									Каталог
+									<ChevronDownIcon
+										className="h-5 w-5 flex-none text-red-800"
+										aria-hidden="true"
+									/>
+								</Popover.Button>
 
-							<Transition
-								show={showCatalog}
-								as={Fragment}
-								enter="transition ease-out duration-200"
-								enterFrom="opacity-0 translate-y-1"
-								enterTo="opacity-100 translate-y-0"
-								leave="transition ease-in duration-150"
-								leaveFrom="opacity-100 translate-y-0"
-								leaveTo="opacity-0 translate-y-1"
-							>
-								<Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-									<div className="p-4">
-										{rubrics.map((item) => (
-											<div
-												onClick={() => setShowCatalog(false)}
-												key={item.name}
-												className="group relative flex gap-x-6 rounded-lg p-3 text-sm leading-6 hover:bg-gray-50"
-											>
-												<div className="mt-1 flex h-14 w-14 flex-none items-center justify-center">
-													{/* <item.icon
+								<Transition
+									show={showCatalog}
+									as={Fragment}
+									enter="transition ease-out duration-200"
+									enterFrom="opacity-0 translate-y-1"
+									enterTo="opacity-100 translate-y-0"
+									leave="transition ease-in duration-150"
+									leaveFrom="opacity-100 translate-y-0"
+									leaveTo="opacity-0 translate-y-1"
+								>
+									<Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+										<div className="p-4">
+											{rubrics.map((item) => (
+												<div
+													onClick={() => setShowCatalog(false)}
+													key={item.name}
+													className="group relative flex gap-x-6 rounded-lg p-3 text-sm leading-6 hover:bg-gray-50"
+												>
+													<div className="mt-1 flex h-14 w-14 flex-none items-center justify-center">
+														{/* <item.icon
 														className="h-6 w-6 text-gray-600 group-hover:text-red-600"
 														aria-hidden="true"
 													/> */}
-													<img src={item.img} alt="рубрика" />
+														<img src={item.img} alt="рубрика" />
+													</div>
+													<div className="flex-auto">
+														<Link
+															href={`/shop/rubric/${item.href}`}
+															className="block font-semibold text-gray-900"
+														>
+															{item.name}
+															<span className="absolute inset-0" />
+														</Link>
+														<p className="mt-1 text-gray-600">
+															{item.description}
+														</p>
+													</div>
 												</div>
-												<div className="flex-auto">
-													<Link
-														href={`/shop/rubric/${item.href}`}
-														className="block font-semibold text-gray-900"
-													>
-														{item.name}
-														<span className="absolute inset-0" />
-													</Link>
-													<p className="mt-1 text-gray-600">
-														{item.description}
-													</p>
-												</div>
+											))}
+										</div>
+										<div className="grid grid-cols-2 divide-x divide-red-800/20 bg-gray-50 border-t border-red-800/20">
+											{callsToAction.map((item) => (
+												<a
+													key={item.name}
+													href={item.href}
+													className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+												>
+													<item.icon
+														className="h-5 w-5 flex-none text-gray-400"
+														aria-hidden="true"
+													/>
+													{item.name}
+												</a>
+											))}
+										</div>
+									</Popover.Panel>
+								</Transition>
+							</Popover>
+						</OutsideClickHandler>
+						<OutsideClickHandler onOutsideClick={handleOutsideClick}>
+							<Popover className="relative">
+								<Popover.Button
+									onClick={() => {
+										setShowServices(!showServices)
+										setShowCatalog(false)
+									}}
+									className="outline-none flex items-center gap-x-1 text-base font-display font-semibold leading-6 text-gray-800"
+								>
+									Услуги
+									<ChevronDownIcon
+										className="h-5 w-5 flex-none text-red-800"
+										aria-hidden="true"
+									/>
+								</Popover.Button>
+
+								<Transition
+									show={showServices}
+									as={Fragment}
+									enter="transition ease-out duration-200"
+									enterFrom="opacity-0 translate-y-1"
+									enterTo="opacity-100 translate-y-0"
+									leave="transition ease-in duration-150"
+									leaveFrom="opacity-100 translate-y-0"
+									leaveTo="opacity-0 translate-y-1"
+								>
+									<Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-96 rounded-3xl bg-white p-4 shadow-lg ring-1 ring-gray-900/5">
+										{services.map((item) => (
+											<div
+												onClick={() => setShowServices(false)}
+												key={item.name}
+												className="relative rounded-lg p-4 hover:bg-gray-50"
+											>
+												<Link
+													href={item.href}
+													className="block text-sm font-semibold leading-6 text-gray-900"
+												>
+													{item.name}
+													<span className="absolute inset-0" />
+												</Link>
+												<p className="mt-1 text-sm leading-6 text-gray-600">
+													{item.description}
+												</p>
 											</div>
 										))}
-									</div>
-									<div className="grid grid-cols-2 divide-x divide-red-800/20 bg-gray-50 border-t border-red-800/20">
-										{callsToAction.map((item) => (
-											<a
-												key={item.name}
-												href={item.href}
-												className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-											>
-												<item.icon
-													className="h-5 w-5 flex-none text-gray-400"
-													aria-hidden="true"
-												/>
-												{item.name}
-											</a>
-										))}
-									</div>
-								</Popover.Panel>
-							</Transition>
-						</Popover>
-					</OutsideClickHandler>
-					<OutsideClickHandler onOutsideClick={handleOutsideClick}>
-						<Popover className="relative">
-							<Popover.Button
-								onClick={() => {
-									setShowServices(!showServices)
-									setShowCatalog(false)
-								}}
-								className="outline-none flex items-center gap-x-1 text-base font-display font-semibold leading-6 text-gray-800"
-							>
-								Услуги
-								<ChevronDownIcon
-									className="h-5 w-5 flex-none text-red-800"
-									aria-hidden="true"
-								/>
-							</Popover.Button>
-
-							<Transition
-								show={showServices}
-								as={Fragment}
-								enter="transition ease-out duration-200"
-								enterFrom="opacity-0 translate-y-1"
-								enterTo="opacity-100 translate-y-0"
-								leave="transition ease-in duration-150"
-								leaveFrom="opacity-100 translate-y-0"
-								leaveTo="opacity-0 translate-y-1"
-							>
-								<Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-96 rounded-3xl bg-white p-4 shadow-lg ring-1 ring-gray-900/5">
-									{services.map((item) => (
-										<div
-											onClick={() => setShowServices(false)}
-											key={item.name}
-											className="relative rounded-lg p-4 hover:bg-gray-50"
-										>
-											<Link
-												href={item.href}
-												className="block text-sm font-semibold leading-6 text-gray-900"
-											>
-												{item.name}
-												<span className="absolute inset-0" />
-											</Link>
-											<p className="mt-1 text-sm leading-6 text-gray-600">
-												{item.description}
-											</p>
-										</div>
-									))}
-								</Popover.Panel>
-							</Transition>
-						</Popover>
-					</OutsideClickHandler>
-					<Link
-						href="/about"
-						className="text-base font-display font-semibold leading-6 text-gray-800"
-					>
-						О компании
-					</Link>
-					{/* <Link
+									</Popover.Panel>
+								</Transition>
+							</Popover>
+						</OutsideClickHandler>
+						<Link
+							href="/about"
+							className="text-base font-display font-semibold leading-6 text-gray-800"
+						>
+							О компании
+						</Link>
+						{/* <Link
 						href="#"
 						className="text-base font-display font-semibold leading-6 text-gray-800"
 					>
 						Блог
 					</Link> */}
 
-					<Link
-						href="/contact"
-						className="text-base font-display font-semibold leading-6 text-gray-800"
-					>
-						Контакты
-					</Link>
-				</Popover.Group>
-				<div className="hidden lg:flex lg:flex-1 lg:justify-end">
-					<a
-						href="https://vk.com/orbita_stroy"
-						className="text-sm font-display font-semibold leading-6 text-gray-900"
-					>
-						ВКонтакте{' '}
-						<span aria-hidden="true" className="text-red-800">
-							&rarr;
-						</span>
-					</a>
-				</div>
-			</nav>}
+						<Link
+							href="/contact"
+							className="text-base font-display font-semibold leading-6 text-gray-800"
+						>
+							Контакты
+						</Link>
+					</Popover.Group>
+					<div className="hidden lg:flex lg:flex-1 lg:justify-end">
+						<a
+							href="https://vk.com/orbita_stroy"
+							className="text-sm font-display font-semibold leading-6 text-gray-900"
+						>
+							ВКонтакте{' '}
+							<span aria-hidden="true" className="text-red-800">
+								&rarr;
+							</span>
+						</a>
+					</div>
+				</nav>
+			)}
 			{/* Mobile Menu */}
 			<Dialog
 				as="div"

@@ -6,7 +6,9 @@ export default function index({ catalog }) {
 		<section className="bg-white dark:bg-gray-900 py-16 sm:py-24">
 			<div className="px-4 mx-auto max-w-screen-xl lg:px-6 font-display">
 				<div className="mx-auto max-w-4xl text-center">
-					<span className="text-base font-semibold leading-7 text-red-600">Раздел каталога</span>
+					<span className="text-base font-semibold leading-7 text-red-600">
+						Раздел каталога
+					</span>
 					<h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
 						{catalog.catalog_one.value}
 					</h1>
@@ -27,7 +29,10 @@ export default function index({ catalog }) {
 
 								<div className="p-5">
 									<h3 className="flex text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-										<span>{item.value} ({item.category.length}) </span><ChevronDownIcon
+										<span>
+											{item.value} ({item.category.length}){' '}
+										</span>
+										<ChevronDownIcon
 											className="h-5 w-5  flex-none text-red-800"
 											aria-hidden="true"
 										/>

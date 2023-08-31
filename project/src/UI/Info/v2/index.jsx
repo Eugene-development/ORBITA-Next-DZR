@@ -27,16 +27,14 @@ function classNames(...classes) {
 }
 
 export default () => {
+	const { productsInCart } = inCart()
 
+	const [isClient, setIsClient] = useState(false)
 
-const { productsInCart } = inCart()
+	useEffect(() => {
+		setIsClient(true)
+	}, [])
 
-const [isClient, setIsClient] = useState(false)
- 
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
-  
 	return (
 		<div className="bg-white">
 			<header className="relative z-10">

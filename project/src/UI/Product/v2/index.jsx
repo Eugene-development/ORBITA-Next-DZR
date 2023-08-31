@@ -1,4 +1,3 @@
-
 import Button from './Button'
 import { CheckIcon, QuestionMarkCircleIcon, StarIcon } from '@heroicons/react/20/solid'
 import { ShieldCheckIcon } from '@heroicons/react/24/outline'
@@ -27,8 +26,7 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
-export default ({product}) => {
-
+export default ({ product }) => {
 	return (
 		<div className="bg-white">
 			<div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
@@ -62,21 +60,23 @@ export default ({product}) => {
 					</nav>
 
 					<div className="mt-4">
-						
 						<h1 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl first-letter:uppercase">
 							{product.product_one.value}
 						</h1>
-				</div>
+					</div>
 
 					<section aria-labelledby="information-heading" className="mt-4">
-						
 						<h2 id="information-heading" className="sr-only">
 							Информация о продукте
 						</h2>
-							
 
 						<div className="flex items-center">
-							<p className="text-sm text-gray-900 sm:text-lg"> {product.product_one.price.value} &#8381;{product.product_one.unit && <span>/</span>}{product.product_one.unit?.value}</p>
+							<p className="text-sm text-gray-900 sm:text-lg">
+								{' '}
+								{product.product_one.price.value} &#8381;
+								{product.product_one.unit && <span>/</span>}
+								{product.product_one.unit?.value}
+							</p>
 
 							<div className="ml-4 border-l border-gray-300 pl-4">
 								<h2 className="sr-only">Reviews</h2>
@@ -104,7 +104,12 @@ export default ({product}) => {
 						</div>
 
 						<div className="mt-4 space-y-6">
-							<div className="text-sm text-gray-500" dangerouslySetInnerHTML={{ __html: product.product_one.text[0]?.value || '' }} />
+							<div
+								className="text-sm text-gray-500"
+								dangerouslySetInnerHTML={{
+									__html: product.product_one.text[0]?.value || ''
+								}}
+							/>
 						</div>
 
 						<div className="mt-6 flex items-center">
@@ -112,9 +117,7 @@ export default ({product}) => {
 								className="h-5 w-5 flex-shrink-0 text-green-500"
 								aria-hidden="true"
 							/>
-							<p className="ml-2 text-sm text-gray-500">
-								Доставка до объекта
-							</p>
+							<p className="ml-2 text-sm text-gray-500">Доставка до объекта</p>
 						</div>
 						{/* <div className="mt-6 flex items-center">
 							<CheckIcon
@@ -141,7 +144,11 @@ export default ({product}) => {
 				<div className="mt-1 md:mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
 					<div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg">
 						<img
-							src={product.product_one.image ? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${product.product_one.image.hash}` : 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'}
+							src={
+								product.product_one.image
+									? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${product.product_one.image.hash}`
+									: 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'
+							}
 							alt={product.product_one.value}
 							className="h-full w-full object-contain object-center"
 						/>
@@ -221,7 +228,7 @@ export default ({product}) => {
 									</a>
 								</div> */}
 							<div className="mt-10">
-								<Button productID={product.product_one.id}/>
+								<Button productID={product.product_one.id} />
 							</div>
 							<div className="mt-6 text-center">
 								<div className="group inline-flex text-base font-medium">
