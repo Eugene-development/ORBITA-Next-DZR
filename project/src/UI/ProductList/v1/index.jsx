@@ -40,8 +40,8 @@ export default ({ category }) => {
 									className="h-full w-full object-contain object-center"
 								/>
 							</div>
-							<div className="pb-4 pt-10 text-center">
-								<h3 className="text-sm font-medium text-gray-900 first-letter:uppercase">
+							<div className="pb-4 pt-6 text-center ">
+								<h3 className="text-sm font-medium text-gray-900 first-letter:uppercase h-12">
 									<Link href={`/shop/product/${item.slug}`}>
 										<span aria-hidden="true" className=" inset-0 " />
 										{item.value}
@@ -72,7 +72,7 @@ export default ({ category }) => {
 									{item.unit?.value}
 								</p>
 							</div>
-							<Button productID={item.id}/>
+							<Button className="object-none object-bottom" productID={item.id}/>
 						</div>
 					))}
 				</div>
