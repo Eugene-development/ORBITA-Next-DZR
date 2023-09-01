@@ -20,14 +20,14 @@ export default ({ productID }) => {
 	return (
 		<>
 			{isClient && productsInCart.includes(productID) ? (
-				<div className="mt-3 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-700 px-8 py-1 text-base font-medium text-white  focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-50">
+				<div className="mt-3 flex w-full items-center justify-center rounded-md border border-transparent bg-red-700 px-8 py-1 text-base font-medium text-white  focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-50">
 					<span>Товар в корзине</span>
 				</div>
 			) : (
 				<button
 					onClick={handleClick}
 					type="button"
-					className="mt-3 flex w-full items-center justify-center rounded-md border border-transparent bg-red-700 px-8 py-1 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+					className="mt-3 flex w-full items-center justify-center rounded-md border border-transparent bg-red-700 px-8 py-1 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-50"
 				>
 					<span>В корзину</span>
 				</button>

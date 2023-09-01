@@ -1,4 +1,63 @@
 import Button from './Button'
+
+const monthProduct = [
+    {
+        id: 1,
+        value: 'Jan',
+        img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
+        price: 760,
+        unit: 'шт'
+    },
+    {
+        id: 2,
+        value: 'Jan',
+        img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
+        price: 760,
+        unit: 'шт'
+    },
+    {
+        id: 3,
+        value: 'Jan',
+        img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
+        price: 760,
+        unit: 'шт'
+    },
+    {
+        id: 4,
+        value: 'Jan',
+        img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
+        price: 760,
+        unit: 'шт'
+    },
+    {
+        id: 1,
+        value: 'Jan',
+        img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
+        price: 760,
+        unit: 'шт'
+    },
+    {
+        id: 2,
+        value: 'Jan',
+        img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
+        price: 760,
+        unit: 'шт'
+    },
+    {
+        id: 3,
+        value: 'Jan',
+        img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
+        price: 760,
+        unit: 'шт'
+    },
+    {
+        id: 4,
+        value: 'Jan',
+        img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
+        price: 760,
+        unit: 'шт'
+    },
+]
 export default () => {
 	return (
 		<section className="font-display">
@@ -13,7 +72,8 @@ export default () => {
 					</p>
 				</div>
 				<div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 xl:gap-8 md:space-y-0">
-					<div className="p-6 bg-white rounded  dark:bg-gray-800 shadow-xl shadow-gray-500">
+                    {monthProduct.map((item)=> (
+                    <div key={item.id} className="p-6 bg-white rounded  dark:bg-gray-800 shadow-xl shadow-gray-500">
 						<div className="mx-auto flex justify-center items-center mb-2 w-20 h-20 rounded lg:h-56 lg:w-56 ">
 							<img
 								src="https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg"
@@ -22,10 +82,13 @@ export default () => {
 						</div>
 						<h3 className="mb-2 text-xl font-bold dark:text-white">790 р/лист</h3>
 						<p className="font-light text-sm text-gray-500 dark:text-gray-400">
-							ГВЛВ "Кнауф" 10 мм (1200*2500)
+							{item.value}
 						</p>
 						<Button />
 					</div>
+                    )
+
+                    )}
 				</div>
 			</div>
 		</section>
