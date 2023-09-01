@@ -1,4 +1,4 @@
-import { Slider, Testimonials } from '@/UI'
+import { Slider, Testimonials, Appeal } from '@/UI'
 
 // const Test = () => {
 // 	return (
@@ -52,11 +52,13 @@ const sliders = [
 		image: 'https://colorprofi.ru/wp-content/uploads/2022/09/klassifikaciya-strojmaterialov.jpg'
 	}
 ]
+
 const Home = () => {
 	return (
 		<>
 			<Slider sliders={sliders} />
 			<Testimonials />
+			<Appeal/>
 		</>
 	)
 }
