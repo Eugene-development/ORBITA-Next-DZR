@@ -13,7 +13,6 @@ export default ({ productID }) => {
 		if (!productsInCart.includes(productID)) setCurrentProductInCart(productID)
 	}
 
-
 	const [isClient, setIsClient] = useState(false)
 
 	useEffect(() => {
@@ -23,9 +22,7 @@ export default ({ productID }) => {
 	return (
 		<>
 			{isClient && productsInCart.includes(productID) ? (
-				<div				
-					className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-800 px-8 py-3 text-base font-medium text-white  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
-				>
+				<div className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-800 px-8 py-3 text-base font-medium text-white  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50">
 					<span>Товар в корзине</span>
 				</div>
 			) : (

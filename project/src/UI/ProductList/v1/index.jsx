@@ -72,7 +72,7 @@ export default ({ category }) => {
 									{item.unit?.value}
 								</p>
 							</div>
-							<Button productID={item.id}/>
+							<Button productID={item.id} />
 						</div>
 					))}
 				</div>
