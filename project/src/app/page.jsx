@@ -1,4 +1,4 @@
-import { Slider, Testimonials, Appeal } from '@/UI'
+import { Slider, Testimonials, Appeal, Message } from '@/UI'
 
 // const Test = () => {
 // 	return (
@@ -58,7 +58,8 @@ const Home = () => {
 		<>
 			<Slider sliders={sliders} />
 			<Testimonials />
-			<Appeal/>
+			<Appeal />
+			<Message />
 		</>
 	)
 }

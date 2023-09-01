@@ -12,7 +12,7 @@ export default () => {
 				</div>
 			</div>
 
-			<section className="my-14 bg-gray-800 font-display">
+			<section className="mt-14 bg-gray-800 font-display">
 				<div className="md:grid md:grid-cols-2">
 					<div className="py-8 px-16 md:flex md:flex-col md:border-r md:border-cyan-900 md:py-12 ">
 						<div className="text-2xl text-gray-100 md:flex-shrink-0">
