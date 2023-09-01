@@ -14,7 +14,7 @@ export default () => {
 
 			<section className="mt-14 bg-gray-800 font-display">
 				<div className="md:grid md:grid-cols-2">
-					<div className="py-8 px-16 md:flex md:flex-col md:border-r md:border-cyan-900 md:py-12 ">
+					<div className="py-8 px-16 md:flex md:flex-col md:border-r md:border-cyan-900 md:py-20 ">
 						<div className="text-2xl text-gray-100 md:flex-shrink-0">
 							<h2>ООО "РемСтройМонтаж"</h2>
 						</div>
@@ -53,7 +53,7 @@ export default () => {
 							</footer>
 						</blockquote>
 					</div>
-					<div className="border-t-2 py-8 px-16 md:border-t-0 md:border-l md:py-12 ">
+					<div className="border-t-2 py-8 px-16 md:border-t-0 md:border-l md:py-20 ">
 						<div className="text-2xl text-gray-100 md:flex-shrink-0">
 							<h2>ООО "ПСГ" Химрегион</h2>
 						</div>
