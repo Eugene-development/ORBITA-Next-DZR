@@ -30,28 +30,28 @@ const monthProduct = [
         unit: 'шт'
     },
     {
-        id: 1,
+        id: 5,
         value: 'Jan',
         img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
         price: 760,
         unit: 'шт'
     },
     {
-        id: 2,
+        id: 6,
         value: 'Jan',
         img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
         price: 760,
         unit: 'шт'
     },
     {
-        id: 3,
+        id: 7,
         value: 'Jan',
         img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
         price: 760,
         unit: 'шт'
     },
     {
-        id: 4,
+        id: 8,
         value: 'Jan',
         img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
         price: 760,
