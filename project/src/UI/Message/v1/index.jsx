@@ -11,7 +11,7 @@ export default () => {
 							"Орбита-Строй"
 						</span>
 						<span className="block text-white text-base sm:text-3xl">
-							база строительных и отделочных материалов в Дзержинске
+							База строительных и отделочных материалов в Дзержинске
 						</span>
 						{/* <span className="block text-gray-100 text-lg">в Дзержинске</span> */}
 					</h2>

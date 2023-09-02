@@ -36,19 +36,19 @@ const sliders = [
 	{
 		id: 4,
 		title: 'Инструмент',
-		description: 'Ручные инструменты для автоматизации и облегчения труда рабочих',
+		description: 'Профессиональные и надежные ручные и электро инструменты для автоматизации и облегчения труда мастеров',
 		image: 'https://colorprofi.ru/wp-content/uploads/2022/09/klassifikaciya-strojmaterialov.jpg'
 	},
 	{
 		id: 5,
 		title: 'Сантехника',
-		description: 'Санитарно-технические материалы для водоотведения',
+		description: 'Качественное сантехническое оборудование и аксессуары к ним для устройства систем водоснабжения',
 		image: 'https://colorprofi.ru/wp-content/uploads/2022/09/klassifikaciya-strojmaterialov.jpg'
 	},
 	{
 		id: 6,
 		title: 'Электрика',
-		description: 'Электротовары для специализированных работ с электричеством',
+		description: 'Электротовары и кабельная продукция для безопасного и качественного электромонтажа различного класса сложности',
 		image: 'https://colorprofi.ru/wp-content/uploads/2022/09/klassifikaciya-strojmaterialov.jpg'
 	}
 ]
