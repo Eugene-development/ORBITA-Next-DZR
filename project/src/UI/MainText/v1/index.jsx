@@ -5,7 +5,7 @@ export default () => {
 				<div className="absolute top-0 bottom-0 left-3/4 hidden w-screen  lg:block" />
 				<div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
 					<div>
-						<h2 className="text-base font-semibold uppercase tracking-wide text-cyan-600">
+						<h2 className="text-base font-semibold uppercase tracking-wide text-red-700">
 							Строительная база
 						</h2>
 						<h3 className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">

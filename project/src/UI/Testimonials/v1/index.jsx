@@ -12,17 +12,17 @@ export default () => {
 				</div>
 			</div>
 
-			<section className="mt-14 bg-gray-800 font-display">
+			<section className="mt-14 bg-gray-900 font-display">
 				<div className="md:grid md:grid-cols-2">
-					<div className="py-8 px-16 md:flex md:flex-col md:border-r md:border-cyan-900 md:py-20 ">
-						<div className="text-2xl text-gray-100 md:flex-shrink-0">
+					<div className="py-8 px-16 md:flex md:flex-col md:border-r md:border-red-900 md:py-20 ">
+						<div className="text-3xl text-gray-100 md:flex-shrink-0">
 							<h2>ООО "РемСтройМонтаж"</h2>
 						</div>
 						<blockquote className="mt-6 md:flex md:flex-grow md:flex-col">
 							<div className="relative text-lg font-medium text-white md:flex-grow">
 								<svg
 									aria-hidden="true"
-									className="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-cyan-500"
+									className="absolute top-0 left-0 h-6 w-6 -translate-x-3 -translate-y-2 transform text-gray-100"
 									fill="currentColor"
 									viewBox="0 0 32 32"
 								>
@@ -45,7 +45,7 @@ export default () => {
 										<div className="text-base font-medium text-white">
 											Вилков А.Н.
 										</div>
-										<div className="text-base font-medium text-cyan-500">
+										<div className="text-base font-medium text-red-500">
 											Генеральный директор
 										</div>
 									</div>
@@ -54,13 +54,13 @@ export default () => {
 						</blockquote>
 					</div>
 					<div className="border-t-2 py-8 px-16 md:border-t-0 md:border-l md:py-20 ">
-						<div className="text-2xl text-gray-100 md:flex-shrink-0">
+						<div className="text-3xl text-gray-100 md:flex-shrink-0">
 							<h2>ООО "ПСГ" Химрегион</h2>
 						</div>
 						<blockquote className="mt-6 md:flex md:flex-grow md:flex-col">
 							<div className="relative text-lg font-medium text-white md:flex-grow">
 								<svg
-									className="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-cyan-500"
+									className="absolute top-0 left-0 h-6 w-6 -translate-x-3 -translate-y-2 transform text-gray-100"
 									fill="currentColor"
 									viewBox="0 0 32 32"
 								>
@@ -83,7 +83,7 @@ export default () => {
 										<div className="text-base font-medium text-white">
 											Чернышев В.В.
 										</div>
-										<div className="text-base font-medium text-cyan-500">
+										<div className="text-base font-medium text-red-500">
 											Генеральный директор
 										</div>
 									</div>
