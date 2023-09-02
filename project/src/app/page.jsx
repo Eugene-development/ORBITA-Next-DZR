@@ -18,19 +18,19 @@ const sliders = [
 	{
 		id: 1,
 		title: 'Стройматериалы',
-		description: 'Строительные материалы для наружных и внутренних работ',
+		description: 'Широкий выбор строительных материалов для строительства и ремонта дома, а также для наружных и внутренних работ',
 		image: 'https://colorprofi.ru/wp-content/uploads/2022/09/klassifikaciya-strojmaterialov.jpg'
 	},
 	{
 		id: 2,
 		title: 'Изоляция',
-		description: 'Изоляционные материалы для работ по ветро, шумо, влаго- защите',
+		description: 'Эффективные решения для тепло-, влаго- и звукоизоляции помещений высокого качества от передовых производителей',
 		image: 'https://colorprofi.ru/wp-content/uploads/2022/09/klassifikaciya-strojmaterialov.jpg'
 	},
 	{
 		id: 3,
 		title: 'Отделка',
-		description: 'Отделочные материалы для нанесения декоротивных слоёв',
+		description: 'Краски, линолеум, стеклообои и потолочные элементы для создания стильного интерьера вашего дома или офиса',
 		image: 'https://colorprofi.ru/wp-content/uploads/2022/09/klassifikaciya-strojmaterialov.jpg'
 	},
 	{
