@@ -19,7 +19,7 @@ export default ({ rubric }) => {
 					Купите товар "{rubric.rubric_one.value}" в Дзержинске по низкой цене с доставкой
 					или самовывозом с нашего склада
 				</p>
-				<div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
+				<div className="isolate mx-auto mt-10 lg:mb-16 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
 					{rubric.rubric_one.category.map(({ id, value, slug }) => (
 						<div
 							key={value}
@@ -75,15 +75,18 @@ export default ({ rubric }) => {
 					))}
 				</div>
 				<div>
-					<h2 className="inline-flex py-1 text-2xl font-semibold tracking-wide text-slate-800">
-						{rubric.rubric_one.value}. Цены, описание и применение.
-					</h2>
+						<h2 class="mx-auto  py-1 text-xl  tracking-wide text-slate-800">
+							<strong className="inline-flex py-1 text-2xl font-semibold tracking-wide text-gray-800"
+								>{rubric.rubric_one.value} со склада в Дзержинске.</strong>
+							<br />
+							<p className="pt-2 text-lg">Наши цены, ассортимент товаров и применение.</p>
+						</h2>
 				</div>
 				{rubric.rubric_one.text.map(({ key, value }, index) => (
-					<div key={index}>
+					<div key={index} className="my-4">
 						{key === '1' && (
 							<div
-								className="my-8 text-gray-500 dark:text-gray-400 prose font-normal"
+								className=" text-gray-500 dark:text-gray-400 prose font-normal"
 								dangerouslySetInnerHTML={{ __html: value }}
 							/>
 						)}

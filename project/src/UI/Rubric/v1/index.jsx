@@ -57,7 +57,7 @@ export default ({ catalog }) => {
 					))}
 				</div>
 				<div>
-					<h2 className="inline-flex py-1 text-2xl font-semibold tracking-wide text-slate-800">
+					<h2 className="inline-flex py-1 text-2xl font-semibold tracking-wide text-gray-800">
 						{catalog.catalog_one.value}. Цены, описание и применение.
 					</h2>
 				</div>
