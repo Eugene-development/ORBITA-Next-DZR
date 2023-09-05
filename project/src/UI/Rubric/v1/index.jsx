@@ -57,14 +57,14 @@ export default ({ catalog }) => {
 					))}
 				</div>
 				<div>
-							<h2 className="inline-flex py-1 text-2xl font-semibold tracking-wide text-slate-800">
-								{catalog.catalog_one.value}. Цены, описание и применение.
-							</h2>
-						</div>
+					<h2 className="inline-flex py-1 text-2xl font-semibold tracking-wide text-slate-800">
+						{catalog.catalog_one.value}. Цены, описание и применение.
+					</h2>
+				</div>
 				<div
-                className="my-8 text-gray-500 dark:text-gray-400 prose font-normal"
-                dangerouslySetInnerHTML={{ __html: catalog.catalog_one.text[0].value }}
-              />
+					className="my-8 text-gray-500 dark:text-gray-400 prose font-normal"
+					dangerouslySetInnerHTML={{ __html: catalog.catalog_one.text[0].value }}
+				/>
 			</div>
 		</section>
 	)

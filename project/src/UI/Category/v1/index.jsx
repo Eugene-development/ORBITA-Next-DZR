@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import { CheckIcon } from '@heroicons/react/20/solid'
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
@@ -18,65 +19,69 @@ export default ({ rubric }) => {
 					Купите товар "{rubric.rubric_one.value}" в Дзержинске по низкой цене с доставкой
 					или самовывозом с нашего склада
 				</p>
-				<div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-					{rubric.rubric_one.category.map((item) => (
+				<div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
+					{rubric.rubric_one.category.map(({ id, value, slug }) => (
 						<div
-							key={item.value}
-							className={classNames(
-								item.mostPopular ? 'ring-2 ring-red-600' : 'ring-1 ring-gray-200',
-								'rounded-3xl p-6 xl:p-8'
-							)}
+							key={value}
+							className="ring-1 ring-gray-200 rounded-3xl p-6 xl:p-8 content-between "
 						>
+							{/* <div
+											key={value}
+											className={classNames(
+												item.mostPopular ? 'ring-2 ring-red-600' : 'ring-1 ring-gray-200',
+												'rounded-3xl p-6 xl:p-8'
+											)}
+										> */}
 							<div className="flex items-center justify-between gap-x-4">
-								<h2
-									id={item.id}
-									className={classNames(
-										item.mostPopular ? 'text-red-600' : 'text-gray-900',
-										'text-sm font-bold leading-8'
-									)}
-								>
-									{item.value}
+								<h2 id={id} className="text-gray-900 text-base font-bold leading-8">
+									{value}
 								</h2>
-								{/* {item.mostPopular ? (
-                  <p className="rounded-full bg-red-600/10 px-2.5 py-1 text-xs font-semibold leading-5 text-red-600">
-                    Most popular
-                  </p>
-                ) : null} */}
 							</div>
-							{/* <p className="mt-4 text-sm leading-6 text-gray-600">{item.description}</p> */}
-							{/* <p className="mt-6 flex items-baseline gap-x-1">
-                <span className="text-4xl font-bold tracking-tight text-gray-900">{item.price[frequency.value]}</span>
-                <span className="text-sm font-semibold leading-6 text-gray-600">{frequency.priceSuffix}</span>
-              </p> */}
+							{/* <p className="mt-4 text-sm leading-6 text-gray-600">qqqqq</p> */}
+							<ul
+								role="list"
+								className="mt-3 space-y-3 text-sm leading-6 text-gray-600 xl:mt-6"
+							>
+								<li className="flex gap-x-3">
+									<CheckIcon
+										className="h-6 w-5 flex-none text-red-600"
+										aria-hidden="true"
+									/>
+									123 поз.
+								</li>
+								<li className="flex gap-x-3">
+									<CheckIcon
+										className="h-6 w-5 flex-none text-red-600"
+										aria-hidden="true"
+									/>
+									Минимальная цена 322р/шт.
+								</li>
+							</ul>
 							<Link
-								href={`/shop/products/${item.slug}`}
-								aria-describedby={item.id}
-								className={classNames(
-									item.mostPopular
-										? 'bg-red-600 text-white shadow-sm hover:bg-red-500'
-										: 'text-red-600 ring-1 ring-inset ring-red-200 hover:ring-red-300',
-									'mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600'
-								)}
+								href={`/shop/products/${slug}`}
+								aria-describedby={id}
+								className="text-gray-600 ring-1 ring-inset ring-red-200 hover:ring-red-300 mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
 							>
 								Выбрать
 							</Link>
-							<ul
-								role="list"
-								className="mt-8 space-y-3 text-sm leading-6 text-gray-600 xl:mt-10"
-							>
-								{/* {item.features.map((feature) => (
-									<li key={feature} className="flex gap-x-3">
-										<CheckIcon
-											className="h-6 w-5 flex-none text-red-600"
-											aria-hidden="true"
-										/>
-										{feature}
-									</li>
-								))} */}
-							</ul>
 						</div>
 					))}
 				</div>
+				<div>
+					<h2 className="inline-flex py-1 text-2xl font-semibold tracking-wide text-slate-800">
+						{rubric.rubric_one.value}. Цены, описание и применение.
+					</h2>
+				</div>
+				{rubric.rubric_one.text.map(({ key, value }, index) => (
+					<div key={index}>
+						{key === '1' && (
+							<div
+								className="my-8 text-gray-500 dark:text-gray-400 prose font-normal"
+								dangerouslySetInnerHTML={{ __html: value }}
+							/>
+						)}
+					</div>
+				))}
 			</div>
 		</div>
 	)
