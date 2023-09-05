@@ -18,17 +18,18 @@ export default ({ category }) => {
 						{category.category_one.value}
 					</p>
 				</div>
-				<p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
+				<p className="mx-auto mt-6  max-w-2xl text-center text-lg leading-8 text-gray-600">
 					Купите товар "{category.category_one.value}" по доступной цене с доставкой или
 					самовывозом с нашего склада в Дзержинске
 				</p>
 
-				<div className="mt-8 -mx-px grid grid-cols-2 border-l border-t border-gray-200 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
+				<div className="mt-8 -mx-px lg:mb-16 grid grid-cols-2 border-l border-t border-gray-200 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
 					{category.category_one.product.map((item) => (
 						<div
 							key={item.id}
 							className="group relative border-b border-r border-gray-200 p-4 sm:p-6"
 						>
+							<Link href={`/shop/product/${item.slug}`}>
 							<div className="aspect-h-1 aspect-w-1 overflow-hidden group-hover:opacity-75">
 								<img
 									src={
@@ -42,10 +43,8 @@ export default ({ category }) => {
 							</div>
 							<div className="pb-4 pt-6 text-center ">
 								<h3 className="text-sm font-medium text-gray-900 first-letter:uppercase h-12">
-									<Link href={`/shop/product/${item.slug}`}>
 										<span aria-hidden="true" className=" inset-0 " />
 										{item.value}
-									</Link>
 								</h3>
 								<div className="mt-3 flex flex-col items-center">
 									{/* <p className="sr-only">{product.rating} out of 5 stars</p> */}
@@ -72,10 +71,30 @@ export default ({ category }) => {
 									{item.unit?.value}
 								</p>
 							</div>
+							</Link>
 							<Button productID={item.id} />
 						</div>
 					))}
 				</div>
+
+				<div>
+						<h2 class="mx-auto  py-1 text-xl  tracking-wide text-slate-800">
+							<strong className="inline-flex py-1 text-2xl font-semibold tracking-wide text-gray-800"
+								>{category.category_one.value} со склада в Дзержинске.</strong>
+							<br />
+							<p className="pt-2 text-lg">Наши цены, ассортимент товаров и применение.</p>
+						</h2>
+				</div>
+				{category.category_one.text.map(({ key, value }, index) => (
+					<div key={index} className="my-4">
+						{key === '1' && (
+							<div
+								className=" text-gray-500 dark:text-gray-400 prose font-normal"
+								dangerouslySetInnerHTML={{ __html: value }}
+							/>
+						)}
+					</div>
+				))}
 			</div>
 		</div>
 	)
