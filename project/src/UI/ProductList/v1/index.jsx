@@ -42,7 +42,7 @@ export default ({ category }) => {
 									/>
 								</div>
 								<div className="pb-4 pt-6 text-center ">
-									<h3 className="text-sm font-medium text-gray-900 first-letter:uppercase h-12">
+									<h3 className="text-xs sm:text-sm font-medium text-gray-900 first-letter:uppercase h-12">
 										<span aria-hidden="true" className=" inset-0 " />
 										{item.value}
 									</h3>
