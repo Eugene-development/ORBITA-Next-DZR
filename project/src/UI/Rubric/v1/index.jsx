@@ -3,21 +3,21 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 export default ({ catalog }) => {
 	return (
-		<section className="bg-white dark:bg-gray-900 py-16 sm:py-24">
+		<section className="bg-white dark:bg-gray-900 py-16 sm:py-20">
 			<div className="px-4 mx-auto max-w-screen-xl lg:px-6 font-display">
 				<div className="mx-auto max-w-4xl text-center">
 					<span className="text-base font-semibold leading-7 text-red-600">
 						Раздел каталога
 					</span>
-					<h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+					<h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
 						{catalog.catalog_one.value}
 					</h1>
 				</div>
-				<p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
+				<p className="mx-auto mt-6 max-w-2xl text-center text-sm sm:text-lg leading-6 text-gray-600">
 					Купите с нашего склада в Дзержинске товар "{catalog.catalog_one.value}" по
 					низкой цене и с доставкой или самовывозом своим транспортом
 				</p>
-				<div className="grid gap-8 my-12 lg:mb-16 md:grid-cols-2">
+				<div className="grid gap-8 my-12 mb-16 md:grid-cols-2">
 					{catalog.catalog_one.rubric.map((item) => (
 						<Link key={item.value} href={`/shop/category/${item.slug}`}>
 							<div className="items-center  rounded-lg sm:flex dark:bg-gray-800 dark:border-gray-700 shadow-lg">

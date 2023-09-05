@@ -7,19 +7,19 @@ function classNames(...classes) {
 
 export default ({ rubric }) => {
 	return (
-		<div className="bg-white py-16 sm:py-24">
+		<div className="bg-white py-16 sm:py-20">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8 font-display">
 				<div className="mx-auto max-w-4xl text-center">
 					<h2 className="text-base font-semibold leading-7 text-red-600">Рубрика</h2>
-					<p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+					<p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
 						{rubric.rubric_one.value}
 					</p>
 				</div>
-				<p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
+				<p className="mx-auto mt-6 max-w-2xl text-center text-sm sm:text-lg leading-6 text-gray-600">
 					Купите товар "{rubric.rubric_one.value}" в Дзержинске по низкой цене с доставкой
 					или самовывозом с нашего склада
 				</p>
-				<div className="isolate mx-auto mt-10 lg:mb-16 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
+				<div className="isolate mx-auto mt-10 mb-16 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
 					{rubric.rubric_one.category.map(({ id, value, slug }) => (
 						<div
 							key={value}

@@ -9,21 +9,21 @@ function classNames(...classes) {
 
 export default ({ category }) => {
 	return (
-		<div className="bg-white py-16 sm:py-24">
+		<div className="bg-white py-16 sm:py-20">
 			<div className="mx-auto max-w-7xl overflow-hidden sm:px-6 lg:px-8 font-display">
 				{/* <h2 className="sr-only">Products</h2> */}
 				<div className="mx-auto max-w-4xl text-center">
 					<h2 className="text-base font-semibold leading-7 text-red-600">Категория</h2>
-					<p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+					<p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
 						{category.category_one.value}
 					</p>
 				</div>
-				<p className="mx-auto mt-6  max-w-2xl text-center text-lg leading-8 text-gray-600">
+				<p className="mx-auto mt-6  max-w-2xl text-center text-sm sm:text-lg leading-6 text-gray-600">
 					Купите товар "{category.category_one.value}" по доступной цене с доставкой или
 					самовывозом с нашего склада в Дзержинске
 				</p>
 
-				<div className="mt-8 -mx-px lg:mb-16 grid grid-cols-2 border-l border-t border-gray-200 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
+				<div className="mt-8 -mx-px mb-16 grid grid-cols-2 border-l border-t border-gray-200 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
 					{category.category_one.product.map((item) => (
 						<div
 							key={item.id}
