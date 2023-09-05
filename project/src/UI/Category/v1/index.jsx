@@ -32,31 +32,38 @@ export default ({ rubric }) => {
 												'rounded-3xl p-6 xl:p-8'
 											)}
 										> */}
-							<div className="flex items-center justify-between gap-x-4">
-								<h2 id={id} className="text-gray-900 text-base font-bold leading-8">
-									{value}
-								</h2>
+							<div className="h-16">
+								<div className="flex items-center justify-between gap-x-4">
+									<h2
+										id={id}
+										className="text-gray-900 text-lg font-bold leading-8"
+									>
+										{value}
+									</h2>
+								</div>
+								{/* <p className="mt-4 text-sm leading-6 text-gray-600">qqqqq</p> */}
+								
 							</div>
-							{/* <p className="mt-4 text-sm leading-6 text-gray-600">qqqqq</p> */}
 							<ul
-								role="list"
-								className="mt-3 space-y-3 text-sm leading-6 text-gray-600 xl:mt-6"
-							>
-								<li className="flex gap-x-3">
-									<CheckIcon
-										className="h-6 w-5 flex-none text-red-600"
-										aria-hidden="true"
-									/>
-									123 поз.
-								</li>
-								<li className="flex gap-x-3">
-									<CheckIcon
-										className="h-6 w-5 flex-none text-red-600"
-										aria-hidden="true"
-									/>
-									Минимальная цена 322р/шт.
-								</li>
-							</ul>
+									role="list"
+									className="mt-3 space-y-3 text-sm leading-6 text-gray-600 xl:mt-4"
+								>
+									<li className="flex gap-x-3">
+										<CheckIcon
+											className="h-6 w-5 flex-none text-red-600"
+											aria-hidden="true"
+										/>
+										123 поз.
+									</li>
+									<li className="flex gap-x-3">
+										<CheckIcon
+											className="h-6 w-5 flex-none text-red-600"
+											aria-hidden="true"
+										/>
+										Минимальная цена 322р/шт.
+									</li>
+								</ul>
+
 							<Link
 								href={`/shop/products/${slug}`}
 								aria-describedby={id}
