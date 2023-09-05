@@ -30,47 +30,47 @@ export default ({ category }) => {
 							className="group relative border-b border-r border-gray-200 p-4 sm:p-6"
 						>
 							<Link href={`/shop/product/${item.slug}`}>
-							<div className="aspect-h-1 aspect-w-1 overflow-hidden group-hover:opacity-75">
-								<img
-									src={
-										item.image
-											? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${item.image.hash}`
-											: 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'
-									}
-									alt={item.value}
-									className="h-full w-full object-contain object-center"
-								/>
-							</div>
-							<div className="pb-4 pt-6 text-center ">
-								<h3 className="text-sm font-medium text-gray-900 first-letter:uppercase h-12">
+								<div className="aspect-h-1 aspect-w-1 overflow-hidden group-hover:opacity-75">
+									<img
+										src={
+											item.image
+												? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${item.image.hash}`
+												: 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'
+										}
+										alt={item.value}
+										className="h-full w-full object-contain object-center"
+									/>
+								</div>
+								<div className="pb-4 pt-6 text-center ">
+									<h3 className="text-sm font-medium text-gray-900 first-letter:uppercase h-12">
 										<span aria-hidden="true" className=" inset-0 " />
 										{item.value}
-								</h3>
-								<div className="mt-3 flex flex-col items-center">
-									{/* <p className="sr-only">{product.rating} out of 5 stars</p> */}
-									<div className="flex items-center">
-										{[0, 1, 2, 3, 4].map((rating) => (
-											<StarIcon
-												key={rating}
-												className={classNames(
-													item.rating > rating
-														? 'text-yellow-400'
-														: 'text-yellow-300',
-													'h-5 w-5 flex-shrink-0'
-												)}
-												aria-hidden="true"
-											/>
-										))}
-									</div>
-									{/* <p className="mt-1 text-sm text-gray-500">
+									</h3>
+									<div className="mt-3 flex flex-col items-center">
+										{/* <p className="sr-only">{product.rating} out of 5 stars</p> */}
+										<div className="flex items-center">
+											{[0, 1, 2, 3, 4].map((rating) => (
+												<StarIcon
+													key={rating}
+													className={classNames(
+														item.rating > rating
+															? 'text-yellow-400'
+															: 'text-yellow-300',
+														'h-5 w-5 flex-shrink-0'
+													)}
+													aria-hidden="true"
+												/>
+											))}
+										</div>
+										{/* <p className="mt-1 text-sm text-gray-500">
 										{product.reviewCount} reviews
 									</p> */}
+									</div>
+									<p className="mt-4 text-base font-medium text-gray-900">
+										{item.price?.value} руб{item.unit && <span>/</span>}
+										{item.unit?.value}
+									</p>
 								</div>
-								<p className="mt-4 text-base font-medium text-gray-900">
-									{item.price?.value} руб{item.unit && <span>/</span>}
-									{item.unit?.value}
-								</p>
-							</div>
 							</Link>
 							<Button productID={item.id} />
 						</div>
@@ -78,12 +78,13 @@ export default ({ category }) => {
 				</div>
 
 				<div>
-						<h2 class="mx-auto  py-1 text-xl  tracking-wide text-slate-800">
-							<strong className="inline-flex py-1 text-2xl font-semibold tracking-wide text-gray-800"
-								>{category.category_one.value} со склада в Дзержинске.</strong>
-							<br />
-							<p className="pt-2 text-lg">Наши цены, ассортимент товаров и применение.</p>
-						</h2>
+					<h2 class="mx-auto  py-1 text-xl  tracking-wide text-slate-800">
+						<strong className="inline-flex py-1 text-2xl font-semibold tracking-wide text-gray-800">
+							{category.category_one.value} со склада в Дзержинске.
+						</strong>
+						<br />
+						<p className="pt-2 text-lg">Наши цены, ассортимент товаров и применение.</p>
+					</h2>
 				</div>
 				{category.category_one.text.map(({ key, value }, index) => (
 					<div key={index} className="my-4">

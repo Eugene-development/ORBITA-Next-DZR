@@ -42,27 +42,26 @@ export default ({ rubric }) => {
 									</h2>
 								</div>
 								{/* <p className="mt-4 text-sm leading-6 text-gray-600">qqqqq</p> */}
-								
 							</div>
 							<ul
-									role="list"
-									className="mt-3 space-y-3 text-sm leading-6 text-gray-600 xl:mt-4"
-								>
-									<li className="flex gap-x-3">
-										<CheckIcon
-											className="h-6 w-5 flex-none text-red-600"
-											aria-hidden="true"
-										/>
-										123 поз.
-									</li>
-									<li className="flex gap-x-3">
-										<CheckIcon
-											className="h-6 w-5 flex-none text-red-600"
-											aria-hidden="true"
-										/>
-										Минимальная цена 322р/шт.
-									</li>
-								</ul>
+								role="list"
+								className="mt-3 space-y-3 text-sm leading-6 text-gray-600 xl:mt-4"
+							>
+								<li className="flex gap-x-3">
+									<CheckIcon
+										className="h-6 w-5 flex-none text-red-600"
+										aria-hidden="true"
+									/>
+									123 поз.
+								</li>
+								<li className="flex gap-x-3">
+									<CheckIcon
+										className="h-6 w-5 flex-none text-red-600"
+										aria-hidden="true"
+									/>
+									Минимальная цена 322р/шт.
+								</li>
+							</ul>
 
 							<Link
 								href={`/shop/products/${slug}`}
@@ -75,12 +74,13 @@ export default ({ rubric }) => {
 					))}
 				</div>
 				<div>
-						<h2 class="mx-auto  py-1 text-xl  tracking-wide text-slate-800">
-							<strong className="inline-flex py-1 text-2xl font-semibold tracking-wide text-gray-800"
-								>{rubric.rubric_one.value} со склада в Дзержинске.</strong>
-							<br />
-							<p className="pt-2 text-lg">Наши цены, ассортимент товаров и применение.</p>
-						</h2>
+					<h2 class="mx-auto  py-1 text-xl  tracking-wide text-slate-800">
+						<strong className="inline-flex py-1 text-2xl font-semibold tracking-wide text-gray-800">
+							{rubric.rubric_one.value} со склада в Дзержинске.
+						</strong>
+						<br />
+						<p className="pt-2 text-lg">Наши цены, ассортимент товаров и применение.</p>
+					</h2>
 				</div>
 				{rubric.rubric_one.text.map(({ key, value }, index) => (
 					<div key={index} className="my-4">
