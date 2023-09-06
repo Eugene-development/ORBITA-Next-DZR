@@ -13,6 +13,9 @@ const ONE_RUBRIC = gql`
 				slug
 				product {
 					value
+					price {
+						value
+					}
 				}
 			}
 			parent: parentable {

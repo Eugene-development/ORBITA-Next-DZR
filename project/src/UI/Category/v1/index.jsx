@@ -2,6 +2,8 @@
 import Link from 'next/link'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import { FadeIn } from '@/hooks/motion/FadeIn'
+import MinPrice from './MinPrice'
+
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
@@ -152,7 +154,7 @@ export default ({ rubric }) => {
 											className="h-6 w-5 flex-none text-red-600"
 											aria-hidden="true"
 										/>
-										Минимальная цена 322р/шт.
+										Минимальная цена <MinPrice data={product}/> руб.
 									</li>
 								</ul>
 
