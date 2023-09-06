@@ -113,7 +113,7 @@ export default ({ rubric }) => {
 				</p>
 				<FadeIn>
 					<div className="isolate mx-auto mt-10 mb-16 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
-						{rubric.rubric_one.category.map(({ id, value, slug }) => (
+						{rubric.rubric_one.category.map(({ id, value, slug, product}) => (
 							<div
 								key={value}
 								className="ring-1 ring-gray-200 rounded-3xl p-6 xl:p-8 content-between "
@@ -145,7 +145,7 @@ export default ({ rubric }) => {
 											className="h-6 w-5 flex-none text-red-600"
 											aria-hidden="true"
 										/>
-										123 поз.
+										{product.length} поз. товара
 									</li>
 									<li className="flex gap-x-3">
 										<CheckIcon

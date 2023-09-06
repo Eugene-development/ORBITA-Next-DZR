@@ -32,7 +32,7 @@ export default ({ catalog }) => {
 									<div className="p-5">
 										<h3 className="flex text-xl font-bold tracking-tight text-gray-900 dark:text-white">
 											<span>
-												{item.value} ({item.category.length}){' '}
+												{item.value} ({item.category.length})
 											</span>
 											<ChevronDownIcon
 												className="h-5 w-5  flex-none text-red-800"
