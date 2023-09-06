@@ -11,10 +11,98 @@ export default ({ rubric }) => {
 		<div className="bg-white py-16 sm:py-20">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8 font-display">
 				<div className="mx-auto max-w-4xl text-center">
-					<h2 className="text-base font-semibold leading-7 text-red-600">Рубрика</h2>
-					<p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+		<div className="flex mb-6" aria-label="Breadcrumb">
+				<div className="flex items-center space-x-4 mx-auto">
+					<div>
+						<div>
+							<Link href="/" className="text-gray-600 hover:text-gray-800">
+								<svg
+									className="h-4 w-4 flex-shrink-0"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 20 20"
+									fill="currentColor"
+									aria-hidden="true"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+								<span className="sr-only">Главная</span>
+							</Link>
+						</div>
+					</div>
+
+					{/* <div>
+						<div className="flex items-center">
+							<svg
+								className="h-5 w-5 flex-shrink-0 text-red-700"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								aria-hidden="true"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+							<Link
+								href={`/shop/rubric/${category.category_one.parent.parent.slug}`}
+								className="ml-4 text-sm md:text-lg font-medium text-gray-600 hover:text-gray-800"
+								>{category.category_one.parent.parent.value}</Link>
+						</div>
+					</div> */}
+
+					<div>
+						<div className="flex items-center">
+							<svg
+								className="h-5 w-5 flex-shrink-0 text-red-700"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								aria-hidden="true"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+							<Link
+								href={`/shop/rubric/${rubric.rubric_one.parent.slug}`}
+								className="ml-4 text-sm md:text-lg font-medium text-gray-600 hover:text-gray-800"
+								>{rubric.rubric_one.parent.value}</Link>
+						</div>
+					</div>
+
+					{/* <div className="hidden md:block">
+						<div className="flex items-center">
+							<svg
+								className="h-5 w-5 flex-shrink-0 text-red-800"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								aria-hidden="true"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+							<span className="ml-4 text-sm md:text-xl font-medium text-gray-800 "
+								>{data.category.category_one.value}</span
+							>
+						</div>
+					</div> */}
+				</div>
+			</div>
+					<h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
 						{rubric.rubric_one.value}
-					</p>
+					</h1>
 				</div>
 				<p className="mx-auto mt-6 max-w-2xl text-center text-sm sm:text-lg leading-6 text-gray-600">
 					Купите товар "{rubric.rubric_one.value}" в Дзержинске по низкой цене с доставкой
@@ -38,7 +126,7 @@ export default ({ rubric }) => {
 								<div className="flex items-center justify-between gap-x-4">
 									<h2
 										id={id}
-										className="text-gray-900 text-lg font-bold leading-8"
+										className="text-gray-900 text-xl font-bold leading-8"
 									>
 										{value}
 									</h2>

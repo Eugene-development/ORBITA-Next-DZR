@@ -104,16 +104,16 @@ export default ({ category }) => {
 				</div>
 			</div>
 
-				<div className="mx-auto max-w-4xl text-center">
+				<div className="mx-auto max-w-5xl text-center">
 					{/* <h2 className="text-base font-semibold leading-7 text-red-600">Категория</h2> */}
 
-					<h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+					<h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
 						{category.category_one.value}
-					</h2>
+					</h1>
 
 
 				</div>
-				<p className="mx-auto mt-6  max-w-2xl text-center text-sm sm:text-lg leading-6 text-gray-600">
+				<p className="mx-auto mt-6  max-w-3xl text-center text-sm sm:text-lg leading-6 text-gray-600">
 					Купите товар "{category.category_one.value}" по доступной цене с доставкой или
 					самовывозом с нашего склада в Дзержинске
 				</p>
