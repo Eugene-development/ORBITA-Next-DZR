@@ -10,11 +10,11 @@ function classNames(...classes) {
 
 export default ({ rubric }) => {
 	return (
-		<div className="bg-white py-16 sm:py-20">
+		<div className="bg-white py-16 ">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8 font-display">
 				<div className="mx-auto max-w-4xl text-center">
 					<div className="flex mb-6" aria-label="Breadcrumb">
-						<div className="flex items-center space-x-4 mx-auto">
+						<div className="flex items-center space-x-3 mx-auto">
 							<div>
 								<div>
 									<Link href="/" className="text-gray-600 hover:text-gray-800">
@@ -79,6 +79,25 @@ export default ({ rubric }) => {
 									>
 										{rubric.rubric_one.parent.value}
 									</Link>
+								</div>
+							</div>
+
+							<div>
+								<div className="flex items-center">
+									<svg
+										className="h-5 w-5 flex-shrink-0 text-red-700"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 20 20"
+										fill="currentColor"
+										aria-hidden="true"
+									>
+										<path
+											fill-rule="evenodd"
+											d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+											clip-rule="evenodd"
+										/>
+									</svg>
+									
 								</div>
 							</div>
 

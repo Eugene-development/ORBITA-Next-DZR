@@ -10,7 +10,7 @@ function classNames(...classes) {
 
 export default ({ category }) => {
 	return (
-		<div className="bg-white py-16 sm:py-20">
+		<div className="bg-white py-16 ">
 			<div className="mx-auto max-w-7xl overflow-hidden sm:px-6 lg:px-8 font-display">
 				{/* <h2 className="sr-only">Products</h2> */}
 
@@ -133,26 +133,26 @@ export default ({ category }) => {
 				</p>
 
 				<div className="mt-8 -mx-px mb-16 grid grid-cols-2 border border-gray-100 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
-					{category.category_one.product.map((item) => (
-						<div key={item.id}>
+					{category.category_one.product.map(({id, slug, image, value, price, unit}) => (
+						<div key={id}>
 							<FadeIn>
 								<div className="group relative border border-gray-100 p-4 sm:p-6">
-									<Link href={`/shop/product/${item.slug}`}>
+									<Link href={`/shop/product/${slug}`}>
 										<div className="aspect-h-1 aspect-w-1 overflow-hidden group-hover:opacity-75">
 											<img
 												src={
-													item.image
-														? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${item.image.hash}`
+													image
+														? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${image.hash}`
 														: 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'
 												}
-												alt={item.value}
+												alt={value}
 												className="h-full w-full object-contain object-center"
 											/>
 										</div>
 										<div className="pb-4 pt-6 text-center ">
 											<h3 className="text-xs sm:text-sm font-medium text-gray-900 first-letter:uppercase h-12">
 												<span aria-hidden="true" className=" inset-0 " />
-												{item.value}
+												{value}
 											</h3>
 											<div className="mt-3 flex flex-col items-center">
 												{/* <p className="sr-only">{product.rating} out of 5 stars</p> */}
@@ -161,7 +161,7 @@ export default ({ category }) => {
 														<StarIcon
 															key={rating}
 															className={classNames(
-																item.rating > rating
+																true
 																	? 'text-yellow-400'
 																	: 'text-yellow-300',
 																'h-5 w-5 flex-shrink-0'
@@ -175,12 +175,12 @@ export default ({ category }) => {
 										</p> */}
 											</div>
 											<p className="mt-4 text-base font-medium text-gray-900">
-												{item.price?.value} руб{item.unit && <span>/</span>}
-												{item.unit?.value}
+												{price?.value} руб{unit && <span>/</span>}
+												{unit?.value}
 											</p>
 										</div>
 									</Link>
-									<Button productID={item.id} />
+									<Button productID={id} />
 								</div>
 							</FadeIn>
 						</div>

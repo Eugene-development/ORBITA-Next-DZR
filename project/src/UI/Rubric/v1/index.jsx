@@ -4,12 +4,58 @@ import { FadeIn } from '@/hooks/motion/FadeIn'
 
 export default ({ catalog }) => {
 	return (
-		<section className="bg-white dark:bg-gray-900 py-16 sm:py-20">
+		<section className="bg-white dark:bg-gray-900 py-16 ">
 			<div className="px-4 mx-auto max-w-screen-xl lg:px-6 font-display">
 				<div className="mx-auto max-w-4xl text-center">
-					<span className="text-base font-semibold leading-7 text-red-600">
-						Раздел каталога
-					</span>
+					<div className="flex mb-6" aria-label="Breadcrumb">
+						<div className="flex items-center space-x-3 mx-auto">
+							<div>
+								<div>
+									<Link href="/" className="text-gray-600 hover:text-gray-800">
+										<svg
+											className="h-4 w-4 flex-shrink-0"
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 20 20"
+											fill="currentColor"
+											aria-hidden="true"
+										>
+											<path
+												fill-rule="evenodd"
+												d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z"
+												clip-rule="evenodd"
+											/>
+										</svg>
+										<span className="sr-only">Главная</span>
+									</Link>
+								</div>
+							</div>
+
+							<div>
+								<div className="flex items-center">
+									<svg
+										className="h-5 w-5 flex-shrink-0 text-red-700"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 20 20"
+										fill="currentColor"
+										aria-hidden="true"
+									>
+										<path
+											fill-rule="evenodd"
+											d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+											clip-rule="evenodd"
+										/>
+									</svg>
+									
+								</div>
+							</div>
+
+							
+
+
+							
+						</div>
+					</div>
+
 					<h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
 						{catalog.catalog_one.value}
 					</h1>
