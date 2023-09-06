@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { CheckIcon } from '@heroicons/react/20/solid'
+import { FadeIn } from '@/hooks/motion/FadeIn'
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
@@ -19,6 +20,7 @@ export default ({ rubric }) => {
 					Купите товар "{rubric.rubric_one.value}" в Дзержинске по низкой цене с доставкой
 					или самовывозом с нашего склада
 				</p>
+				<FadeIn>
 				<div className="isolate mx-auto mt-10 mb-16 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
 					{rubric.rubric_one.category.map(({ id, value, slug }) => (
 						<div
@@ -73,6 +75,7 @@ export default ({ rubric }) => {
 						</div>
 					))}
 				</div>
+				</FadeIn>
 				<div>
 					<h2 class="mx-auto  py-1 text-xl  tracking-wide text-slate-800">
 						<strong className="inline-flex py-1 text-2xl font-semibold tracking-wide text-gray-800">

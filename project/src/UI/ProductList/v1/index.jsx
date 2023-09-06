@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { StarIcon } from '@heroicons/react/20/solid'
+import { FadeIn } from '@/hooks/motion/FadeIn'
 import Button from './Button'
 
 function classNames(...classes) {
@@ -23,56 +24,59 @@ export default ({ category }) => {
 					самовывозом с нашего склада в Дзержинске
 				</p>
 
-				<div className="mt-8 -mx-px mb-16 grid grid-cols-2 border-l border-t border-gray-200 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
+				<div className="mt-8 -mx-px mb-16 grid grid-cols-2 border  border-gray-100 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
 					{category.category_one.product.map((item) => (
-						<div
-							key={item.id}
-							className="group relative border-b border-r border-gray-200 p-4 sm:p-6"
-						>
-							<Link href={`/shop/product/${item.slug}`}>
-								<div className="aspect-h-1 aspect-w-1 overflow-hidden group-hover:opacity-75">
-									<img
-										src={
-											item.image
-												? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${item.image.hash}`
-												: 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'
-										}
-										alt={item.value}
-										className="h-full w-full object-contain object-center"
-									/>
-								</div>
-								<div className="pb-4 pt-6 text-center ">
-									<h3 className="text-xs sm:text-sm font-medium text-gray-900 first-letter:uppercase h-12">
-										<span aria-hidden="true" className=" inset-0 " />
-										{item.value}
-									</h3>
-									<div className="mt-3 flex flex-col items-center">
-										{/* <p className="sr-only">{product.rating} out of 5 stars</p> */}
-										<div className="flex items-center">
-											{[0, 1, 2, 3, 4].map((rating) => (
-												<StarIcon
-													key={rating}
-													className={classNames(
-														item.rating > rating
-															? 'text-yellow-400'
-															: 'text-yellow-300',
-														'h-5 w-5 flex-shrink-0'
-													)}
-													aria-hidden="true"
-												/>
-											))}
-										</div>
-										{/* <p className="mt-1 text-sm text-gray-500">
-										{product.reviewCount} reviews
-									</p> */}
+						<div key={item.id}>
+						<FadeIn>
+							<div				
+								className="group relative border border-gray-100 p-4 sm:p-6"
+							>
+								<Link href={`/shop/product/${item.slug}`}>
+									<div className="aspect-h-1 aspect-w-1 overflow-hidden group-hover:opacity-75">
+										<img
+											src={
+												item.image
+													? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${item.image.hash}`
+													: 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'
+											}
+											alt={item.value}
+											className="h-full w-full object-contain object-center"
+										/>
 									</div>
-									<p className="mt-4 text-base font-medium text-gray-900">
-										{item.price?.value} руб{item.unit && <span>/</span>}
-										{item.unit?.value}
-									</p>
-								</div>
-							</Link>
-							<Button productID={item.id} />
+									<div className="pb-4 pt-6 text-center ">
+										<h3 className="text-xs sm:text-sm font-medium text-gray-900 first-letter:uppercase h-12">
+											<span aria-hidden="true" className=" inset-0 " />
+											{item.value}
+										</h3>
+										<div className="mt-3 flex flex-col items-center">
+											{/* <p className="sr-only">{product.rating} out of 5 stars</p> */}
+											<div className="flex items-center">
+												{[0, 1, 2, 3, 4].map((rating) => (
+													<StarIcon
+														key={rating}
+														className={classNames(
+															item.rating > rating
+																? 'text-yellow-400'
+																: 'text-yellow-300',
+															'h-5 w-5 flex-shrink-0'
+														)}
+														aria-hidden="true"
+													/>
+												))}
+											</div>
+											{/* <p className="mt-1 text-sm text-gray-500">
+											{product.reviewCount} reviews
+										</p> */}
+										</div>
+										<p className="mt-4 text-base font-medium text-gray-900">
+											{item.price?.value} руб{item.unit && <span>/</span>}
+											{item.unit?.value}
+										</p>
+									</div>
+								</Link>
+								<Button productID={item.id} />
+							</div>
+						</FadeIn>
 						</div>
 					))}
 				</div>

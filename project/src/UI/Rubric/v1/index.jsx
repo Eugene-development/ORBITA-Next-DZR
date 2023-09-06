@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { FadeIn } from '@/hooks/motion/FadeIn'
 
 export default ({ catalog }) => {
 	return (
@@ -17,6 +18,8 @@ export default ({ catalog }) => {
 					Купите с нашего склада в Дзержинске товар "{catalog.catalog_one.value}" по
 					низкой цене и с доставкой или самовывозом своим транспортом
 				</p>
+									<FadeIn>
+
 				<div className="grid gap-8 my-12 mb-16 md:grid-cols-2">
 					{catalog.catalog_one.rubric.map((item) => (
 						<Link key={item.value} href={`/shop/category/${item.slug}`}>
@@ -55,7 +58,9 @@ export default ({ catalog }) => {
 							</div>
 						</Link>
 					))}
+					
 				</div>
+				</FadeIn>
 				<div>
 					<h2 className="inline-flex py-1 text-2xl font-semibold tracking-wide text-gray-800">
 						{catalog.catalog_one.value}. Цены, описание и применение.
