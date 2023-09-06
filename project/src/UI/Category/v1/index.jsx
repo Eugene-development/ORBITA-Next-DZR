@@ -13,7 +13,6 @@ export default ({ rubric }) => {
 		<div className="bg-white py-16 sm:py-20">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8 font-display">
 				<div className="mx-auto max-w-4xl text-center">
-					
 					<div className="flex mb-6" aria-label="Breadcrumb">
 						<div className="flex items-center space-x-4 mx-auto">
 							<div>
@@ -110,12 +109,12 @@ export default ({ rubric }) => {
 					</h1>
 				</div>
 				<p className="mx-auto mt-6 max-w-2xl text-center text-sm sm:text-lg leading-4 text-gray-600">
-					У нас вы можете купить товар "{rubric.rubric_one.value}" в Дзержинске по низкой цене с доставкой
-					или самовывозом с нашего склада
+					У нас вы можете купить товар "{rubric.rubric_one.value}" в Дзержинске по низкой
+					цене с доставкой или самовывозом с нашего склада
 				</p>
 				<FadeIn>
 					<div className="isolate mx-auto mt-10 mb-16 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
-						{rubric.rubric_one.category.map(({ id, value, slug, product}) => (
+						{rubric.rubric_one.category.map(({ id, value, slug, product }) => (
 							<div
 								key={value}
 								className="ring-1 ring-gray-200 rounded-3xl p-6 xl:p-8 content-between "
@@ -154,7 +153,7 @@ export default ({ rubric }) => {
 											className="h-6 w-5 flex-none text-red-600"
 											aria-hidden="true"
 										/>
-										Минимальная цена <MinPrice data={product}/> руб.
+										Минимальная цена <MinPrice data={product} /> руб.
 									</li>
 								</ul>
 
