@@ -18,29 +18,28 @@ export default ({ catalog }) => {
 					Купите с нашего склада в Дзержинске товар "{catalog.catalog_one.value}" по
 					низкой цене и с доставкой или самовывозом своим транспортом
 				</p>
-									<FadeIn>
+				<FadeIn>
+					<div className="grid gap-8 my-12 mb-16 md:grid-cols-2">
+						{catalog.catalog_one.rubric.map((item) => (
+							<Link key={item.value} href={`/shop/category/${item.slug}`}>
+								<div className="items-center  rounded-lg sm:flex dark:bg-gray-800 dark:border-gray-700 shadow-lg">
+									<img
+										className="hidden lg:block w-36 p-4 rounded-lg sm:rounded-none sm:rounded-l-lg"
+										src="https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/logo/logo.png"
+										alt="Bonnie Avatar"
+									/>
 
-				<div className="grid gap-8 my-12 mb-16 md:grid-cols-2">
-					{catalog.catalog_one.rubric.map((item) => (
-						<Link key={item.value} href={`/shop/category/${item.slug}`}>
-							<div className="items-center  rounded-lg sm:flex dark:bg-gray-800 dark:border-gray-700 shadow-lg">
-								<img
-									className="hidden lg:block w-36 p-4 rounded-lg sm:rounded-none sm:rounded-l-lg"
-									src="https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/logo/logo.png"
-									alt="Bonnie Avatar"
-								/>
-
-								<div className="p-5">
-									<h3 className="flex text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-										<span>
-											{item.value} ({item.category.length}){' '}
-										</span>
-										<ChevronDownIcon
-											className="h-5 w-5  flex-none text-red-800"
-											aria-hidden="true"
-										/>
-									</h3>
-									{/* <div className="flex mt-1">
+									<div className="p-5">
+										<h3 className="flex text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+											<span>
+												{item.value} ({item.category.length}){' '}
+											</span>
+											<ChevronDownIcon
+												className="h-5 w-5  flex-none text-red-800"
+												aria-hidden="true"
+											/>
+										</h3>
+										{/* <div className="flex mt-1">
 										<span className="text-gray-500 dark:text-gray-400">
 											{item.category.length} 
 										</span>
@@ -50,16 +49,15 @@ export default ({ catalog }) => {
 										/>
 									</div> */}
 
-									<p className="mt-4 mb-4 font-light text-gray-500 dark:text-gray-400">
-										Bonnie drives the technical strategy of the flowbite
-										platform and brand.
-									</p>
+										<p className="mt-4 mb-4 font-light text-gray-500 dark:text-gray-400">
+											Bonnie drives the technical strategy of the flowbite
+											platform and brand.
+										</p>
+									</div>
 								</div>
-							</div>
-						</Link>
-					))}
-					
-				</div>
+							</Link>
+						))}
+					</div>
 				</FadeIn>
 				<div>
 					<h2 className="inline-flex py-1 text-2xl font-semibold tracking-wide text-gray-800">

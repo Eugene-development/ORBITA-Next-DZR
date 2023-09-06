@@ -72,22 +72,21 @@ export default () => {
 					</p>
 				</div>
 				<div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 xl:gap-8 md:space-y-0">
-					{monthProduct.map(({id, img, value, price, unit}) => (
+					{monthProduct.map(({ id, img, value, price, unit }) => (
 						<div
 							key={id}
 							className="p-6 bg-white rounded  dark:bg-gray-800 shadow-xl shadow-gray-400"
 						>
 							<div className="mx-auto flex justify-center items-center mb-2 w-20 h-20 rounded lg:h-56 lg:w-56 ">
-								<img
-									src={img}
-									alt={value}
-								/>
+								<img src={img} alt={value} />
 							</div>
-							<h3 className="mb-2 text-xl font-bold dark:text-white">{price} р/{unit}</h3>
+							<h3 className="mb-2 text-xl font-bold dark:text-white">
+								{price} р/{unit}
+							</h3>
 							<p className="font-light text-sm text-gray-500 dark:text-gray-400">
 								{value}
 							</p>
-							<Button productID={id}/>
+							<Button productID={id} />
 						</div>
 					))}
 				</div>

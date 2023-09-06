@@ -4,7 +4,6 @@ import { CheckIcon, QuestionMarkCircleIcon, StarIcon } from '@heroicons/react/20
 import { ShieldCheckIcon } from '@heroicons/react/24/outline'
 import { FadeIn } from '@/hooks/motion/FadeIn'
 
-
 const reviews = { average: 5, totalCount: 1624 }
 
 function classNames(...classes) {
@@ -13,11 +12,11 @@ function classNames(...classes) {
 
 export default ({ product }) => {
 	const pr = {
-	breadcrumbs: [
-		{ id: 1, name: 'Главная', href: '/' },
-		{ id: 2, name: product.product_one.parent.value, href: product.product_one.parent.slug }
-	],
-}
+		breadcrumbs: [
+			{ id: 1, name: 'Главная', href: '/' },
+			{ id: 2, name: product.product_one.parent.value, href: product.product_one.parent.slug }
+		]
+	}
 	return (
 		<FadeIn>
 			<div className="bg-white">
@@ -88,7 +87,9 @@ export default ({ product }) => {
 													/>
 												))}
 											</div>
-											<p className="sr-only">{reviews.average} out of 5 stars</p>
+											<p className="sr-only">
+												{reviews.average} out of 5 stars
+											</p>
 										</div>
 										{/* <p className="ml-2 text-sm text-gray-500"></p> */}
 									</div>
