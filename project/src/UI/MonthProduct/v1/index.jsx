@@ -55,7 +55,7 @@ const monthProduct = [
 		value: 'Jan',
 		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
 		price: 760,
-		unit: 'шт'
+		unit: 'мп'
 	}
 ]
 export default () => {
@@ -72,22 +72,22 @@ export default () => {
 					</p>
 				</div>
 				<div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 xl:gap-8 md:space-y-0">
-					{monthProduct.map((item) => (
+					{monthProduct.map(({id, img, value, price, unit}) => (
 						<div
-							key={item.id}
+							key={id}
 							className="p-6 bg-white rounded  dark:bg-gray-800 shadow-xl shadow-gray-400"
 						>
 							<div className="mx-auto flex justify-center items-center mb-2 w-20 h-20 rounded lg:h-56 lg:w-56 ">
 								<img
-									src="https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg"
-									alt=""
+									src={img}
+									alt={value}
 								/>
 							</div>
-							<h3 className="mb-2 text-xl font-bold dark:text-white">790 р/лист</h3>
+							<h3 className="mb-2 text-xl font-bold dark:text-white">{price} р/{unit}</h3>
 							<p className="font-light text-sm text-gray-500 dark:text-gray-400">
-								{item.value}
+								{value}
 							</p>
-							<Button />
+							<Button productID={id}/>
 						</div>
 					))}
 				</div>
