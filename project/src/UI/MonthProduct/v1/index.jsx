@@ -86,7 +86,7 @@ export default () => {
 							<p className="font-light text-sm text-gray-500 dark:text-gray-400">
 								{value}
 							</p>
-							<Button productID={id} />
+							<Button productID={id} productName={value} productPrice={price} />
 						</div>
 					))}
 				</div>
