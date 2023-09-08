@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react'
 import { useInCart } from '@/app/(catalog)/shop/product/store'
 const { inCart } = useInCart
 
-export default ({ productID, productName, productPrice }) => {
+export default ({ productID, productName, productPrice, productUnit }) => {
 	const { productsInCart, setCurrentProductInCart } = inCart()
 
 	const handleClick = () => {
-		if (!productsInCart.includes(productID)) setCurrentProductInCart(productID, productName, productPrice)
+		if (!productsInCart.includes(productID)) setCurrentProductInCart(productID, productName, productPrice, productUnit)
 	}
 
 	const [isClient, setIsClient] = useState(false)

@@ -180,7 +180,7 @@ export default ({ category }) => {
 											</p>
 										</div>
 									</Link>
-									<Button productID={id} productName={value} productPrice={price.value} />
+									<Button productID={id} productName={value} productPrice={price.value} productUnit={unit?.value}/>
 								</div>
 							</FadeIn>
 						</div>
