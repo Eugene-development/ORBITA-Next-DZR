@@ -221,7 +221,7 @@ export default ({ product }) => {
 										</a>
 									</div> */}
 								<div className="mt-10">
-									<Button productID={product.product_one.id} productName={product.product_one.value} productPrice={product.product_one.price.value}/>
+									<Button productID={product.product_one.id} productName={product.product_one.value} productPrice={product.product_one.price.value} productUnit={product.product_one.unit.value}/>
 								</div>
 								<div className="mt-6 text-center">
 									<div className="group inline-flex text-base font-medium">

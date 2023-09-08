@@ -61,7 +61,7 @@ export default () => {
 							<tbody className="divide-y divide-gray-200">
 								{/* <!-- {#each productsInCart as { id, value, price, unit, img, quantity }, idx} -->
 							{#each $prodInCart as { id, value, price, unit, img, quantity }, idx} */}
-							{productsInCart.map(({id, name, price}, idx) => (
+							{productsInCart.map(({id, name, price, unit}, idx) => (
 								<tr>
 									<td className="w-full max-w-0 py-4 pl-4 pr-3 text-sm font-medium text-gray-900  sm:w-auto sm:max-w-none sm:pl-6">
 										{idx + 1}. <span className="ml-1 first-letter:uppercase">{name}</span>
@@ -69,13 +69,13 @@ export default () => {
 											<dt className="sr-only">Цена</dt>
 											<dd className="mt-1 truncate">
 												<span className="inline-flex rounded-md bg-cyan-100 px-2 text-xs font-semibold leading-5 text-cyan-900">
-													Цена: {price} руб/xxx
+													Цена: {price} руб/{unit}
 												</span>
 											</dd>
 											<dt className="sr-only">Цена</dt>
 											<dd className="mt-1 truncate">
 												<span className="inline-flex rounded-md bg-cyan-100 px-2 text-xs font-semibold leading-5 text-cyan-900">
-													Цена со скидкой: xxx руб/xxx
+													Цена со скидкой: xxx руб/{unit}
 												</span>
 											</dd>
 											<dt className="sr-only sm:hidden">Количество</dt>
@@ -90,12 +90,12 @@ export default () => {
 									</td>
 									<td className="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell ">
 										<span className="inline-flex rounded-md bg-cyan-100 px-3 py-1 text-sm font-semibold leading-5 text-cyan-900">
-											{price} руб/xxx
+											{price} руб/{unit}
 										</span>
 									</td>
 									<td className="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell ">
 										<span className="inline-flex rounded-md bg-cyan-100 px-3 py-1 text-sm font-semibold leading-5 text-cyan-900">
-											{price - price*0.05} руб/xxxx
+											{price - price*0.05} руб/{unit}
 										</span>
 									</td>
 									<td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">

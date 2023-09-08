@@ -4,9 +4,9 @@ const inCart = create(
 	persist(
 		(set) => ({
 			productsInCart: [],
-			setCurrentProductInCart: (id, name, price) =>
+			setCurrentProductInCart: (id, name, price, unit) =>
 				set((state) => ({
-					productsInCart: [...state.productsInCart, { id, name, price }]
+					productsInCart: [...state.productsInCart, { id, name, price, unit }]
 				}))
 			// setCurrentProductInCart: (id) => set(() => ({ productsInCart: id }))
 			// productInCart: false,
