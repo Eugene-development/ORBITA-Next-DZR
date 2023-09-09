@@ -74,6 +74,7 @@ export default () => {
 									<tbody key={id} className="divide-y divide-gray-200">
 										<tr>
 											<InputCount
+											    idx={idx}
 												id={id}
 												name={name}
 												price={price}

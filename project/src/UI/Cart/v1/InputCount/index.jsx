@@ -5,14 +5,14 @@ import { useState, useEffect } from 'react'
 import { useInCart } from '@/app/(catalog)/shop/product/store'
 const { inCart } = useInCart
 
-export default function index({ id, name, price, unit }) {
+export default function index({idx, id, name, price, unit }) {
 	const [count, setCount] = useState(1)
 
 	return (
 		<>
 			{/* mobile */}
 			<td className="w-full max-w-0 py-4 pl-4 pr-3 text-sm font-medium text-gray-900  sm:w-auto sm:max-w-none sm:pl-6">
-				{id}. <span className="ml-1 first-letter:uppercase">{name}</span>
+				{idx + 1}. <span className="ml-1 first-letter:uppercase">{name}</span>
 				<dl className="font-normal lg:hidden">
 					<dt className="sr-only">Цена</dt>
 					<dd className="mt-1 truncate">
