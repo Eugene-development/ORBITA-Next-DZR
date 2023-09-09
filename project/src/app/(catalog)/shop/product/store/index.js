@@ -5,10 +5,11 @@ const inCart = create(
 	persist(
 		(set) => ({
 			productsInCart: [],
-			setCurrentProductInCart: (id, name, price, unit) =>
+			setCurrentProductInCart: (id, name, price, unit, count) =>
 				set((state) => ({
-					productsInCart: [...state.productsInCart, { id, name, price, unit }]
+					productsInCart: [...state.productsInCart, { id, name, price, unit, count }]
 				}))
+
 			// setCurrentProductInCart: (id) => set(() => ({ productsInCart: id }))
 			// productInCart: false,
 			// changeStatusButton: () => set(() => ({ productInCart: true }))
@@ -19,17 +20,17 @@ const inCart = create(
 	)
 )
 
-const countProductTable = create((set) => ({
-	count: 1,
-	setCount: (param) => {
-		console.log(param)
-		set(() => ({
-			count: param
-		}))
-	}
-}))
+// const countProductTable = create((set) => ({
+// 	count: 1,
+// 	setCount: (param) => {
+// 		console.log(param)
+// 		set(() => ({
+// 			count: param
+// 		}))
+// 	}
+// }))
 
 export const useInCart = {
-	inCart,
-	countProductTable
+	inCart
+	// countProductTable
 }

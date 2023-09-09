@@ -133,58 +133,69 @@ export default ({ category }) => {
 				</p>
 
 				<div className="mt-8 -mx-px mb-16 grid grid-cols-2 border border-gray-100 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
-					{category.category_one.product.map(({id, slug, image, value, price, unit}) => (
-						<div key={id}>
-							<FadeIn>
-								<div className="group relative border border-gray-100 p-4 sm:p-6">
-									<Link href={`/shop/product/${slug}`}>
-										<div className="aspect-h-1 aspect-w-1 overflow-hidden group-hover:opacity-75">
-											<img
-												src={
-													image
-														? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${image.hash}`
-														: 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'
-												}
-												alt={value}
-												className="h-full w-full object-contain object-center"
-											/>
-										</div>
-										<div className="pb-4 pt-6 text-center ">
-											<h3 className="text-xs sm:text-sm font-medium text-gray-900 first-letter:uppercase h-12">
-												<span aria-hidden="true" className=" inset-0 " />
-												{value}
-											</h3>
-											<div className="mt-3 flex flex-col items-center">
-												{/* <p className="sr-only">{product.rating} out of 5 stars</p> */}
-												<div className="flex items-center">
-													{[0, 1, 2, 3, 4].map((rating) => (
-														<StarIcon
-															key={rating}
-															className={classNames(
-																true
-																	? 'text-yellow-400'
-																	: 'text-yellow-300',
-																'h-5 w-5 flex-shrink-0'
-															)}
-															aria-hidden="true"
-														/>
-													))}
-												</div>
-												{/* <p className="mt-1 text-sm text-gray-500">
+					{category.category_one.product.map(
+						({ id, slug, image, value, price, unit }) => (
+							<div key={id}>
+								<FadeIn>
+									<div className="group relative border border-gray-100 p-4 sm:p-6">
+										<Link href={`/shop/product/${slug}`}>
+											<div className="aspect-h-1 aspect-w-1 overflow-hidden group-hover:opacity-75">
+												<img
+													src={
+														image
+															? `https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/${image.hash}`
+															: 'https://img2.freepng.ru/20181125/wbe/kisspng-apartment-renting-london-residential-house-product-5bfa6d06347989.212131131543138566215.jpg'
+													}
+													alt={value}
+													className="h-full w-full object-contain object-center"
+												/>
+											</div>
+											<div className="pb-4 pt-6 text-center ">
+												<h3 className="text-xs sm:text-sm font-medium text-gray-900 first-letter:uppercase h-12">
+													<span
+														aria-hidden="true"
+														className=" inset-0 "
+													/>
+													{value}
+												</h3>
+												<div className="mt-3 flex flex-col items-center">
+													{/* <p className="sr-only">{product.rating} out of 5 stars</p> */}
+													<div className="flex items-center">
+														{[0, 1, 2, 3, 4].map((rating) => (
+															<StarIcon
+																key={rating}
+																className={classNames(
+																	true
+																		? 'text-yellow-400'
+																		: 'text-yellow-300',
+																	'h-5 w-5 flex-shrink-0'
+																)}
+																aria-hidden="true"
+															/>
+														))}
+													</div>
+													{/* <p className="mt-1 text-sm text-gray-500">
 											{product.reviewCount} reviews
 										</p> */}
+												</div>
+												<p className="mt-4 text-base font-medium text-gray-900">
+													{price?.value} руб{unit && <span>/</span>}
+													{unit?.value}
+												</p>
 											</div>
-											<p className="mt-4 text-base font-medium text-gray-900">
-												{price?.value} руб{unit && <span>/</span>}
-												{unit?.value}
-											</p>
-										</div>
-									</Link>
-									<Button productID={id} productName={value} productPrice={price.value} productUnit={unit?.value}/>
-								</div>
-							</FadeIn>
-						</div>
-					))}
+										</Link>
+										<Button
+											productID={id}
+											productName={value}
+											productPrice={price.value}
+											productUnit={unit?.value}
+											productCount="1"
+										/>
+									</div>
+								</FadeIn>
+							</div>
+						)
+					)}
 				</div>
 
 				<div>

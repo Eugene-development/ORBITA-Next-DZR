@@ -97,7 +97,6 @@ export default ({ rubric }) => {
 											clip-rule="evenodd"
 										/>
 									</svg>
-									
 								</div>
 							</div>
 

@@ -1,29 +1,22 @@
-'use client'
+import React from 'react'
 
-import { useState, useEffect } from 'react'
-
-import { useInCart } from '@/app/(catalog)/shop/product/store'
-const { inCart } = useInCart
-
-export default function index({ id, name, price, unit }) {
-	const [count, setCount] = useState(1)
-
+export default function index(item) {
 	return (
-		<>
+		<tr>
 			{/* mobile */}
 			<td className="w-full max-w-0 py-4 pl-4 pr-3 text-sm font-medium text-gray-900  sm:w-auto sm:max-w-none sm:pl-6">
-				{id}. <span className="ml-1 first-letter:uppercase">{name}</span>
+				. <span className="ml-1 first-letter:uppercase">{item.name}</span>
 				<dl className="font-normal lg:hidden">
 					<dt className="sr-only">Цена</dt>
 					<dd className="mt-1 truncate">
 						<span className="inline-flex rounded-md bg-cyan-100 px-2 text-xs font-semibold leading-5 text-cyan-900">
-							Цена: {price} руб/{unit}
+							Цена: {item.price} руб/{item.unit}
 						</span>
 					</dd>
 					<dt className="sr-only">Цена</dt>
 					<dd className="mt-1 truncate">
 						<span className="inline-flex rounded-md bg-cyan-100 px-2 text-xs font-semibold leading-5 text-cyan-900">
-							Цена со скидкой: xxx руб/{unit}
+							Цена со скидкой: xxx руб/{item.unit}
 						</span>
 					</dd>
 					<dt className="sr-only sm:hidden">Количество</dt>
@@ -36,23 +29,18 @@ export default function index({ id, name, price, unit }) {
 			{/* Desktop */}
 			<td className="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell ">
 				<span className="inline-flex rounded-md bg-cyan-100 px-3 py-1 text-sm font-semibold leading-5 text-cyan-900">
-					{price} руб/{unit}
+					{item.price} руб/{item.unit}
 				</span>
 			</td>
 			<td className="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell ">
 				<span className="inline-flex rounded-md bg-cyan-100 px-3 py-1 text-sm font-semibold leading-5 text-cyan-900">
-					{price - price * 0.05} руб/{unit}
+					{item.price - item.price * 0.05} руб/{item.unit}
 				</span>
 			</td>
 			<td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">
-				<input
-					value={count}
-					onChange={(e) => setCount(e.target.value)}
-					type="number"
-					className="block w-24 rounded-md border-cyan-300 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"
-				/>
+				{/* <InputCount /> */}
 			</td>
-			<td className="px-3 py-4 text-sm text-gray-500">{price - price * 0.05}</td>
+			<td className="px-3 py-4 text-sm text-gray-500">{item.price - item.price * 0.05}</td>
 			<td className="py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
 				{/* <button
 											on:click={deleteProductFromCart(id)}
@@ -75,6 +63,6 @@ export default function index({ id, name, price, unit }) {
 											</svg>
 										</button> */}
 			</td>
-		</>
+		</tr>
 	)
 }
