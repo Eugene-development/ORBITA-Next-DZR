@@ -21,10 +21,12 @@ const inCart = create(
 
 const countProductTable = create((set) => ({
 	count: 1,
-	setCount: () =>
-		set((currentCount) => ({
-			count: currentCount
+	setCount: (param) => {
+		console.log(param)
+		set(() => ({
+			count: param
 		}))
+	}
 }))
 
 export const useInCart = {

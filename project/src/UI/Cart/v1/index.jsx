@@ -8,10 +8,9 @@ const { inCart, countProductTable } = useInCart
 export default () => {
 
 	const { productsInCart } = inCart()
-	const { count } = countProductTable()
+	// const { count, setCount } = countProductTable()
 
 	const [domLoaded, setDomLoaded] = useState(false);
-
 	useEffect(() => {
 		setDomLoaded(true);
 	}, []);
