@@ -92,8 +92,9 @@ export default () => {
 											<dt className="sr-only sm:hidden">Количество</dt>
 											<dd className="mt-2 mr-20 truncate text-gray-500 sm:hidden">
 												<input
+												    value={count}
 												    onChange={(e) => setCount(e.target.value)}
-													type="text"
+													type="number"
 													className="block w-full rounded-md border-cyan-300 pr-8 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"													
 												/>
 											</dd>
@@ -114,8 +115,9 @@ export default () => {
 									</td>
 									<td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">
 										<input
-										    onChange={(e) => setCount(e.target.value)}
-											type="text"
+										    value={count}
+											onChange={(e) => setCount(e.target.value)}
+											type="number"
 											className="-mr-48 block w-full rounded-md border-cyan-300 pr-16 focus:border-cyan-500 focus:ring-cyan-600 sm:text-sm"										
 										/>
 									</td>
