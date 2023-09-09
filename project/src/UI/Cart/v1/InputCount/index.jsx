@@ -57,7 +57,7 @@ export default function index({idx, id, name, price, unit }) {
 					className="block w-24 rounded-md border-cyan-300 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"
 				/>
 			</td>
-			<td className="px-3 py-4 text-sm text-gray-500">xxx руб.</td>
+			<td className="px-3 py-4 text-sm text-gray-500"><strong>{(price - price * 0.05) * count}</strong> руб.</td>
 			<td className="py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
 				{/* <button
 											on:click={deleteProductFromCart(id)}
