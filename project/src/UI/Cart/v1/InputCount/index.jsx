@@ -8,11 +8,18 @@ const { inCart } = useInCart
 export default function index({idx, id, name, price, unit }) {
 	const [count, setCount] = useState(1)
 
+	const { changeCountLS } = inCart()
+
+	const handleCount = (newQuantity) => {
+		setCount(newQuantity)
+		changeCountLS(id, newQuantity)
+	}
+
 	return (
 		<>
 			{/* mobile */}
 			<td className="w-full max-w-0 py-4 pl-4 pr-3 text-sm font-medium text-gray-900  sm:w-auto sm:max-w-none sm:pl-6">
-				{idx + 1}. <span className="ml-1 first-letter:uppercase">{name}</span>
+				{idx + 1}. <span className="ml-1 first-letter:uppercase">{name}-{id}</span>
 				<dl className="font-normal lg:hidden">
 					<dt className="sr-only">Цена</dt>
 					<dd className="mt-1 truncate">
@@ -30,7 +37,7 @@ export default function index({idx, id, name, price, unit }) {
 					<dd className="mt-2 mr-20 truncate text-gray-500 sm:hidden">
 						<input
 					value={count}
-					onChange={(e) => setCount(e.target.value)}
+					onChange={(e) => setCount(id, e.target.value)}
 					type="number"
 					className="block w-24 rounded-md border-cyan-300 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"
 				/>
@@ -52,7 +59,7 @@ export default function index({idx, id, name, price, unit }) {
 			<td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">
 				<input
 					value={count}
-					onChange={(e) => setCount(e.target.value)}
+					onChange={(e) => handleCount(e.target.value)}
 					type="number"
 					className="block w-24 rounded-md border-cyan-300 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"
 				/>

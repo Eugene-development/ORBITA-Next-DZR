@@ -1,10 +1,9 @@
 'use client'
 import { useState, useEffect } from 'react'
 import InputCount from './InputCount'
-import ProductInCartTable from './ProductInCartTable'
 
 import { useInCart } from '@/app/(catalog)/shop/product/store'
-const { inCart, countProductTable } = useInCart
+const { inCart } = useInCart
 
 export default () => {
 	const { productsInCart } = inCart()
@@ -117,7 +116,7 @@ export default () => {
 
 			<div className="m-8 text-right">
 				<span className="inline-flex  rounded-md bg-cyan-100 px-3.5 py-1 text-xs font-medium text-cyan-800 sm:text-base">
-					ИТОГО (с учётом скидки 5%): xxx руб.
+					Итоговая сумма заказа: xxx руб.
 				</span>
 			</div>
 
