@@ -23,12 +23,17 @@ export default function index({idx, id, name, price, unit }) {
 					<dt className="sr-only">Цена</dt>
 					<dd className="mt-1 truncate">
 						<span className="inline-flex rounded-md bg-cyan-100 px-2 text-xs font-semibold leading-5 text-cyan-900">
-							Цена со скидкой: xxx руб/{unit}
+							Цена со скидкой 5%: {price - price * 0.05} руб/{unit}
 						</span>
 					</dd>
 					<dt className="sr-only sm:hidden">Количество</dt>
 					<dd className="mt-2 mr-20 truncate text-gray-500 sm:hidden">
-						{/* <InputCount /> */}
+						<input
+					value={count}
+					onChange={(e) => setCount(e.target.value)}
+					type="number"
+					className="block w-24 rounded-md border-cyan-300 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"
+				/>
 					</dd>
 				</dl>
 			</td>
@@ -52,7 +57,7 @@ export default function index({idx, id, name, price, unit }) {
 					className="block w-24 rounded-md border-cyan-300 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"
 				/>
 			</td>
-			<td className="px-3 py-4 text-sm text-gray-500">{price - price * 0.05}</td>
+			<td className="px-3 py-4 text-sm text-gray-500">xxx руб.</td>
 			<td className="py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
 				{/* <button
 											on:click={deleteProductFromCart(id)}

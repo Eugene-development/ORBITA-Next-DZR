@@ -48,7 +48,7 @@ export default () => {
 										scope="col"
 										className="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell"
 									>
-										Цена со скидкой:
+										Цена со скидкой 5%:
 									</th>
 
 									<th
