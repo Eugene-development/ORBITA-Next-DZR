@@ -95,14 +95,13 @@ export default () => {
 												    value={count}
 												    onChange={(e) => setCount(e.target.value)}
 													type="number"
-													className="block w-full rounded-md border-cyan-300 pr-8 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"													
+													className="block w-24 rounded-md border-cyan-300 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"													
 												/>
 											</dd>
 										</dl>
 									</td>
 
-
-
+									{/* Desktop */}
 									<td className="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell ">
 										<span className="inline-flex rounded-md bg-cyan-100 px-3 py-1 text-sm font-semibold leading-5 text-cyan-900">
 											{price} руб/{unit}
@@ -118,7 +117,7 @@ export default () => {
 										    value={count}
 											onChange={(e) => setCount(e.target.value)}
 											type="number"
-											className="-mr-48 block w-full rounded-md border-cyan-300 pr-16 focus:border-cyan-500 focus:ring-cyan-600 sm:text-sm"										
+											className=" block w-24 rounded-md border-cyan-300 focus:border-cyan-500 focus:ring-cyan-600 sm:text-sm"										
 										/>
 									</td>
 									<td className="px-3 py-4 text-sm text-gray-500">xxx</td>
