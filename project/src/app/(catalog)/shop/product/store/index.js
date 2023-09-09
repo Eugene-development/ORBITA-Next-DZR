@@ -14,6 +14,10 @@ const inCart = create(
 					productsInCart: state.productsInCart.map((product) =>
 						product.id === id ? { ...product, count: newQuantity } : product
 					)
+				})),
+			removeProduct: (id) =>
+				set((state) => ({
+					productsInCart: state.productsInCart.filter((product) => product.id !== id)
 				}))
 			// set((state) => {
 			// 	const targetProduct = state.productsInCart.find(function (product) {
