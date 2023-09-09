@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+
 const inCart = create(
 	persist(
 		(set) => ({
@@ -18,6 +19,15 @@ const inCart = create(
 	)
 )
 
+const countProductTable = create((set) => ({
+	count: 1,
+	setCount: () =>
+		set((currentCount) => ({
+			count: currentCount
+		}))
+}))
+
 export const useInCart = {
-	inCart
+	inCart,
+	countProductTable
 }

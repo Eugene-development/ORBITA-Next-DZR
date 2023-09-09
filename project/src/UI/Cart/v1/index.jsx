@@ -1,13 +1,14 @@
 "use client"
 import { useState, useEffect } from "react";
+import InputCount from "./InputCount"
 
 import { useInCart } from '@/app/(catalog)/shop/product/store'
-const { inCart } = useInCart
+const { inCart, countProductTable } = useInCart
 
 export default () => {
 
 	const { productsInCart } = inCart()
-	const [count, setCount] = useState(1);
+	const { count } = countProductTable()
 
 	const [domLoaded, setDomLoaded] = useState(false);
 
@@ -91,12 +92,7 @@ export default () => {
 											</dd>
 											<dt className="sr-only sm:hidden">Количество</dt>
 											<dd className="mt-2 mr-20 truncate text-gray-500 sm:hidden">
-												<input
-												    value={count}
-												    onChange={(e) => setCount(e.target.value)}
-													type="number"
-													className="block w-24 rounded-md border-cyan-300 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"													
-												/>
+												<InputCount />
 											</dd>
 										</dl>
 									</td>
@@ -113,12 +109,7 @@ export default () => {
 										</span>
 									</td>
 									<td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">
-										<input
-										    value={count}
-											onChange={(e) => setCount(e.target.value)}
-											type="number"
-											className=" block w-24 rounded-md border-cyan-300 focus:border-cyan-500 focus:ring-cyan-600 sm:text-sm"										
-										/>
+										<InputCount />
 									</td>
 									<td className="px-3 py-4 text-sm text-gray-500">xxx</td>
 									<td className="py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
