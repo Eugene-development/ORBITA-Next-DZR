@@ -1,10 +1,19 @@
 "use client"
+import { useState, useEffect } from "react";
+
 import { useInCart } from '@/app/(catalog)/shop/product/store'
 const { inCart } = useInCart
 
 export default () => {
 
-		const { productsInCart } = inCart()
+	const { productsInCart } = inCart()
+	const [count, setCount] = useState(1);
+
+	const [domLoaded, setDomLoaded] = useState(false);
+
+	useEffect(() => {
+		setDomLoaded(true);
+	}, []);
 
 	return (
 		<>
@@ -58,11 +67,13 @@ export default () => {
 									</th>
 								</tr>
 							</thead>
-							<tbody className="divide-y divide-gray-200">
-								{/* <!-- {#each productsInCart as { id, value, price, unit, img, quantity }, idx} -->
-							{#each $prodInCart as { id, value, price, unit, img, quantity }, idx} */}
-							{productsInCart.map(({id, name, price, unit}, idx) => (
-								<tr>
+
+							{domLoaded && (
+								productsInCart.map(({id, name, price, unit}, idx) => (
+									
+								<tbody key={id} className="divide-y divide-gray-200">
+								<tr >
+									{/* mobile */}
 									<td className="w-full max-w-0 py-4 pl-4 pr-3 text-sm font-medium text-gray-900  sm:w-auto sm:max-w-none sm:pl-6">
 										{idx + 1}. <span className="ml-1 first-letter:uppercase">{name}</span>
 										<dl className="font-normal lg:hidden">
@@ -80,14 +91,17 @@ export default () => {
 											</dd>
 											<dt className="sr-only sm:hidden">Количество</dt>
 											<dd className="mt-2 mr-20 truncate text-gray-500 sm:hidden">
-												{/* <input
+												<input
+												    onChange={(e) => setCount(e.target.value)}
 													type="text"
-													className="block w-full rounded-md border-cyan-300 pr-8 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"
-													bind:value={quantity}
-												/> */}
+													className="block w-full rounded-md border-cyan-300 pr-8 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"													
+												/>
 											</dd>
 										</dl>
 									</td>
+
+
+
 									<td className="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell ">
 										<span className="inline-flex rounded-md bg-cyan-100 px-3 py-1 text-sm font-semibold leading-5 text-cyan-900">
 											{price} руб/{unit}
@@ -99,11 +113,11 @@ export default () => {
 										</span>
 									</td>
 									<td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">
-										{/* <input
+										<input
+										    onChange={(e) => setCount(e.target.value)}
 											type="text"
-											className="-mr-48 block w-full rounded-md border-cyan-300 pr-16 focus:border-cyan-500 focus:ring-cyan-600 sm:text-sm"
-											bind:value={quantity}
-										/> */}
+											className="-mr-48 block w-full rounded-md border-cyan-300 pr-16 focus:border-cyan-500 focus:ring-cyan-600 sm:text-sm"										
+										/>
 									</td>
 									<td className="px-3 py-4 text-sm text-gray-500">xxx</td>
 									<td className="py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
@@ -129,11 +143,14 @@ export default () => {
 										</button> */}
 									</td>
 								</tr>
+								</tbody>
 
-							))}
+							))
+							)}
+							
 								
-								{/* {/each} */}
-							</tbody>
+								
+							
 						</table>
 					</div>
 				</div>
