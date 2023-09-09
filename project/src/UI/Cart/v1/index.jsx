@@ -36,26 +36,26 @@ export default () => {
 										scope="col"
 										className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
 									>
-										Наименование:
+										Наименование :
 									</th>
 									<th
 										scope="col"
 										className="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell"
 									>
-										Цена:
+										Цена :
 									</th>
 									<th
 										scope="col"
 										className="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell"
 									>
-										Цена со скидкой 5%:
+										Cо скидкой 5% :
 									</th>
 
 									<th
 										scope="col"
 										className="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell"
 									>
-										Количество:
+										Количество :
 									</th>
 									<th
 										scope="col"
