@@ -6,13 +6,12 @@ import { useInCart } from '@/app/(catalog)/shop/product/store'
 const { inCart } = useInCart
 
 export default () => {
-	const { productsInCart } = inCart()
-	// const { count, setCount } = countProductTable()
-	const [totalPrice, setTotalPrice] = useState(0)
+	const { productsInCart, totalCount, setTotalCount } = inCart()
 
 	const [domLoaded, setDomLoaded] = useState(false)
 	useEffect(() => {
 		setDomLoaded(true)
+		setTotalCount()
 	}, [])
 
 	return (
@@ -81,7 +80,8 @@ export default () => {
 											/>
 										</tr>
 									</tbody>
-								))}
+								))
+								}
 						</table>
 					</div>
 				</div>
@@ -115,9 +115,11 @@ export default () => {
 			)}
 
 			<div className="m-8 text-right">
+				{domLoaded &&
 				<span className="inline-flex  rounded-md bg-cyan-100 px-3.5 py-1 text-xs font-medium text-cyan-800 sm:text-base">
-					Итоговая сумма заказа: xxx руб.
+					Итоговая сумма заказа: {totalCount} руб.
 				</span>
+}
 			</div>
 
 			<form className="m-8 space-y-6 rounded-md border-2 border-slate-100 bg-gray-50">

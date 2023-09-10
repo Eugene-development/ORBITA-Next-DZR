@@ -8,11 +8,12 @@ const { inCart } = useInCart
 export default function index({idx, id, name, price, unit }) {
 	const [count, setCount] = useState(1)
 
-	const { changeCountLS, removeProduct } = inCart()
+	const { changeCountLS, removeProduct, setTotalCount } = inCart()
 
 	const handleCount = (newQuantity) => {
 		setCount(newQuantity)
 		changeCountLS(id, newQuantity)
+		setTotalCount(newQuantity)
 	}
 
 	const handleRemoveProduct = (id) => {
@@ -41,7 +42,7 @@ export default function index({idx, id, name, price, unit }) {
 					<dd className="mt-2 mr-20 truncate text-gray-500 sm:hidden">
 						<input
 					value={count}
-					onChange={(e) => setCount(id, e.target.value)}
+					onChange={(e) => handleCount(e.target.value)}
 					type="number"
 					className="block w-24 rounded-md border-cyan-300 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"
 				/>
@@ -84,9 +85,9 @@ export default function index({idx, id, name, price, unit }) {
                     >
                         <path
                             d="M6 18L18 6M6 6l12 12"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                         />
                     </svg>
                 </button>
