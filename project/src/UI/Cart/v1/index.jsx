@@ -16,7 +16,7 @@ export default () => {
 
 	return (
 		<>
-			{true ? (
+			{productsInCart.length ? (
 				<div className="mt-12 px-4 sm:px-6 lg:px-8">
 					<div className="sm:flex sm:items-center">
 						<div className="sm:flex-auto">
