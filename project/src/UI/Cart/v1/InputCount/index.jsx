@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { useInCart } from '@/app/(catalog)/shop/product/store'
 const { inCart } = useInCart
 
-export default function index({idx, id, name, price, unit }) {
+export default function index({ idx, id, name, price, unit }) {
 	const [count, setCount] = useState(1)
 
 	const { changeCountLS, removeProduct, setTotalCount } = inCart()
@@ -17,9 +17,9 @@ export default function index({idx, id, name, price, unit }) {
 	}
 
 	const handleRemoveProduct = (id) => {
-    removeProduct(id);
-	setTotalCount();
-  };
+		removeProduct(id)
+		setTotalCount()
+	}
 
 	return (
 		<>
@@ -42,11 +42,11 @@ export default function index({idx, id, name, price, unit }) {
 					<dt className="sr-only sm:hidden">Количество</dt>
 					<dd className="mt-2 mr-20 truncate text-gray-500 sm:hidden">
 						<input
-					value={count}
-					onChange={(e) => handleCount(e.target.value)}
-					type="number"
-					className="block w-24 rounded-md border-cyan-300 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"
-				/>
+							value={count}
+							onChange={(e) => handleCount(e.target.value)}
+							type="number"
+							className="block w-24 rounded-md border-cyan-300 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"
+						/>
 					</dd>
 				</dl>
 			</td>
@@ -70,28 +70,30 @@ export default function index({idx, id, name, price, unit }) {
 					className="block w-24 rounded-md border-cyan-300 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"
 				/>
 			</td>
-			<td className="px-3 py-4 text-sm text-gray-500 w-24"><strong>{Math.ceil((price - price * 0.05)) * count}</strong> руб.</td>
+			<td className="px-3 py-4 text-sm text-gray-500 w-24">
+				<strong>{Math.ceil(price - price * 0.05) * count}</strong> руб.
+			</td>
 			<td className="py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
 				<button
-                    onClick={() => handleRemoveProduct(id)}
-                    className="inline-flex items-center rounded-full border border-transparent bg-red-800 p-1.5 text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-                    type="button"
-                >
-                    <svg
-                        className="h-4 w-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M6 18L18 6M6 6l12 12"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                        />
-                    </svg>
-                </button>
+					onClick={() => handleRemoveProduct(id)}
+					className="inline-flex items-center rounded-full border border-transparent bg-red-800 p-1.5 text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+					type="button"
+				>
+					<svg
+						className="h-4 w-4"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M6 18L18 6M6 6l12 12"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
+						/>
+					</svg>
+				</button>
 			</td>
 		</>
 	)
