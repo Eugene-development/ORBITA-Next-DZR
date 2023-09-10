@@ -58,7 +58,7 @@ export default function index({idx, id, name, price, unit }) {
 			</td>
 			<td className="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell ">
 				<span className="inline-flex rounded-md bg-cyan-100 px-3 py-1 text-sm font-semibold leading-5 text-cyan-900">
-					{price - price * 0.05} руб / {unit}
+					{Math.ceil(price - price * 0.05)} руб / {unit}
 				</span>
 			</td>
 			<td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">
@@ -69,7 +69,7 @@ export default function index({idx, id, name, price, unit }) {
 					className="block w-24 rounded-md border-cyan-300 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"
 				/>
 			</td>
-			<td className="px-3 py-4 text-sm text-gray-500 w-24"><strong>{(price - price * 0.05) * count}</strong> руб.</td>
+			<td className="px-3 py-4 text-sm text-gray-500 w-24"><strong>{Math.ceil((price - price * 0.05)) * count}</strong> руб.</td>
 			<td className="py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
 				<button
                     onClick={() => handleRemoveProduct(id)}

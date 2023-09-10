@@ -24,11 +24,13 @@ const inCart = create(
 			// Сумма считается не корректно. При загрузке страницы выводится ноль.
 			setTotalCount: () =>
 				set((state) => ({
-					totalCount: state.productsInCart.reduce((sum, product) => {
-						let price = product.price
-						let count = product.count
-						return sum + price * count - price * count * 0.05
-					}, 0)
+					totalCount: Math.ceil(
+						state.productsInCart.reduce((sum, product) => {
+							let price = product.price
+							let count = product.count
+							return sum + price * count - price * count * 0.05
+						}, 0)
+					)
 				}))
 
 			// 		total = $prodInCart.reduce((sum, product) => {
