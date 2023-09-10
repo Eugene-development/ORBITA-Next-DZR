@@ -18,6 +18,7 @@ export default function index({idx, id, name, price, unit }) {
 
 	const handleRemoveProduct = (id) => {
     removeProduct(id);
+	setTotalCount();
   };
 
 	return (
