@@ -8,6 +8,29 @@ const { inCart } = useInCart
 export default () => {
 	const { productsInCart, totalCount, setTotalCount } = inCart()
 
+	const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    address: '',
+    comment: '',
+  });
+	
+// Обработчик изменения полей формы
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  useEffect(() => {
+    // В этом блоке можно выполнять действия при изменении полей формы
+    console.log('Форма была изменена:', formData);
+  }, [formData]); // Передайте зависимость [formData] для отслеживания изменений
+
+
+
 	const [domLoaded, setDomLoaded] = useState(false)
 	useEffect(() => {
 		setDomLoaded(true)
@@ -20,7 +43,7 @@ export default () => {
 				<div className="mt-12 px-4 sm:px-6 lg:px-8">
 					<div className="sm:flex sm:items-center">
 						<div className="sm:flex-auto">
-							<h1 className="text-2xl font-semibold text-gray-900">Ваша корзина</h1>
+							<p className="text-2xl font-semibold text-gray-900">Ваша корзина</p>
 							<p className="mt-2 text-sm text-gray-700">
 								После отправки заказа с вами свяжется менеджер
 							</p>
@@ -140,6 +163,8 @@ export default () => {
 										Ваше имя:
 									</label>
 									<input
+									    value={formData.firstName}
+        onChange={handleInputChange}
 										type="text"
 										required
 										id="first_name"
@@ -155,6 +180,8 @@ export default () => {
 										Телефон:
 									</label>
 									<input
+									value={formData.firstName}
+        onChange={handleInputChange}
 										type="text"
 										required
 										id="phone"
@@ -169,6 +196,8 @@ export default () => {
 											Адрес доставки:
 										</label>
 										<input
+										value={formData.firstName}
+        onChange={handleInputChange}
 											type="text"
 											id="street_address"
 											className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-800 focus:ring-red-800 sm:text-sm"
@@ -183,6 +212,8 @@ export default () => {
 											Комментарий:
 										</label>
 										<input
+										value={formData.firstName}
+        onChange={handleInputChange}
 											type="text"
 											id="comments"
 											className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-800 focus:ring-red-800 sm:text-sm"

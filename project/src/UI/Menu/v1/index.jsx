@@ -130,7 +130,7 @@ export default () => {
 					<Popover.Group className="hidden lg:flex lg:gap-x-12">
 						<Link
 							href="/"
-							className="text-base font-display font-semibold leading-6 text-gray-800"
+							className="text-base font-display font-semibold leading-6 text-gray-800 transition ease-in-out hover:scale-110 hover:text-red-700"
 						>
 							Главная
 						</Link>
@@ -142,7 +142,7 @@ export default () => {
 										setShowCatalog(!showCatalog)
 										setShowServices(false)
 									}}
-									className="your-target-class outline-none font-display flex items-center gap-x-1 text-base font-semibold leading-6 text-gray-800"
+									className="your-target-class outline-none font-display flex items-center gap-x-1 text-base font-semibold leading-6 text-gray-800 hover:text-red-700 transition ease-in-out hover:scale-110"
 								>
 									Каталог
 									<ChevronDownIcon
@@ -217,7 +217,7 @@ export default () => {
 										setShowServices(!showServices)
 										setShowCatalog(false)
 									}}
-									className="outline-none flex items-center gap-x-1 text-base font-display font-semibold leading-6 text-gray-800"
+									className="outline-none flex items-center gap-x-1 text-base font-display font-semibold leading-6 text-gray-800 hover:text-red-700 transition ease-in-out hover:scale-110"
 								>
 									Услуги
 									<ChevronDownIcon
@@ -261,7 +261,7 @@ export default () => {
 						</OutsideClickHandler>
 						<Link
 							href="/about"
-							className="text-base font-display font-semibold leading-6 text-gray-800"
+							className="text-base font-display font-semibold leading-6 text-gray-800 hover:text-red-700 transition ease-in-out hover:scale-110"
 						>
 							О компании
 						</Link>
@@ -274,7 +274,7 @@ export default () => {
 
 						<Link
 							href="/contact"
-							className="text-base font-display font-semibold leading-6 text-gray-800"
+							className="text-base font-display font-semibold leading-6 text-gray-800 hover:text-red-700 transition ease-in-out hover:scale-110"
 						>
 							Контакты
 						</Link>

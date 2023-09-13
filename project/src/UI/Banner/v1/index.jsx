@@ -5,7 +5,9 @@ import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/20/solid'
 export default function Banner({ data, currentVisibleBanner, changeVisibleBanner }) {
 	return (
 		currentVisibleBanner && (
-			<div className="relative isolate flex items-center py-2.5 px-4 sm:px-3.5 bg-gray-900 justify-between">
+			<>
+			
+						<div className="relative isolate flex items-center py-2.5 px-4 sm:px-3.5 bg-gray-900 justify-between">
 				<svg
 					viewBox="0 0 577 310"
 					aria-hidden="true"
@@ -31,7 +33,7 @@ export default function Banner({ data, currentVisibleBanner, changeVisibleBanner
 						</linearGradient>
 					</defs>
 				</svg>
-				<div className="flex flex-1 justify-start">
+				<div className="pr-8 flex flex-1 justify-start">
 					<div className="hidden md:flex">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -63,6 +65,9 @@ export default function Banner({ data, currentVisibleBanner, changeVisibleBanner
 					</a>
 				</div>
 
+<marquee className="flex" direction="left">
+<div className='flex space-x-48'>
+
 				<a
 					href="mailto:info@orbita-stroy.com"
 					className="hidden md:block text-sm leading-6 text-gray-50 font-display"
@@ -81,10 +86,36 @@ export default function Banner({ data, currentVisibleBanner, changeVisibleBanner
 						<span className="text-red-500">&rarr; &nbsp;</span> {data.email}
 					</span>
 				</a>
-				<div className="flex flex-1 justify-end">
+				<a
+					href="mailto:info@orbita-stroy.com"
+					className="hidden md:block text-sm leading-6 text-gray-50 font-display"
+				>
+					<strong className="font-semibold">Покупаете как организация?</strong>
+					<svg
+						viewBox="0 0 2 2"
+						className="mx-2 inline h-0.5 w-0.5 fill-current text-red-500"
+						aria-hidden="true"
+					>
+						<circle cx={1} cy={1} r={1} />
+					</svg>
+					Отправьте запрос на почту &nbsp;
+					<span aria-hidden="true">
+						{' '}
+						<span className="text-red-500">&rarr; &nbsp;</span> {data.email}
+					</span>
+				</a>
+
+
+</div>
+</marquee>
+
+				<div className="pl-8 flex flex-1 justify-end">
 					<CloseButton changeVisibleBanner={changeVisibleBanner} />
 				</div>
 			</div>
+
+			
+			</>
 		)
 	)
 }
