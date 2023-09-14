@@ -120,7 +120,7 @@ export default () => {
 														className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
 														aria-hidden="true"
 													/>
-													<span className="ml-2 text-2xl font-medium text-red-800 group-hover:text-gray-800">
+													<span className="w-8 ml-2 text-2xl font-medium text-red-800 group-hover:text-gray-800">
 														{isClient && productsInCart.length}
 													</span>
 													<span className="sr-only">
