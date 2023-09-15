@@ -180,8 +180,8 @@ export default ({allProducts}) => {
 														</tr>
 													</thead>
 													<tbody>
-                                                        {allProducts.product.map((item)=> (
-                                                            <tr key={item.id} className="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                                        {allProducts.product.map(({id, value, price, unit})=> (
+                                                            <tr key={id} className="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
 															<th
 																scope="row"
 																className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"
@@ -192,7 +192,7 @@ export default ({allProducts}) => {
 																		alt="iMac Front Image"
 																		className="h-8 w-auto mr-3"
 																	/> */}
-																	{item.value}
+																	{value}
 																</div>
 															</th>
 															{/* <td className="px-4 py-3">
@@ -200,7 +200,7 @@ export default ({allProducts}) => {
 																	Desktop PC
 																</span>
 															</td> */}
-															<td className="px-4 py-3">$3.2M</td>
+															<td className="px-4 py-3">{price?.value} р/{unit?.value}</td>
 															<td className="px-4 py-3  font-medium text-gray-900 whitespace-nowrap dark:text-white">
 																<div className="flex items-center space-x-4 ">
 																	<button
