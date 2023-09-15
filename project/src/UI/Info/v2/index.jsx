@@ -1,15 +1,11 @@
 'use client'
-// import { gql, request } from 'graphql-request'
 import SearchButton from "./SearchButton"
 import Link from 'next/link'
 import { useInCart } from '@/app/(catalog)/shop/product/store'
 const { inCart } = useInCart
 
-// import { getAllProducts } from '@/app/layout/info/server'
 
 import SearchModal from './SearchModal'
-// import { useStoreSearch } from '@/store/search'
-// const { visibleSearch } = useStoreSearch
 
 import { Fragment, useState, useEffect } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
@@ -31,67 +27,13 @@ const navigation = {
 }
 
 export default ({allProducts}) => {
-// console.log( allProducts)
-
-	// const allProducts = await getAllProducts()
 
 	const { productsInCart } = inCart()
-	// const { openVisibleSearch } = visibleSearch()
 
-	// const [products, setProducts] = useState([])
-	// const [isHovered, setIsHovered] = useState(false)
-	// const [hasFetchedData, setHasFetchedData] = useState(false)
 
-	// console.log( getAllProducts())
-
-	// useEffect(() => {
-    // if (isHovered && !hasFetchedData) {
-
-	// 	setHasFetchedData(true);
-			// console.log(() => getAllProducts())
-
-		// setProducts(() => getAllProducts())
-
-		// console.log('123')
-    //   getAllProducts()
-    //     .then((response) => {
-    //       setProducts(response.data);
-    //       setHasFetchedData(true);
-    //     })
-    //     .catch((error) => {
-    //       // Обработка ошибок
-    //     });
-//     }
-//   }, [isHovered, hasFetchedData]);
-
-// const ALL_PRODUCTS = gql`
-// 	query all_product {
-// 		product {
-// 			id
-// 			value
-// 			slug
-// 			price {
-// 				id
-// 				value
-// 			}
-// 			unit {
-// 				value
-// 			}
-// 		}
-// 	}
-// `
-
-// const getAllProducts = async () => {
-// 		const url = process.env.NEXT_PUBLIC_GRAPHQL
-		
-// 		const pr = await request(url, ALL_PRODUCTS);
-// 		console.log(pr);
-// 	};
-
-	const handleSearch = () => {
-		// console.log( getAllProducts())
-		openVisibleSearch()
-	}
+	// const handleSearch = () => {
+	// 	openVisibleSearch()
+	// }
 
 	const [isClient, setIsClient] = useState(false)
 	useEffect(() => {
