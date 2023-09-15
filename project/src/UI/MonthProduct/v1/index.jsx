@@ -67,8 +67,8 @@ export default () => {
 						Стройматериалы по сниженным ценам
 					</h2>
 					<p className="font-light text-gray-500 dark:text-gray-400 sm:text-xl">
-						Так же вы получите <strong className='text-red-700'>плюс 5% скидки</strong> к цене при заказе через наш интернет
-						магазин стройматериалов.
+						Так же вы получите <strong className="text-red-700">плюс 5% скидки</strong>{' '}
+						к цене при заказе через наш интернет магазин стройматериалов.
 					</p>
 				</div>
 				<div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 xl:gap-8 md:space-y-0">

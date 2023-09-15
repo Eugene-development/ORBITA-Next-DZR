@@ -26,23 +26,43 @@ const navigation = {
 	]
 }
 
-function classNames(...classes) {
-	return classes.filter(Boolean).join(' ')
-}
-
 export default () => {
 	const { productsInCart } = inCart()
 	const { openVisibleSearch } = visibleSearch()
-	
-	const [isClient, setIsClient] = useState(false)
 
+	const [products, setProducts] = useState([])
+	const [isHovered, setIsHovered] = useState(false)
+	const [hasFetchedData, setHasFetchedData] = useState(false)
+
+	useEffect(() => {
+    if (isHovered ) {
+
+		setHasFetchedData(true);
+
+		// console.log('123')
+    //   getAllProducts()
+    //     .then((response) => {
+    //       setProducts(response.data);
+    //       setHasFetchedData(true);
+    //     })
+    //     .catch((error) => {
+    //       // Обработка ошибок
+    //     });
+    }
+  }, [isHovered, hasFetchedData]);
+
+	const handleSearch = () => {
+		openVisibleSearch()
+	}
+
+	const [isClient, setIsClient] = useState(false)
 	useEffect(() => {
 		setIsClient(true)
 	}, [])
 
 	return (
 		<div className="bg-white">
-			<SearchModal/>
+			<SearchModal />
 			<header className="relative z-10">
 				<nav aria-label="Top">
 					<div className="bg-white">
@@ -97,11 +117,13 @@ export default () => {
 											8 (8314) 23-70-96
 										</Link>
 									</div>
+
 									<div className="flex flex-1 items-center justify-end">
 										<div className="flex items-center lg:ml-8">
-											<div  className="flex space-x-8">
+											<div className="flex space-x-8">
 												<button
-													onClick={() => openVisibleSearch()} 
+												    onMouseEnter={() => setIsHovered(true)}
+													onClick={handleSearch}
 													className="-m-2 p-2 text-gray-400 hover:text-gray-500"
 												>
 													<span className="sr-only">Поиск</span>
