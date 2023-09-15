@@ -1,4 +1,8 @@
 import { Info } from '@/UI'
-export default function index() {
-	return <Info />
+import { getAllProducts } from './server'
+
+export default async function index() {
+		const allProducts = await getAllProducts()
+
+	return <Info allProducts={allProducts}/>
 }

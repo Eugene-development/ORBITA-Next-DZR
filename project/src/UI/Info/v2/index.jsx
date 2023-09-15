@@ -1,11 +1,15 @@
 'use client'
+// import { gql, request } from 'graphql-request'
+import SearchButton from "./SearchButton"
 import Link from 'next/link'
 import { useInCart } from '@/app/(catalog)/shop/product/store'
 const { inCart } = useInCart
 
+// import { getAllProducts } from '@/app/layout/info/server'
+
 import SearchModal from './SearchModal'
-import { useStoreSearch } from '@/store/search'
-const { visibleSearch } = useStoreSearch
+// import { useStoreSearch } from '@/store/search'
+// const { visibleSearch } = useStoreSearch
 
 import { Fragment, useState, useEffect } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
@@ -26,18 +30,27 @@ const navigation = {
 	]
 }
 
-export default () => {
+export default ({allProducts}) => {
+// console.log( allProducts)
+
+	// const allProducts = await getAllProducts()
+
 	const { productsInCart } = inCart()
-	const { openVisibleSearch } = visibleSearch()
+	// const { openVisibleSearch } = visibleSearch()
 
-	const [products, setProducts] = useState([])
-	const [isHovered, setIsHovered] = useState(false)
-	const [hasFetchedData, setHasFetchedData] = useState(false)
+	// const [products, setProducts] = useState([])
+	// const [isHovered, setIsHovered] = useState(false)
+	// const [hasFetchedData, setHasFetchedData] = useState(false)
 
-	useEffect(() => {
-    if (isHovered ) {
+	// console.log( getAllProducts())
 
-		setHasFetchedData(true);
+	// useEffect(() => {
+    // if (isHovered && !hasFetchedData) {
+
+	// 	setHasFetchedData(true);
+			// console.log(() => getAllProducts())
+
+		// setProducts(() => getAllProducts())
 
 		// console.log('123')
     //   getAllProducts()
@@ -48,10 +61,35 @@ export default () => {
     //     .catch((error) => {
     //       // Обработка ошибок
     //     });
-    }
-  }, [isHovered, hasFetchedData]);
+//     }
+//   }, [isHovered, hasFetchedData]);
+
+// const ALL_PRODUCTS = gql`
+// 	query all_product {
+// 		product {
+// 			id
+// 			value
+// 			slug
+// 			price {
+// 				id
+// 				value
+// 			}
+// 			unit {
+// 				value
+// 			}
+// 		}
+// 	}
+// `
+
+// const getAllProducts = async () => {
+// 		const url = process.env.NEXT_PUBLIC_GRAPHQL
+		
+// 		const pr = await request(url, ALL_PRODUCTS);
+// 		console.log(pr);
+// 	};
 
 	const handleSearch = () => {
+		// console.log( getAllProducts())
 		openVisibleSearch()
 	}
 
@@ -62,7 +100,7 @@ export default () => {
 
 	return (
 		<div className="bg-white">
-			<SearchModal />
+			<SearchModal allProducts={allProducts}/>
 			<header className="relative z-10">
 				<nav aria-label="Top">
 					<div className="bg-white">
@@ -120,19 +158,8 @@ export default () => {
 
 									<div className="flex flex-1 items-center justify-end">
 										<div className="flex items-center lg:ml-8">
-											<div className="flex space-x-8">
-												<button
-												    onMouseEnter={() => setIsHovered(true)}
-													onClick={handleSearch}
-													className="-m-2 p-2 text-gray-400 hover:text-gray-500"
-												>
-													<span className="sr-only">Поиск</span>
-													<MagnifyingGlassIcon
-														className="h-6 w-6"
-														aria-hidden="true"
-													/>
-												</button>
-											</div>
+											<SearchButton/>
+											
 
 											<span
 												className="mx-4 h-6 w-px bg-gray-200 lg:mx-6"
