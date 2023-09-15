@@ -2,7 +2,7 @@
 import { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/24/outline'
-
+import TableBody from "./TableBody"
 import { useStoreSearch } from '@/store/search'
 const { visibleSearch } = useStoreSearch
 
@@ -10,7 +10,9 @@ export default ({allProducts}) => {
 
     	// console.log(allProducts)
 
-	// const [open, setOpen] = useState(true)
+	const [request, setRequest] = useState("")
+
+    
 
 	const { currentVisibleSearch, closeVisibleSearch } = visibleSearch()
 

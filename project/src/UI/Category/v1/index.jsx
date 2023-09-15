@@ -187,7 +187,7 @@ export default ({ rubric }) => {
 					</div>
 				</FadeIn>
 				<div>
-					<h2 class="mx-auto  py-1 text-xl  tracking-wide text-slate-800">
+					<h2 className="mx-auto  py-1 text-xl  tracking-wide text-slate-800">
 						<strong className="inline-flex py-1 text-2xl font-semibold tracking-wide text-gray-800">
 							{rubric.rubric_one.value} со склада в Дзержинске.
 						</strong>
