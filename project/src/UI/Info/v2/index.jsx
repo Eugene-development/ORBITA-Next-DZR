@@ -35,21 +35,12 @@ export default () => {
 	const { openVisibleSearch, currentVisibleSearch } = visibleSearch()
 	const { setAllProducts, allProducts } = products()
 
-	// const [allProducts, setAllProducts] = useState()
-// console.log(allProducts)
-
-
-
-// const [isHovered, setIsHovered] = useState(false);
-
-
 
 	const handleSearch = async () => {
 		// Если продукты ещё не получен, получаем с серверного экшена getAllProducts данные и пишем его в стор Зустанд через метод setAllProducts
 		if (allProducts.length < 1) setAllProducts(await getAllProducts())
 		openVisibleSearch()
 	}
-
 
 	const [isClient, setIsClient] = useState(false)
 	useEffect(() => {
