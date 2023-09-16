@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { useInCart } from '@/app/(catalog)/shop/product/store'
 const { inCart } = useInCart
 
-
 import SearchModal from './SearchModal'
 import { getAllProducts } from '@/app/layout/info/server'
 
@@ -30,11 +29,9 @@ const navigation = {
 }
 
 export default () => {
-
 	const { productsInCart } = inCart()
 	const { openVisibleSearch, currentVisibleSearch } = visibleSearch()
 	const { setAllProducts, allProducts } = products()
-
 
 	const handleSearch = async () => {
 		// Если продукты ещё не получен, получаем с серверного экшена getAllProducts данные и пишем его в стор Зустанд через метод setAllProducts
@@ -49,7 +46,7 @@ export default () => {
 
 	return (
 		<div className="bg-white">
-			{currentVisibleSearch && <SearchModal />}
+			<SearchModal />
 			<header className="relative z-10">
 				<nav aria-label="Top">
 					<div className="bg-white">
@@ -110,7 +107,7 @@ export default () => {
 											<div className="flex space-x-8">
 												<button
 													// onMouseEnter={() => setIsHovered(true)}
-        											// onMouseLeave={() => setIsHovered(false)}
+													// onMouseLeave={() => setIsHovered(false)}
 													onClick={handleSearch}
 													className="-m-2 p-2 text-gray-400 hover:text-gray-500"
 												>
@@ -121,7 +118,6 @@ export default () => {
 													/>
 												</button>
 											</div>
-											
 
 											<span
 												className="mx-4 h-6 w-px bg-gray-200 lg:mx-6"
