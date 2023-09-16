@@ -195,14 +195,10 @@ export default () => {
 																			scope="row"
 																			className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"
 																		>
-																			<div className="flex items-center mr-3 text-xs first-letter:uppercase">
-																				{/* <img
-                                                                            src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
-                                                                            alt="iMac Front Image"
-                                                                            className="h-8 w-auto mr-3"
-                                                                        /> */}
+																			<span className="flex items-center mr-3 text-xs first-letter:uppercase">
+																				
 																				{value}
-																			</div>
+																			</span>
 																		</th>
 																		{/* <td className="px-4 py-3">
                                                                     <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
