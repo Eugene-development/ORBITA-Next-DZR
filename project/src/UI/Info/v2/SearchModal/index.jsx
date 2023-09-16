@@ -10,9 +10,6 @@ export default () => {
     	const { allProducts } = products()
         console.log(allProducts)
 
-	const [request, setRequest] = useState("")
-
-    
 
 	const { currentVisibleSearch, closeVisibleSearch } = visibleSearch()
 
