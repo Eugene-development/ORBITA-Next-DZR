@@ -42,11 +42,10 @@ export default () => {
 
 const [isHovered, setIsHovered] = useState(false);
 
-// const ddd =  console.log('123')
 
-		useEffect( () => {
-			if (isHovered) getProd()
-		}, [isHovered]);
+	useEffect( () => {
+		isHovered && getProd()
+	}, [isHovered]);
 
 
 	const getProd = async () => {
