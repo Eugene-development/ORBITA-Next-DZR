@@ -55,8 +55,8 @@ export default ({ catalog }) => {
 					</h1>
 				</div>
 				<p className="mx-auto mt-6 max-w-2xl text-center text-sm sm:text-lg leading-6 text-gray-600">
-					Купите с нашего склада в Дзержинске товар "{catalog.catalog_one.value}" по
-					низкой цене и с доставкой или самовывозом своим транспортом
+					Купите с нашего склада категорию товаров "{catalog.catalog_one.value}" по
+					низкой цене с доставкой или самовывозом своим транспортом
 				</p>
 				<FadeIn>
 					<div className="grid gap-8 my-12 mb-16 md:grid-cols-2">

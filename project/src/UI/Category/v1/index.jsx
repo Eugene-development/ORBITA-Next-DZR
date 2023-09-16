@@ -127,8 +127,8 @@ export default ({ rubric }) => {
 					</h1>
 				</div>
 				<p className="mx-auto mt-6 max-w-2xl text-center text-sm sm:text-lg leading-4 text-gray-600">
-					У нас вы можете купить товар "{rubric.rubric_one.value}" в Дзержинске по низкой
-					цене с доставкой или самовывозом с нашего склада
+					У нас вы можете купить категорию товаров "{rubric.rubric_one.value}" по низкой
+					цене с доставкой или самовывозом
 				</p>
 				<FadeIn>
 					<div className="isolate mx-auto mt-10 mb-16 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
