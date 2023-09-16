@@ -11,18 +11,19 @@ export default () => {
     
     const [ request, setRequest] = useState('')
 
+    const [filteredProducts, setFilteredProducts] = useState([]);
 
-    let res = [];
-    if (request.length >= 3) {
+useEffect(() => {
+    if (request.length >= 3) { request.length >= 3 
 		const query = request.toLowerCase();
-		const res = allProducts.product.filter(({ value }) => value.toLowerCase().includes(query));
-
-        console.log(res)
-		// const result = search(query);        
-		// const query = request.toLowerCase();
-		// const search = (query) => allProducts.product.filter(({ value }) => value.toLowerCase().includes(query));
-		// const result = search(query);        
+		const filtered = allProducts.product.filter(({ value }) => value.toLowerCase().includes(query));
+        setFilteredProducts(filtered);
 	}
+    else {
+      // Если введено менее трех символов, очищаем результат фильтрации
+      setFilteredProducts([]);
+    }
+    }, [request, allProducts]);
     
 
 	const { currentVisibleSearch, closeVisibleSearch } = visibleSearch()
@@ -110,6 +111,7 @@ export default () => {
 															</div>
 															<input
                                                                 onChange={(e) => setRequest(e.target.value)}
+                                                                value={request}
 																type="text"
 																id="simple-search"
 																placeholder="Поиск по каталогу"
@@ -176,7 +178,7 @@ export default () => {
 														</tr>
 													</thead>
 													<tbody>
-                                                        { res.map(({id, value, price, unit})=> (
+                                                        {filteredProducts.map(({id, value, price, unit})=> (
                                                             <tr key={id} className="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
 															<th
 																scope="row"
