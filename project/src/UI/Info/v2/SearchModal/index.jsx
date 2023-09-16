@@ -19,10 +19,6 @@ export default () => {
 	const cancelButtonRef = useRef(null)
 
 
-    const [isClient, setIsClient] = useState(false)
-	useEffect(() => {
-		setIsClient(true)
-	}, [])
 
 	return (
 		<Transition.Root show={currentVisibleSearch} as={Fragment}>
@@ -188,7 +184,7 @@ export default () => {
 														</tr>
 													</thead>
 													<tbody>
-                                                        {isClient && allProducts.product.map(({id, value, price, unit})=> (
+                                                        {allProducts.product.map(({id, value, price, unit})=> (
                                                             <tr key={id} className="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
 															<th
 																scope="row"

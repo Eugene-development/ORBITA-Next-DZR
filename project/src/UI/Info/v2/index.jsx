@@ -33,7 +33,7 @@ export default () => {
 
 	const { productsInCart } = inCart()
 	const { openVisibleSearch, currentVisibleSearch } = visibleSearch()
-	const { allProducts, setAllProducts } = products()
+	const { setAllProducts } = products()
 
 	// const [allProducts, setAllProducts] = useState()
 // console.log(allProducts)
@@ -52,9 +52,8 @@ export default () => {
 
 
 	const handleSearch = async () => {
-
-		const pr = await getAllProducts()
-		setAllProducts(pr)			
+		// Получаем с серверного экшена getAllProducts данные и пишем его в стор Зустанд через метод setAllProducts
+		setAllProducts(await getAllProducts())			
 		openVisibleSearch()
 	}
 
