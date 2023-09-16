@@ -1,5 +1,4 @@
 'use client'
-import SearchButton from "./SearchButton"
 import Link from 'next/link'
 import { useInCart } from '@/app/(catalog)/shop/product/store'
 const { inCart } = useInCart
@@ -9,7 +8,7 @@ import SearchModal from './SearchModal'
 import { getAllProducts } from '@/app/layout/info/server'
 
 import { useStoreSearch } from '@/store/search'
-const { visibleSearch } = useStoreSearch
+const { visibleSearch, products } = useStoreSearch
 
 import { Fragment, useState, useEffect } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
@@ -30,19 +29,34 @@ const navigation = {
 	]
 }
 
-export default ({allProducts}) => {
+export default () => {
 
 	const { productsInCart } = inCart()
-	const { openVisibleSearch } = visibleSearch()
+	const { openVisibleSearch, currentVisibleSearch } = visibleSearch()
+	const { allProducts, setAllProducts } = products()
+
+	// const [allProducts, setAllProducts] = useState()
+// console.log(allProducts)
+
+
+
+// const [isHovered, setIsHovered] = useState(false);
+
+
+// useEffect(async () => {
+//     if (isHovered) {
+//       const products = await getAllProducts()
+// 	  console.log(products)
+//     }
+//   }, [isHovered]);
 
 
 	const handleSearch = async () => {
 
-			const test = await getAllProducts()
-			console.log(test)
-			openVisibleSearch()
-	    }
-
+		const pr = await getAllProducts()
+		setAllProducts(pr)			
+		openVisibleSearch()
+	}
 
 
 	const [isClient, setIsClient] = useState(false)
@@ -52,7 +66,7 @@ export default ({allProducts}) => {
 
 	return (
 		<div className="bg-white">
-			<SearchModal allProducts={allProducts}/>
+			{currentVisibleSearch && <SearchModal />}
 			<header className="relative z-10">
 				<nav aria-label="Top">
 					<div className="bg-white">
@@ -113,6 +127,7 @@ export default ({allProducts}) => {
 											<div className="flex space-x-8">
 												<button
 													// onMouseEnter={() => setIsHovered(true)}
+        											// onMouseLeave={() => setIsHovered(false)}
 													onClick={handleSearch}
 													className="-m-2 p-2 text-gray-400 hover:text-gray-500"
 												>
