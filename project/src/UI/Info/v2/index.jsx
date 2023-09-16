@@ -40,22 +40,13 @@ export default () => {
 
 
 
-const [isHovered, setIsHovered] = useState(false);
+// const [isHovered, setIsHovered] = useState(false);
 
 
-	useEffect( () => {
-		isHovered && getProd()
-	}, [isHovered]);
 
-
-	const getProd = async () => {
-		// Получаем с серверного экшена getAllProducts данные и пишем его в стор Зустанд через метод setAllProducts
-		setAllProducts(await getAllProducts())			
-		
-	}
 	const handleSearch = async () => {
-		// Получаем с серверного экшена getAllProducts данные и пишем его в стор Зустанд через метод setAllProducts
-		setAllProducts(await getAllProducts())			
+		// Если продукты ещё не получен, получаем с серверного экшена getAllProducts данные и пишем его в стор Зустанд через метод setAllProducts
+		if (allProducts.length < 1) setAllProducts(await getAllProducts())
 		openVisibleSearch()
 	}
 
@@ -127,8 +118,8 @@ const [isHovered, setIsHovered] = useState(false);
 										<div className="flex items-center lg:ml-8">
 											<div className="flex space-x-8">
 												<button
-													onMouseEnter={() => setIsHovered(true)}
-        											onMouseLeave={() => setIsHovered(false)}
+													// onMouseEnter={() => setIsHovered(true)}
+        											// onMouseLeave={() => setIsHovered(false)}
 													onClick={handleSearch}
 													className="-m-2 p-2 text-gray-400 hover:text-gray-500"
 												>
