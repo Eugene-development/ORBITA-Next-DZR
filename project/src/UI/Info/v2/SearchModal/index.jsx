@@ -8,8 +8,22 @@ const { visibleSearch, products } = useStoreSearch
 export default () => {
 
     const { allProducts } = products()
-    // console.log(allProducts)
+    
+    const [ request, setRequest] = useState('')
 
+
+    let res = [];
+    if (request.length >= 3) {
+		const query = request.toLowerCase();
+		const res = allProducts.product.filter(({ value }) => value.toLowerCase().includes(query));
+
+        console.log(res)
+		// const result = search(query);        
+		// const query = request.toLowerCase();
+		// const search = (query) => allProducts.product.filter(({ value }) => value.toLowerCase().includes(query));
+		// const result = search(query);        
+	}
+    
 
 	const { currentVisibleSearch, closeVisibleSearch } = visibleSearch()
 
@@ -71,7 +85,7 @@ export default () => {
                     </div> */}
 											<div className="flex flex-col md:flex-row items-stretch md:items-center md:space-x-3 space-y-3 md:space-y-0 justify-between mx-4 py-4  dark:border-gray-700">
 												<div className="w-full md:w-1/2">
-													<form className="flex items-center">
+													<div className="flex items-center">
 														<label
 															htmlFor="simple-search"
 															className="sr-only"
@@ -95,6 +109,7 @@ export default () => {
 																</svg>
 															</div>
 															<input
+                                                                onChange={(e) => setRequest(e.target.value)}
 																type="text"
 																id="simple-search"
 																placeholder="Поиск по каталогу"
@@ -102,7 +117,7 @@ export default () => {
 																className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
 															/>
 														</div>
-													</form>
+													</div>
 												</div>
 												<div className="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
 													<div
@@ -161,7 +176,7 @@ export default () => {
 														</tr>
 													</thead>
 													<tbody>
-                                                        {allProducts.product.map(({id, value, price, unit})=> (
+                                                        { res.map(({id, value, price, unit})=> (
                                                             <tr key={id} className="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
 															<th
 																scope="row"
