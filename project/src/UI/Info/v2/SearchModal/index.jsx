@@ -162,7 +162,8 @@ export default () => {
 													</div>
 												</div>
 											</div>
-											<div className="overflow-x-auto">
+                                            {filteredProducts.length > 0 &&
+                                            <div className="overflow-x-auto">
 												<table className="w-full text-left text-gray-500 dark:text-gray-400">
 													<thead className="text-base text-gray-700 uppercase border-b dark:bg-gray-700 dark:text-gray-400">
 														<tr>
@@ -239,6 +240,9 @@ export default () => {
 													</tbody>
 												</table>
 											</div>
+                                            
+                                            }
+											
 										</div>
 									</div>
 								</section>
