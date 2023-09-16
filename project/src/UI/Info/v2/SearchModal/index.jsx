@@ -7,15 +7,13 @@ const { visibleSearch, products } = useStoreSearch
 
 export default () => {
 
-    	const { allProducts } = products()
-        console.log(allProducts)
+    const { allProducts } = products()
+    // console.log(allProducts)
 
 
 	const { currentVisibleSearch, closeVisibleSearch } = visibleSearch()
 
 	const cancelButtonRef = useRef(null)
-
-
 
 	return (
 		<Transition.Root show={currentVisibleSearch} as={Fragment}>
@@ -111,25 +109,7 @@ export default () => {
 														id="filterDropdown"
 														className="z-10 hidden px-3 pt-1 bg-white rounded-lg shadow w-80 dark:bg-gray-700 right-0"
 													>
-														<div className="flex items-center justify-between pt-2">
-															<h6 className="text-sm font-medium text-black dark:text-white">
-																Filters
-															</h6>
-															<div className="flex items-center space-x-3">
-																<a
-																	href="#"
-																	className="flex items-center text-sm font-medium text-primary-600 dark:text-primary-500 hover:underline"
-																>
-																	Save view
-																</a>
-																<a
-																	href="#"
-																	className="flex items-center text-sm font-medium text-primary-600 dark:text-primary-500 hover:underline"
-																>
-																	Clear all
-																</a>
-															</div>
-														</div>
+														
 														<div className="pt-3 pb-2">
 															<label
 																htmlFor="input-group-search"
