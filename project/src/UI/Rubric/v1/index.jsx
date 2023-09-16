@@ -55,8 +55,8 @@ export default ({ catalog }) => {
 					</h1>
 				</div>
 				<p className="mx-auto mt-6 max-w-2xl text-center text-sm sm:text-lg leading-6 text-gray-600">
-					Купите с нашего склада категорию товаров "{catalog.catalog_one.value}" по
-					низкой цене с доставкой или самовывозом своим транспортом
+					Купите с нашего склада категорию товаров "{catalog.catalog_one.value}" по низкой
+					цене с доставкой или самовывозом своим транспортом
 				</p>
 				<FadeIn>
 					<div className="grid gap-8 my-12 mb-16 md:grid-cols-2">
@@ -72,7 +72,11 @@ export default ({ catalog }) => {
 									<div className="p-5">
 										<h3 className="flex text-xl font-bold tracking-tight text-gray-900 dark:text-white">
 											<span>
-												{item.value} (<span className='text-lg'>{item.category.length}</span>)
+												{item.value} (
+												<span className="text-lg">
+													{item.category.length}
+												</span>
+												)
 											</span>
 											<ChevronDownIcon
 												className="h-5 w-5  flex-none text-red-800"
@@ -90,7 +94,8 @@ export default ({ catalog }) => {
 									</div> */}
 
 										<p className="mt-4 mb-4 font-light text-gray-500 dark:text-gray-400">
-											Ознакомьтесь с нашими предложениями строительных материалов из этой рубрики
+											Ознакомьтесь с нашими предложениями строительных
+											материалов из этой рубрики
 										</p>
 									</div>
 								</div>

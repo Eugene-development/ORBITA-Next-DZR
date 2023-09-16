@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import InputCount from './InputCount'
+import StringTable from './StringTable'
 
 import { useInCart } from '@/app/(catalog)/shop/product/store'
 const { inCart } = useInCart
@@ -92,7 +92,7 @@ export default () => {
 								productsInCart.map(({ id, name, price, unit, count }, idx) => (
 									<tbody key={id} className="divide-y divide-gray-200">
 										<tr>
-											<InputCount
+											<StringTable
 												idx={idx}
 												id={id}
 												name={name}

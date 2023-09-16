@@ -187,7 +187,7 @@ export default ({ category }) => {
 										<Button
 											productID={id}
 											productName={value}
-											productPrice={price.value}
+											productPrice={price?.value}
 											productUnit={unit?.value}
 											productCount="1"
 										/>
