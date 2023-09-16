@@ -1,3 +1,5 @@
+'use server'
+
 import { gql, request } from 'graphql-request'
 
 const ALL_PRODUCTS = gql`

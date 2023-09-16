@@ -6,17 +6,20 @@ import {
 	XMarkIcon
 } from '@heroicons/react/24/outline'
 // import { getAllProducts } from '@/app/layout/info/server'
-import { useStoreSearch } from '@/store/search'
-const { visibleSearch } = useStoreSearch
+// import { useStoreSearch } from '@/store/search'
+// const { visibleSearch } = useStoreSearch
+// import { getAllProducts } from '@/app/layout/info/server'
 
 export default function index() {
 		const { openVisibleSearch } = visibleSearch()
 
 
-		const handleSearch = () => {
-		// console.log(getAllProducts())
-		openVisibleSearch()
-	}
+		const handleSearch = async () => {
+
+			const test = await getAllProducts()
+			console.log(test)
+			openVisibleSearch()
+	    }
 
   return (
    <div className="flex space-x-8">

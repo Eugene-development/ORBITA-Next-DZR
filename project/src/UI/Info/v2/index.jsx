@@ -6,6 +6,10 @@ const { inCart } = useInCart
 
 
 import SearchModal from './SearchModal'
+import { getAllProducts } from '@/app/layout/info/server'
+
+import { useStoreSearch } from '@/store/search'
+const { visibleSearch } = useStoreSearch
 
 import { Fragment, useState, useEffect } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
@@ -29,11 +33,17 @@ const navigation = {
 export default ({allProducts}) => {
 
 	const { productsInCart } = inCart()
+	const { openVisibleSearch } = visibleSearch()
 
 
-	// const handleSearch = () => {
-	// 	openVisibleSearch()
-	// }
+	const handleSearch = async () => {
+
+			const test = await getAllProducts()
+			console.log(test)
+			openVisibleSearch()
+	    }
+
+
 
 	const [isClient, setIsClient] = useState(false)
 	useEffect(() => {
@@ -100,7 +110,19 @@ export default ({allProducts}) => {
 
 									<div className="flex flex-1 items-center justify-end">
 										<div className="flex items-center lg:ml-8">
-											<SearchButton/>
+											<div className="flex space-x-8">
+												<button
+													// onMouseEnter={() => setIsHovered(true)}
+													onClick={handleSearch}
+													className="-m-2 p-2 text-gray-400 hover:text-gray-500"
+												>
+													<span className="sr-only">Поиск</span>
+													<MagnifyingGlassIcon
+														className="h-6 w-6"
+														aria-hidden="true"
+													/>
+												</button>
+											</div>
 											
 
 											<span
