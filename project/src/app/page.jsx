@@ -27,7 +27,7 @@ const sliders = [
 		title: 'Изоляция',
 		description:
 			'Эффективные решения для тепло-, влаго- и звукоизоляции помещений высокого качества от передовых производителей изоляционных материалов',
-		image: 'https://avatars.mds.yandex.net/i?id=f636abbdec36aa9a53a1982de2cd248a-4395422-images-thumbs&n=13'
+		image: 'https://liderdara.ru/wp-content/uploads/58887779.jpg'
 	},
 	{
 		id: 3,
