@@ -4,7 +4,7 @@ import { Banner } from '@/UI'
 import { contentBanner } from './staticData'
 const { data } = contentBanner
 
-import { useStoreBanner } from './store'
+import { useStoreBanner } from '@/store/banner'
 const { visibleBanner } = useStoreBanner
 
 export default () => {

@@ -1,27 +1,27 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+// import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 
-const features = [
-	{
-		name: 'Push to deploy.',
-		description:
-			'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-		icon: CloudArrowUpIcon
-	},
-	{
-		name: 'SSL certificates.',
-		description:
-			'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-		icon: LockClosedIcon
-	},
-	{
-		name: 'Database backups.',
-		description:
-			'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-		icon: ServerIcon
-	}
-]
+// const features = [
+// 	{
+// 		name: 'Push to deploy.',
+// 		description:
+// 			'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+// 		icon: CloudArrowUpIcon
+// 	},
+// 	{
+// 		name: 'SSL certificates.',
+// 		description:
+// 			'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
+// 		icon: LockClosedIcon
+// 	},
+// 	{
+// 		name: 'Database backups.',
+// 		description:
+// 			'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+// 		icon: ServerIcon
+// 	}
+// ]
 
-export default () => {
+export default ({features, service}) => {
 	return (
 		<div className="overflow-hidden bg-white py-24 sm:py-32">
 			<div className="mx-auto max-w-7xl md:px-6 lg:px-8">
@@ -29,15 +29,14 @@ export default () => {
 					<div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
 						<div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
 							<h2 className="text-base font-semibold leading-7 text-red-600">
-								Deploy faster
+								Услуга компании
 							</h2>
+							
 							<p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-								A better workflow
+								{service.title}
 							</p>
 							<p className="mt-6 text-lg leading-8 text-gray-600">
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-								impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-								ratione.
+								{service.description}
 							</p>
 							<dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
 								{features.map((feature) => (
@@ -63,7 +62,7 @@ export default () => {
 							/>
 							<div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
 								<img
-									src="https://tailwindui.com/img/component-images/project-app-screenshot.png"
+									src="https://www.trn-news.ru/Ru/Upload/Image/rtyuevtfwuedtwfytegfvefjhf.jpg"
 									alt="Product screenshot"
 									width={2432}
 									height={1442}
