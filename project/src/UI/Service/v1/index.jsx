@@ -25,9 +25,9 @@ export default ({features, service}) => {
 	return (
 		<div className="overflow-hidden bg-white py-24 sm:py-32">
 			<div className="mx-auto max-w-7xl md:px-6 lg:px-8">
-				<div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
+				<div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-1 lg:items-start">
 					<div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
-						<div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+						<div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-2xl">
 							<h2 className="text-base font-semibold leading-7 text-red-600">
 								Услуга компании
 							</h2>
@@ -54,7 +54,7 @@ export default ({features, service}) => {
 							</dl>
 						</div>
 					</div>
-					<div className="sm:px-6 lg:px-0">
+					{/* <div className="sm:px-6 lg:px-0">
 						<div className="relative isolate overflow-hidden bg-gray-200 px-6 pt-8 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:pl-16 sm:pr-0 sm:pt-16 lg:mx-0 lg:max-w-none">
 							<div
 								className="absolute -inset-y-px -left-3 -z-10 w-full origin-bottom-left skew-x-[-30deg] bg-gray-100 opacity-20 "
@@ -62,7 +62,7 @@ export default ({features, service}) => {
 							/>
 							<div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
 								<img
-									src="https://www.trn-news.ru/Ru/Upload/Image/rtyuevtfwuedtwfytegfvefjhf.jpg"
+									src="https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/logo/logo.png"
 									alt="Product screenshot"
 									width={2432}
 									height={1442}
@@ -74,7 +74,7 @@ export default ({features, service}) => {
 								aria-hidden="true"
 							/>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</div>
