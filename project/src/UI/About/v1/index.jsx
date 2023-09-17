@@ -5,7 +5,7 @@ const cards = [
 		name: 'Качество',
 		description:
 			'Идеальный для потребителя баланс между ценой и качеством строительных материалов.',
-		icon: PhoneIcon
+		icon: LifebuoyIcon
 	},
 	{
 		name: 'Доставка',
@@ -16,16 +16,16 @@ const cards = [
 	{
 		name: 'Цены',
 		description: 'Возможность покупки товаров оптовыми партиями со значительной скидкой.',
-		icon: NewspaperIcon
+		icon: LifebuoyIcon
 	},
 	{
 		name: 'Сервис',
 		description: 'Высокий уровень профессиональной подготовленности персонала компании.',
-		icon: NewspaperIcon
+		icon: LifebuoyIcon
 	}
 ]
 
-export default function Example() {
+export default () => {
 	return (
 		<div className="relative isolate overflow-hidden bg-gray-50 py-24 sm:py-32">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
