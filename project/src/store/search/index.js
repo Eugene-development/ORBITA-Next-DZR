@@ -1,5 +1,4 @@
 import { create } from 'zustand'
-import { getAllProducts } from '@/app/layout/info/server'
 
 const visibleSearch = create((set) => ({
 	currentVisibleSearch: false,

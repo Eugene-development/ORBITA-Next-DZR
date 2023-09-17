@@ -1,7 +1,6 @@
 'use client'
 import { Fragment, useRef, useState, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { CheckIcon } from '@heroicons/react/24/outline'
 import { useStoreSearch } from '@/store/search'
 const { visibleSearch, products } = useStoreSearch
 

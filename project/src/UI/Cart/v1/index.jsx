@@ -1,9 +1,10 @@
 'use client'
-
+import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react'
 import StringTable from './StringTable'
 
-import { useRouter } from 'next/navigation';
+import { send } from '@/app/(catalog)/cart/sendOrder';
+
 
 import { useInCart } from '@/store/cart'
 const { inCart } = useInCart
@@ -40,7 +41,7 @@ export default () => {
 
 		const data = { formData };
 		console.log(data);
-		// send(data);
+		send(data);
 
 		// setName("");
 		// setPhone("");

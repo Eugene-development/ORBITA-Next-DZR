@@ -1,5 +1,13 @@
 import Link from "next/link"
 
+export const metadata = {
+	title: 'Страница благодарности',
+	description: 'Благодарим вас за совершенную покупку',
+	robots: {
+		index: false
+	}
+}
+
 export default () => {
   return (
     <div className="bg-white">

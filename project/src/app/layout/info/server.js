@@ -1,5 +1,5 @@
 'use server'
-
+// TODO: Переместить файл
 import { gql, request } from 'graphql-request'
 
 const ALL_PRODUCTS = gql`
