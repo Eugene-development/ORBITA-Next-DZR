@@ -137,7 +137,7 @@ export default ({ category }) => {
 						({ id, slug, image, value, price, unit }) => (
 							<div key={id}>
 								<FadeIn>
-									<div className="group relative border border-gray-100 p-4 sm:p-6">
+									<div className="group relative border border-gray-100 p-4 sm:p-6 ">
 										<Link href={`/shop/product/${slug}`}>
 											<div className="aspect-h-1 aspect-w-1 overflow-hidden group-hover:opacity-75">
 												<img
@@ -151,7 +151,7 @@ export default ({ category }) => {
 												/>
 											</div>
 											<div className="pb-4 pt-6 text-center ">
-												<h3 className="text-xs sm:text-sm font-medium text-gray-900 first-letter:uppercase h-12">
+												<h3 className="text-xs sm:text-sm font-medium text-gray-900 hover:text-red-700 first-letter:uppercase h-12">
 													<span
 														aria-hidden="true"
 														className=" inset-0 "

@@ -62,7 +62,7 @@ export default ({ catalog }) => {
 					<div className="grid gap-8 my-12 mb-16 md:grid-cols-2">
 						{catalog.catalog_one.rubric.map((item) => (
 							<Link key={item.value} href={`/shop/category/${item.slug}`}>
-								<div className="items-center  rounded-lg sm:flex dark:bg-gray-800 dark:border-gray-700 shadow-lg">
+								<div className="items-center  rounded-lg sm:flex dark:bg-gray-800 dark:border-gray-700 shadow-lg transition ease-in-out hover:scale-105">
 									<img
 										className="hidden lg:block w-36 p-4 rounded-lg sm:rounded-none sm:rounded-l-lg"
 										src="https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/logo/logo.png"
@@ -70,7 +70,7 @@ export default ({ catalog }) => {
 									/>
 
 									<div className="p-5">
-										<h3 className="flex text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+										<h3 className="flex text-xl font-bold tracking-tight text-gray-900 dark:text-white hover:text-red-700 ">
 											<span>
 												{item.value} (
 												<span className="text-lg">
@@ -79,7 +79,7 @@ export default ({ catalog }) => {
 												)
 											</span>
 											<ChevronDownIcon
-												className="h-5 w-5  flex-none text-red-800"
+												className="h-4 w-4 mt-0.5 flex-none text-red-800"
 												aria-hidden="true"
 											/>
 										</h3>

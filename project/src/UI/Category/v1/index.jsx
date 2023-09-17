@@ -178,7 +178,7 @@ export default ({ rubric }) => {
 								<Link
 									href={`/shop/products/${slug}`}
 									aria-describedby={id}
-									className="text-gray-600 ring-1 ring-inset ring-red-200 hover:ring-red-300 mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+									className="text-gray-600 ring-1 ring-inset ring-red-200 hover:ring-red-300 mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 hover:text-red-700 transition ease-in-out hover:scale-110"
 								>
 									Выбрать
 								</Link>
