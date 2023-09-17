@@ -282,7 +282,7 @@ export default () => {
 					<div className="hidden lg:flex lg:flex-1 lg:justify-end">
 						<a
 							href="https://vk.com/orbita_stroy"
-							className="text-sm font-display font-semibold leading-6 text-gray-900"
+							className="text-sm font-display font-semibold leading-6 text-gray-900 hover:text-red-700 transition ease-in-out hover:scale-110"
 						>
 							ВКонтакте{' '}
 							<span aria-hidden="true" className="text-red-800">
