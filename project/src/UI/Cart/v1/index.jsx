@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import StringTable from './StringTable'
 
-import { useInCart } from '@/app/(catalog)/shop/product/store'
+import { useInCart } from '@/store/cart'
 const { inCart } = useInCart
 
 export default () => {

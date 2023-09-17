@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 
-import { useInCart } from '@/app/(catalog)/shop/product/store'
+import { useInCart } from '@/store/cart'
 const { inCart } = useInCart
 
 export default ({ productID, productName, productPrice, productUnit }) => {
