@@ -1,4 +1,3 @@
-// 'use server'
 import { gql, request } from 'graphql-request'
 
 const ONE_PRODUCT = gql`
