@@ -1,18 +1,23 @@
 'use client'
+
 import { useState, useEffect } from 'react'
 import StringTable from './StringTable'
+
+import { useRouter } from 'next/navigation';
 
 import { useInCart } from '@/store/cart'
 const { inCart } = useInCart
 
 export default () => {
+	const { push } = useRouter();
+
 	const { productsInCart, totalCount, setTotalCount } = inCart()
 
 	const [formData, setFormData] = useState({
-		name: '',
+		first_name: '',
 		phone: '',
-		address: '',
-		comment: ''
+		street_address: '',
+		comments: ''
 	})
 
 	// Обработчик изменения полей формы
@@ -28,6 +33,25 @@ export default () => {
 		// В этом блоке можно выполнять действия при изменении полей формы
 		console.log('Форма была изменена:', formData)
 	}, [formData]) // Передайте зависимость [formData] для отслеживания изменений
+
+
+	const handleSendOrder = (e) => {
+		e.preventDefault();
+
+		const data = { formData };
+		console.log(data);
+		// send(data);
+
+		// setName("");
+		// setPhone("");
+		// setAddress("");
+		// setEmail("");
+		// setComment("");
+		// setProject("");
+
+		push('/spasibo');
+  };
+
 
 	const [domLoaded, setDomLoaded] = useState(false)
 	useEffect(() => {
@@ -142,7 +166,7 @@ export default () => {
 				)}
 			</div>
 
-			<form className="m-8 space-y-6 rounded-md border-2 border-slate-100 bg-gray-50">
+			<form onSubmit={handleSendOrder} className="m-8 space-y-6 rounded-md border-2 border-slate-100 bg-gray-50">
 				<div className="px-4 py-5 shadow sm:rounded-lg sm:p-6">
 					<div className="md:grid md:grid-cols-3 md:gap-6">
 						<div className="md:col-span-1">
@@ -161,7 +185,7 @@ export default () => {
 										Ваше имя:
 									</label>
 									<input
-										value={formData.firstName}
+										value={formData.first_name}
 										onChange={handleInputChange}
 										type="text"
 										required
@@ -178,7 +202,7 @@ export default () => {
 										Телефон:
 									</label>
 									<input
-										value={formData.firstName}
+										value={formData.phone}
 										onChange={handleInputChange}
 										type="text"
 										required
@@ -194,7 +218,7 @@ export default () => {
 											Адрес доставки:
 										</label>
 										<input
-											value={formData.firstName}
+											value={formData.street_address}
 											onChange={handleInputChange}
 											type="text"
 											id="street_address"
@@ -210,7 +234,7 @@ export default () => {
 											Комментарий:
 										</label>
 										<input
-											value={formData.firstName}
+											value={formData.comments}
 											onChange={handleInputChange}
 											type="text"
 											id="comments"
