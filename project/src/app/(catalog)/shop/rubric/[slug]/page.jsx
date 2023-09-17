@@ -16,6 +16,7 @@ export async function generateMetadata({ params }) {
 			'. Широкий ассортимент и качественное обслуживание.'
 	}
 }
+
 export default async ({ params }) => {
 	const catalog = await getOneCatalog(params)
 
