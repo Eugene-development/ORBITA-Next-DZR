@@ -14,9 +14,9 @@ const navigation = {
 		{ name: 'Электротовары', href: '/shop/rubric/elektrotovary' }
 	],
 	service: [
-		{ name: 'Доставка', href: '#' },
-		{ name: 'Грузчики', href: '#' },
-		{ name: 'Хранение', href: '#' }
+		{ name: 'Доставка', href: '/information/delivery' },
+		{ name: 'Грузчики', href: '/information/movers' },
+		{ name: 'Хранение', href: '/information/storage' }
 	],
 	information: [
 		{ name: 'О компании', href: '/about' },
