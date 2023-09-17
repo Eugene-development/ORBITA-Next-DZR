@@ -1,13 +1,13 @@
 'use client'
 
 import { useEffect } from 'react'
-// export const metadata = {
-// 	title: 'Фабрика',
-// 	description: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-// 	robots: {
-// 		index: false
-// 	}
-// }
+export const metadata = {
+	title: 'Фабрика',
+	description: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+	robots: {
+		index: false
+	}
+}
 function OutsideClickHandler({ onOutsideClick, children }) {
 	useEffect(() => {
 		function handleClickOutside(event) {
