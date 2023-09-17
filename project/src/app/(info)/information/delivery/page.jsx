@@ -4,7 +4,8 @@ import { Service } from '@/UI'
 
 const service = {
 	title: 'Доставка стройматериалов',
-	description: 'Для удобства мы предлагаем покупателям купить стройматериалы с доставкой товара на адрес объекта.'
+	description:
+		'Для удобства мы предлагаем покупателям купить стройматериалы с доставкой товара на адрес объекта.'
 }
 
 const features = [
@@ -28,12 +29,11 @@ const features = [
 	},
 	{
 		name: 'Акция.',
-		description:
-			'При заказе товара от 20 000 рублей доставка массой до 1500 кг – БЕСПЛАТНО!',
+		description: 'При заказе товара от 20 000 рублей доставка массой до 1500 кг – БЕСПЛАТНО!',
 		icon: ServerIcon
-	},
+	}
 ]
 
 export default function page() {
-	return <Service features={features} service={service}/>
+	return <Service features={features} service={service} />
 }

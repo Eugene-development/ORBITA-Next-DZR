@@ -19,7 +19,6 @@ export default ({ slider }) => {
 						<div className="hidden sm:block">
 							<img
 								className="p-20 mx-auto sm:flex h-[28rem]"
-								
 								src={slider.image}
 								alt="фото рубрики"
 							/>

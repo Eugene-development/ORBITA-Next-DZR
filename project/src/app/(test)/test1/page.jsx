@@ -10,12 +10,11 @@ import { getCatalog } from './server'
 // }
 
 export async function generateMetadata() {
-  const catalog = await getCatalog()
- 
-  return {
-    title: catalog.product_one.value,
-    
-  }
+	const catalog = await getCatalog()
+
+	return {
+		title: catalog.product_one.value
+	}
 }
 export default async function page() {
 	const catalog = await getCatalog()

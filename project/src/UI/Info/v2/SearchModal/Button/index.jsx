@@ -25,7 +25,6 @@ export default ({ productID, productName, productPrice, productUnit, productCoun
 				return product.id === productID
 			}) ? (
 				<div
-					
 					data-drawer-target="drawer-read-product-advanced"
 					data-drawer-show="drawer-read-product-advanced"
 					aria-controls="drawer-read-product-advanced"

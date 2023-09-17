@@ -21,7 +21,7 @@
 // 	}
 // ]
 
-export default ({features, service}) => {
+export default ({ features, service }) => {
 	return (
 		<div className="overflow-hidden bg-white py-24 sm:py-32">
 			<div className="mx-auto max-w-7xl md:px-6 lg:px-8">
@@ -31,7 +31,7 @@ export default ({features, service}) => {
 							<h2 className="text-base font-semibold leading-7 text-red-600">
 								Услуга компании
 							</h2>
-							
+
 							<p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
 								{service.title}
 							</p>

@@ -196,7 +196,6 @@ export default () => {
 																			className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"
 																		>
 																			<span className="flex items-center mr-3 text-xs first-letter:uppercase">
-																				
 																				{value}
 																			</span>
 																		</th>
@@ -211,13 +210,19 @@ export default () => {
 																		</td>
 																		<td className="px-4 py-3  font-medium text-gray-900 whitespace-nowrap dark:text-white">
 																			<div className="flex items-center space-x-4 ">
-																				<Button 
-                                                                                    productID={id}
-                                                                                    productName={value}
-                                                                                    productPrice={price?.value}
-                                                                                    productUnit={unit?.value}
-                                                                                    productCount="1"
-                                                                                />
+																				<Button
+																					productID={id}
+																					productName={
+																						value
+																					}
+																					productPrice={
+																						price?.value
+																					}
+																					productUnit={
+																						unit?.value
+																					}
+																					productCount="1"
+																				/>
 																			</div>
 																		</td>
 																	</tr>

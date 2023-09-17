@@ -1,6 +1,6 @@
 import CloseButton from './CloseButton'
 
-import {  EnvelopeIcon } from '@heroicons/react/20/solid'
+import { EnvelopeIcon } from '@heroicons/react/20/solid'
 
 export default function Banner({ data, currentVisibleBanner, changeVisibleBanner }) {
 	return (

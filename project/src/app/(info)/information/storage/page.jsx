@@ -10,8 +10,7 @@ const service = {
 const features = [
 	{
 		name: 'Цена.',
-		description:
-			'Стоимость услуги индивидуальна. Подробности уточняйте у наших менеджеров.',
+		description: 'Стоимость услуги индивидуальна. Подробности уточняйте у наших менеджеров.',
 		icon: ServerIcon
 	},
 	{
@@ -25,9 +24,9 @@ const features = [
 		description:
 			'Под место хранения предлагается оборудованный склад в черте города Дзержинск.',
 		icon: ServerIcon
-	},
+	}
 ]
 
 export default function page() {
-	return <Service features={features} service={service}/>
+	return <Service features={features} service={service} />
 }

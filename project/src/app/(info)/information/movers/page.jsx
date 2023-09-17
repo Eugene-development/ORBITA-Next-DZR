@@ -19,9 +19,9 @@ const features = [
 		description:
 			'Оплата производится в размере от 10 до 50 рублей за этаж за каждую позицию товара. При наличии лифта производится перерасчёт.',
 		icon: ServerIcon
-	},
+	}
 ]
 
 export default function page() {
-	return <Service features={features} service={service}/>
+	return <Service features={features} service={service} />
 }

@@ -29,5 +29,5 @@ const features = [
 ]
 
 export default function page() {
-	return <Service features={features} service={service}/>
+	return <Service features={features} service={service} />
 }

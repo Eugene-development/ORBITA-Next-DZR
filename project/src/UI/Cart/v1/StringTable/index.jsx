@@ -25,20 +25,13 @@ export default function index({ idx, id, name, price, unit }) {
 		<>
 			{/* mobile */}
 			<td className="w-full max-w-0 py-4 pl-4 pr-3 text-sm font-medium text-gray-900  sm:w-auto sm:max-w-none sm:pl-6">
-				<div className='flex'>
+				<div className="flex">
 					<dt className="sr-only">Номер</dt>
-					<dd className="mt-1 mr-2 truncate">
-						{idx + 1}.
-					</dd>
-				<dt className="sr-only">Наименование</dt>
-					<dd className="mt-1 truncate first-letter:uppercase">
-										{name}
-
-					</dd>
-
-
+					<dd className="mt-1 mr-2 truncate">{idx + 1}.</dd>
+					<dt className="sr-only">Наименование</dt>
+					<dd className="mt-1 truncate first-letter:uppercase">{name}</dd>
 				</div>
-				
+
 				<dl className="font-normal lg:hidden">
 					<dt className="sr-only">Цена</dt>
 					<dd className="mt-1 truncate">
