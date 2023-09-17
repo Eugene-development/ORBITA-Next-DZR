@@ -1,4 +1,4 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import { ServerIcon } from '@heroicons/react/20/solid'
 
 import { Service } from '@/UI'
 
