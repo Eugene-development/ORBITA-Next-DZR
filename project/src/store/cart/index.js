@@ -1,6 +1,11 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
+// define the initial state
+const initialState = {
+	productsInCart: []
+}
+
 const inCart = create(
 	persist(
 		(set) => ({
@@ -21,7 +26,12 @@ const inCart = create(
 				set((state) => ({
 					productsInCart: state.productsInCart.filter((product) => product.id !== id)
 				})),
-			// Сумма считается не корректно. При загрузке страницы выводится ноль.
+
+			removeAllProducts: () =>
+				set(() => ({
+					productsInCart: []
+				})),
+
 			setTotalCount: () =>
 				set((state) => ({
 					totalCount: Math.ceil(
@@ -32,23 +42,6 @@ const inCart = create(
 						}, 0)
 					)
 				}))
-
-			// 		total = $prodInCart.reduce((sum, product) => {
-			// 	let price = product.price?.value;
-			// 	return sum + price * product.quantity;
-			// }, 0);
-			// set((state) => {
-			// 	const targetProduct = state.productsInCart.find(function (product) {
-			// 		return product.id == '76'
-			// 	})
-			// 	console.log(targetProduct)
-			// 	targetProduct.count = param
-			// 	productsInCart: [...state.productsInCart, { id, name, price, unit, count }]
-			// })
-
-			// setCurrentProductInCart: (id) => set(() => ({ productsInCart: id }))
-			// productInCart: false,
-			// changeStatusButton: () => set(() => ({ productInCart: true }))
 		}),
 		{
 			name: 'cart'

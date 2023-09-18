@@ -12,7 +12,7 @@ const { inCart } = useInCart
 export default () => {
 	const { push } = useRouter();
 
-	const { productsInCart, totalCount, setTotalCount } = inCart()
+	const { productsInCart, totalCount, setTotalCount, removeAllProducts } = inCart()
 
 	const [formData, setFormData] = useState({
 		first_name: '',
@@ -39,9 +39,24 @@ export default () => {
 	const handleSendOrder = (e) => {
 		e.preventDefault();
 
-		const data = { formData };
+
+		// Текущая дата
+			var currentDate = new Date()
+			var day = currentDate.getDate()
+			var month = currentDate.getMonth() + 1 // Месяцы в объекте Date нумеруются с 0, поэтому добавляем 1
+			var year = currentDate.getFullYear()
+			const date = day + '.' + month + '.' + year
+
+			const data = {
+				date,
+				products: productsInCart,
+				totalSum: totalCount,
+				information: { formData }
+			}
 		console.log(data);
-		send(data);
+
+		removeAllProducts();
+		// send(data);
 
 		// setName("");
 		// setPhone("");
