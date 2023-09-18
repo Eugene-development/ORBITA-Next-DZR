@@ -77,7 +77,7 @@ export default () => {
 
 	return (
 		<>
-			{productsInCart.length ? (
+			{productsInCart.length && domLoaded  ? (
 				<div className="mt-12 px-4 sm:px-6 lg:px-8">
 					<div className="sm:flex sm:items-center">
 						<div className="sm:flex-auto">
@@ -88,6 +88,8 @@ export default () => {
 						</div>
 					</div>
 					<div className="-mx-4 mt-8 overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:-mx-6 md:mx-0 md:rounded-lg">
+						
+						
 						<table className="min-w-full divide-y divide-gray-300 bg-gray-50">
 							<thead className="">
 								<tr>
@@ -128,8 +130,8 @@ export default () => {
 								</tr>
 							</thead>
 
-							{domLoaded &&
-								productsInCart.map(({ id, name, price, unit, count }, idx) => (
+							
+								{productsInCart.map(({ id, name, price, unit, count }, idx) => (
 									<tbody key={id} className="divide-y divide-gray-200">
 										<tr>
 											<StringTable
@@ -173,15 +175,15 @@ export default () => {
 					</div>
 				</div>
 			)}
-
+{domLoaded && (
 			<div className="m-8 text-right">
-				{domLoaded && (
+				
 					<span className="inline-flex  rounded-md bg-cyan-100 px-3.5 py-1 text-xs font-medium text-cyan-800 sm:text-base">
 						Итоговая сумма заказа: {totalCount} руб.
 					</span>
-				)}
-			</div>
-
+				
+			</div>)
+}
 			<form onSubmit={handleSendOrder} className="m-8 space-y-6 rounded-md border-2 border-slate-100 bg-gray-50">
 				<div className="px-4 py-5 shadow sm:rounded-lg sm:p-6">
 					<div className="md:grid md:grid-cols-3 md:gap-6">
