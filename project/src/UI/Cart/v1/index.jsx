@@ -1,16 +1,15 @@
 'use client'
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import StringTable from './StringTable'
 
-import { send } from '@/app/(catalog)/cart/sendOrder';
-
+import { send } from '@/app/(catalog)/cart/sendOrder'
 
 import { useInCart } from '@/store/cart'
 const { inCart } = useInCart
 
 export default () => {
-	const { push } = useRouter();
+	const { push } = useRouter()
 
 	const { productsInCart, totalCount, setTotalCount, removeAllProducts } = inCart()
 
@@ -35,27 +34,25 @@ export default () => {
 		console.log('Форма была изменена:', formData)
 	}, [formData]) // Передайте зависимость [formData] для отслеживания изменений
 
-
 	const handleSendOrder = (e) => {
-		e.preventDefault();
-
+		e.preventDefault()
 
 		// Текущая дата
-			var currentDate = new Date()
-			var day = currentDate.getDate()
-			var month = currentDate.getMonth() + 1 // Месяцы в объекте Date нумеруются с 0, поэтому добавляем 1
-			var year = currentDate.getFullYear()
-			const date = day + '.' + month + '.' + year
+		var currentDate = new Date()
+		var day = currentDate.getDate()
+		var month = currentDate.getMonth() + 1 // Месяцы в объекте Date нумеруются с 0, поэтому добавляем 1
+		var year = currentDate.getFullYear()
+		const date = day + '.' + month + '.' + year
 
-			const data = {
-				date,
-				products: productsInCart,
-				totalSum: totalCount,
-				information: { formData }
-			}
-		console.log(data);
+		const data = {
+			date,
+			products: productsInCart,
+			totalSum: totalCount,
+			information: { formData }
+		}
+		console.log(data)
 
-		removeAllProducts();
+		removeAllProducts()
 		// send(data);
 
 		// setName("");
@@ -65,9 +62,8 @@ export default () => {
 		// setComment("");
 		// setProject("");
 
-		push('/spasibo');
-  };
-
+		push('/spasibo')
+	}
 
 	const [domLoaded, setDomLoaded] = useState(false)
 	useEffect(() => {
@@ -77,7 +73,7 @@ export default () => {
 
 	return (
 		<>
-			{productsInCart.length && domLoaded  ? (
+			{productsInCart.length && domLoaded ? (
 				<div className="mt-12 px-4 sm:px-6 lg:px-8">
 					<div className="sm:flex sm:items-center">
 						<div className="sm:flex-auto">
@@ -88,8 +84,6 @@ export default () => {
 						</div>
 					</div>
 					<div className="-mx-4 mt-8 overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:-mx-6 md:mx-0 md:rounded-lg">
-						
-						
 						<table className="min-w-full divide-y divide-gray-300 bg-gray-50">
 							<thead className="">
 								<tr>
@@ -130,20 +124,19 @@ export default () => {
 								</tr>
 							</thead>
 
-							
-								{productsInCart.map(({ id, name, price, unit, count }, idx) => (
-									<tbody key={id} className="divide-y divide-gray-200">
-										<tr>
-											<StringTable
-												idx={idx}
-												id={id}
-												name={name}
-												price={price}
-												unit={unit}
-											/>
-										</tr>
-									</tbody>
-								))}
+							{productsInCart.map(({ id, name, price, unit, count }, idx) => (
+								<tbody key={id} className="divide-y divide-gray-200">
+									<tr>
+										<StringTable
+											idx={idx}
+											id={id}
+											name={name}
+											price={price}
+											unit={unit}
+										/>
+									</tr>
+								</tbody>
+							))}
 						</table>
 					</div>
 				</div>
@@ -175,16 +168,17 @@ export default () => {
 					</div>
 				</div>
 			)}
-{domLoaded && (
-			<div className="m-8 text-right">
-				
+			{domLoaded && (
+				<div className="m-8 text-right">
 					<span className="inline-flex  rounded-md bg-cyan-100 px-3.5 py-1 text-xs font-medium text-cyan-800 sm:text-base">
 						Итоговая сумма заказа: {totalCount} руб.
 					</span>
-				
-			</div>)
-}
-			<form onSubmit={handleSendOrder} className="m-8 space-y-6 rounded-md border-2 border-slate-100 bg-gray-50">
+				</div>
+			)}
+			<form
+				onSubmit={handleSendOrder}
+				className="m-8 space-y-6 rounded-md border-2 border-slate-100 bg-gray-50"
+			>
 				<div className="px-4 py-5 shadow sm:rounded-lg sm:p-6">
 					<div className="md:grid md:grid-cols-3 md:gap-6">
 						<div className="md:col-span-1">
