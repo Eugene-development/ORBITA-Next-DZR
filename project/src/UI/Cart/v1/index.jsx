@@ -14,9 +14,9 @@ export default () => {
 	const { productsInCart, totalCount, setTotalCount, removeAllProducts } = inCart()
 
 	const [formData, setFormData] = useState({
-		first_name: '',
+		name: '',
 		phone: '',
-		street_address: '',
+		address: '',
 		comments: ''
 	})
 
@@ -44,25 +44,25 @@ export default () => {
 		var year = currentDate.getFullYear()
 		const date = day + '.' + month + '.' + year
 
+
+
+		let products = [...productsInCart]
+		console.log(products)
+
+
 		const data = {
 			date,
 			products: productsInCart,
 			totalSum: totalCount,
-			information: { formData }
+			information: { ...formData }
 		}
 		console.log(data)
 
-		removeAllProducts()
-		// send(data);
+		
+		send(data);
+		// removeAllProducts()
 
-		// setName("");
-		// setPhone("");
-		// setAddress("");
-		// setEmail("");
-		// setComment("");
-		// setProject("");
-
-		push('/spasibo')
+		// push('/spasibo')
 	}
 
 	const [domLoaded, setDomLoaded] = useState(false)
@@ -192,18 +192,18 @@ export default () => {
 								<div className="col-span-6 ">
 									<label
 										className="block text-sm font-medium text-gray-700"
-										htmlFor="first_name"
+										htmlFor="name"
 									>
 										Ваше имя:
 									</label>
 									<input
-										value={formData.first_name}
+										value={formData.name}
 										onChange={handleInputChange}
 										type="text"
 										required
-										id="first_name"
+										id="name"
 										className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-800 focus:ring-red-800 sm:text-sm"
-										name="first_name"
+										name="name"
 									/>
 								</div>
 								<div className="col-span-6">
@@ -225,17 +225,17 @@ export default () => {
 									<div className="col-span-6 mt-6">
 										<label
 											className="block text-sm font-medium text-gray-700"
-											htmlFor="street_address"
+											htmlFor="address"
 										>
 											Адрес доставки:
 										</label>
 										<input
-											value={formData.street_address}
+											value={formData.address}
 											onChange={handleInputChange}
 											type="text"
-											id="street_address"
+											id="address"
 											className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-800 focus:ring-red-800 sm:text-sm"
-											name="street_address"
+											name="address"
 										/>
 									</div>
 									<div className="col-span-6 mt-6">
