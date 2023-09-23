@@ -10,7 +10,7 @@ export default ({ slider }) => {
 			animate={{ opacity: 2, y: -10 }}
 			transition={{ type: 'spring', stiffness: 50 }}
 		>
-			<section className="my-16 md:my-0">
+			<section className="py-32 md:py-12">
 				<div className="relative isolate overflow-hidden">
 					<div
 						className="absolute inset-y-0 right-3/4 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg]  shadow-xl shadow-gray-600/10 ring-1 ring-gray-50 sm:-mr-80 lg:-mr-96"
@@ -18,7 +18,7 @@ export default ({ slider }) => {
 					/>
 					<div className="gap-8 items-center  mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 ">
 						<div>
-							<h2 className="mb-4 text-3xl sm:text-5xl tracking-tight font-display font-extrabold text-gray-900 dark:text-white">
+							<h2 className="mb-4 text-3xl sm:text-6xl tracking-tight font-display font-extrabold text-gray-900 dark:text-white">
 								{slider.title}
 							</h2>
 							<p className="md:mb-6 max-w-xl text-sm sm:text-base font-light text-gray-500 md:text-lg dark:text-gray-400">
@@ -30,7 +30,7 @@ export default ({ slider }) => {
 								data-drawer-target="drawer-read-product-advanced"
 								data-drawer-show="drawer-read-product-advanced"
 								aria-controls="drawer-read-product-advanced"
-								className="w-48 py-2 px-8 flex  mx-auto text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-50 hover:text-red-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+								className="w-48 mt-8 py-2 px-8 flex  mx-auto text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-50 hover:text-red-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
 							>
 								<div className="mx-auto flex items-center">
 									<svg

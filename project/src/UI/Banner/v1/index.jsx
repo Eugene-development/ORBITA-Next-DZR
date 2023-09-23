@@ -59,10 +59,10 @@ export default function Banner({ data, currentVisibleBanner, changeVisibleBanner
 						</div>
 						<a href="mailto:info@orbita-stroy.com" className="flex md:hidden">
 							<EnvelopeIcon
-								className="h-4 w-4 md:h-5 md:w-5 text-red-500"
+								className="h-5 w-5 md:h-5 md:w-5 text-red-500"
 								aria-hidden="true"
 							/>
-							<span className="ml-2 text-xs text-gray-50">{data.email}</span>
+							<span className="ml-2 text-sm text-gray-50 whitespace-nowrap">{data.email}</span>
 						</a>
 					</div>
 
