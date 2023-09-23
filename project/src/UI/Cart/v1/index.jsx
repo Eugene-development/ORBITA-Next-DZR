@@ -53,12 +53,12 @@ export default () => {
 			totalSum: totalCount,
 			information: { ...formData }
 		}
-		console.log(data)
+		// console.log(data)
 
 		send(data)
 		// removeAllProducts()
 
-		// push('/spasibo')
+		push('/spasibo')
 	}
 
 	const [domLoaded, setDomLoaded] = useState(false)

@@ -2,11 +2,12 @@ import Button from './Button'
 
 const monthProduct = [
 	{
-		id: 1,
-		value: 'Jan',
-		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
-		price: 760,
-		unit: 'шт'
+		id: '261',
+		value: 'ГВЛВ "Кнауф" 10 мм (1200*2500)',
+		price: 790,
+		unit: 'шт',
+		link: '/shop/product/gvlv-knauf-10-mm-12002500',
+		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg'
 	},
 	{
 		id: 2,
@@ -91,6 +92,7 @@ export default () => {
 								productName={value}
 								productPrice={price}
 								productUnit={unit}
+								productCount="1"
 							/>
 						</div>
 					))}
