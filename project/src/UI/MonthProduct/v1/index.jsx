@@ -2,7 +2,7 @@ import Button from './Button'
 
 const monthProduct = [
 	{
-		id: '261',
+		id: 261,
 		value: 'ГВЛВ "Кнауф" 10 мм (1200*2500)',
 		price: 790,
 		unit: 'шт',
@@ -10,54 +10,29 @@ const monthProduct = [
 		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg'
 	},
 	{
-		id: 2,
-		value: 'Jan',
-		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
-		price: 760,
-		unit: 'шт'
+		id: 121,
+		value: 'Линокром ТКП сланец серый (10 м2)',
+		price: 1700,
+		unit: 'шт',
+		link: '/shop/product/linokrom-tkp-slanec-seryi-10-m',
+		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%BB%D0%B8%D0%BD%D0%BE%D0%BA%D1%80%D0%BE%D0%BC.jpg'
 	},
 	{
-		id: 3,
-		value: 'Jan',
-		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
-		price: 760,
-		unit: 'шт'
+		id: 123,
+		value: 'Линокром ТПП (15 м2)',
+		price: 2340,
+		unit: 'шт',
+		link: '/shop/product/linokrom-tpp-15-m2',
+		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%BB%D0%B8%D0%BD%D0%BE%D0%BA%D1%80%D0%BE%D0%BC.jpg'
 	},
 	{
-		id: 4,
-		value: 'Jan',
-		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
-		price: 760,
-		unit: 'шт'
+		id: 223,
+		value: 'Брус строганный 50*40*3000',
+		price: 165,
+		unit: 'шт',
+		link: '/shop/product/brus-strogannyi-50403000',
+		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B1%D1%80%D1%83%D1%81%D1%8C%D1%8F.jpg'
 	},
-	{
-		id: 5,
-		value: 'Jan',
-		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
-		price: 760,
-		unit: 'шт'
-	},
-	{
-		id: 6,
-		value: 'Jan',
-		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
-		price: 760,
-		unit: 'шт'
-	},
-	{
-		id: 7,
-		value: 'Jan',
-		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
-		price: 760,
-		unit: 'шт'
-	},
-	{
-		id: 8,
-		value: 'Jan',
-		img: 'https://lumen-image-bucket.s3.eu-central-1.amazonaws.com/images/%D0%B3%D0%B2%D0%BB.jpg',
-		price: 760,
-		unit: 'мп'
-	}
 ]
 export default () => {
 	return (
