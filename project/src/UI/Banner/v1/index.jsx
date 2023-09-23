@@ -68,12 +68,12 @@ export default function Banner({ data, currentVisibleBanner, changeVisibleBanner
 
 					<marquee className="flex" direction="left">
 						<div className="flex space-x-48">
-							<a
-								href="mailto:info@orbita-stroy.com"
+							<div
+								
 								className="hidden md:block text-sm leading-6 text-gray-50 font-display"
 							>
 								<strong className="font-semibold">
-									Покупаете как организация?
+									Ищите выгодные предложения?
 								</strong>
 								<svg
 									viewBox="0 0 2 2"
@@ -82,12 +82,13 @@ export default function Banner({ data, currentVisibleBanner, changeVisibleBanner
 								>
 									<circle cx={1} cy={1} r={1} />
 								</svg>
-								Отправьте запрос на почту &nbsp;
+								При заказе через наш сайт дополнительная скидка &nbsp;
 								<span aria-hidden="true">
 									{' '}
-									<span className="text-red-500">&rarr; &nbsp;</span> {data.email}
+									<span className="text-red-500">&rarr; &nbsp;</span> 5%
 								</span>
-							</a>
+							</div>
+
 							<a
 								href="mailto:info@orbita-stroy.com"
 								className="hidden md:block text-sm leading-6 text-gray-50 font-display"
@@ -102,7 +103,7 @@ export default function Banner({ data, currentVisibleBanner, changeVisibleBanner
 								>
 									<circle cx={1} cy={1} r={1} />
 								</svg>
-								Отправьте запрос на почту &nbsp;
+								Отправьте запрос цен на почту &nbsp;
 								<span aria-hidden="true">
 									{' '}
 									<span className="text-red-500">&rarr; &nbsp;</span> {data.email}
