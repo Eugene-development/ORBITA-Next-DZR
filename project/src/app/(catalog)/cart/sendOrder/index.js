@@ -1,7 +1,7 @@
 'use server'
 import axios from 'axios'
 
-const url = '/sendOrder'
+const url = '/send-order-orbita-dzr'
 
 const apiMAIL = {
 	baseURL: process.env.NEXT_PUBLIC_MAIL,

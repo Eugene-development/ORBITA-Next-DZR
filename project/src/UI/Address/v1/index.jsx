@@ -1,5 +1,15 @@
+"use client";
+import { motion } from "framer-motion";
+
+
 export default () => {
 	return (
+				<motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 2, y: -10 }}
+      transition={{ type: "spring", stiffness: 50 }}
+    >
+
 		<div className="bg-gray-50 py-24 sm:py-32">
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="mx-auto max-w-2xl lg:mx-0">
@@ -169,5 +179,7 @@ export default () => {
 				</div>
 			</div>
 		</div>
+
+		 </motion.main>
 	)
 }

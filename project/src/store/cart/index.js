@@ -9,7 +9,7 @@ const initialState = {
 const inCart = create(
 	persist(
 		(set) => ({
-			productsInCart: [],
+			initialState,
 			totalCount: 0,
 			setCurrentProductInCart: (id, name, price, unit, count) =>
 				set((state) => ({
@@ -29,7 +29,7 @@ const inCart = create(
 
 			removeAllProducts: () =>
 				set(() => ({
-					productsInCart: []
+					initialState
 				})),
 
 			setTotalCount: () =>

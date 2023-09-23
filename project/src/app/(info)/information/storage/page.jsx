@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 import { ServerIcon } from '@heroicons/react/20/solid'
 
 import { Service } from '@/UI'
@@ -28,5 +31,18 @@ const features = [
 ]
 
 export default function page() {
-	return <Service features={features} service={service} />
+
+
+	return (
+		<motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 2, y: -10 }}
+      transition={{ type: "spring", stiffness: 50 }}
+    >
+<Service features={features} service={service} />
+
+	</motion.main>
+
+
+	) 
 }
