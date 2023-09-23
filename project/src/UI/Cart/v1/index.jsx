@@ -44,11 +44,8 @@ export default () => {
 		var year = currentDate.getFullYear()
 		const date = day + '.' + month + '.' + year
 
-
-
 		let products = [...productsInCart]
 		console.log(products)
-
 
 		const data = {
 			date,
@@ -58,8 +55,7 @@ export default () => {
 		}
 		console.log(data)
 
-		
-		send(data);
+		send(data)
 		// removeAllProducts()
 
 		// push('/spasibo')

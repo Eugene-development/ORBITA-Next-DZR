@@ -1,5 +1,3 @@
-
-
 // import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 
 // const features = [
@@ -25,8 +23,6 @@
 
 export default ({ features, service }) => {
 	return (
-
-
 		<div className="overflow-hidden bg-white py-24 sm:py-32">
 			<div className="mx-auto max-w-7xl md:px-6 lg:px-8">
 				<div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-1 lg:items-start">
@@ -82,6 +78,5 @@ export default ({ features, service }) => {
 				</div>
 			</div>
 		</div>
-
 	)
 }
