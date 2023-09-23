@@ -91,7 +91,7 @@ export default () => {
 
 									<div className="md:hidden flex justify-end">
 										<PhoneIcon
-											className="h-5 w-5 text-red-500"
+											className="h-5 w-5 text-red-700"
 											aria-hidden="true"
 										/>
 										<Link
