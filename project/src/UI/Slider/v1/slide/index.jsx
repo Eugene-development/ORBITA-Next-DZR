@@ -1,8 +1,15 @@
+'use client'
+import { motion } from 'framer-motion'
+
 import Link from 'next/link'
 
 export default ({ slider }) => {
 	return (
-		<>
+		<motion.main
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 2, y: -10 }}
+			transition={{ type: 'spring', stiffness: 50 }}
+		>
 			<section className="my-16 md:my-0">
 				<div className="relative isolate overflow-hidden">
 					<div
@@ -53,6 +60,6 @@ export default ({ slider }) => {
 					</div>
 				</div>
 			</section>
-		</>
+		</motion.main>
 	)
 }
