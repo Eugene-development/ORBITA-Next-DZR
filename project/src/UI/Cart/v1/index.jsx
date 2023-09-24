@@ -45,7 +45,6 @@ export default () => {
 		const date = day + '.' + month + '.' + year
 
 		let products = [...productsInCart]
-		console.log(products)
 
 		const data = {
 			date,
@@ -53,10 +52,9 @@ export default () => {
 			totalSum: totalCount,
 			information: { ...formData }
 		}
-		// console.log(data)
 
 		send(data)
-		// removeAllProducts()
+		removeAllProducts()
 
 		push('/spasibo')
 	}

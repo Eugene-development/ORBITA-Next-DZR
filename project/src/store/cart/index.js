@@ -29,7 +29,7 @@ const inCart = create(
 
 			removeAllProducts: () =>
 				set(() => ({
-					initialState
+					productsInCart: []
 				})),
 
 			setTotalCount: () =>
