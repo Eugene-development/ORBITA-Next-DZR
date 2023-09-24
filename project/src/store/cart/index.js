@@ -2,9 +2,9 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
 // define the initial state
-const initialState = {
-	productsInCart: []
-}
+// const initialState = {
+// 	productsInCart: []
+// }
 
 const inCart = create(
 	persist(
@@ -49,17 +49,6 @@ const inCart = create(
 	)
 )
 
-// const countProductTable = create((set) => ({
-// 	count: 1,
-// 	setCount: (param) => {
-// 		console.log(param)
-// 		set(() => ({
-// 			count: param
-// 		}))
-// 	}
-// }))
-
 export const useInCart = {
 	inCart
-	// countProductTable
 }

@@ -20,7 +20,7 @@ const navigation = {
 	],
 	information: [
 		{ name: 'О компании', href: '/about' },
-		{ name: 'Блог', href: '/blog' },
+		{ name: 'Блог', href: '/#' },
 		{ name: 'Контакты', href: '/contact' }
 	]
 	// social: [
