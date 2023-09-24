@@ -134,7 +134,7 @@ export default () => {
 														aria-hidden="true"
 													/>
 													<span className="w-8 ml-2 text-2xl font-medium text-red-800 group-hover:text-gray-800">
-														{isClient && productsInCart.length}
+														{isClient && productsInCart?.length}
 													</span>
 													<span className="sr-only">
 														количество в корзине

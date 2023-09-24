@@ -34,7 +34,7 @@ export default ({ product }) => {
 											>
 												{breadcrumb.name}
 											</Link>
-											{breadcrumbIdx !== pr.breadcrumbs.length - 1 ? (
+											{breadcrumbIdx !== pr.breadcrumbs?.length - 1 ? (
 												<svg
 													viewBox="0 0 20 20"
 													fill="currentColor"

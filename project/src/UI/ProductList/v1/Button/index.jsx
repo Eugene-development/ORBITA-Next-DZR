@@ -7,10 +7,10 @@ const { inCart } = useInCart
 export default ({ productID, productName, productPrice, productUnit, productCount }) => {
 	const { productsInCart, setCurrentProductInCart } = inCart()
 	//   let isInCart = false
-	//   if (productsInCart.includes(productID)) isInCart = true
+	//   if (productsInCart?.includes(productID)) isInCart = true
 
 	const handleClick = () => {
-		if (!productsInCart.includes(productID))
+		if (!productsInCart?.includes(productID))
 			setCurrentProductInCart(productID, productName, productPrice, productUnit, productCount)
 	}
 
@@ -23,9 +23,9 @@ export default ({ productID, productName, productPrice, productUnit, productCoun
 	return (
 		<>
 			{isClient &&
-			productsInCart.some(function (product) {
+			productsInCart?.some(function (product) {
 				return product.id === productID
-			}) ? (
+			})  ? (
 				<div className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-900 px-4 py-3 text-base font-medium text-white  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50">
 					<span>В корзине</span>
 				</div>

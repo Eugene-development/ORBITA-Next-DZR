@@ -71,6 +71,7 @@ export default function index({ idx, id, name, price, unit }) {
 			<td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">
 				<input
 					value={count}
+					min="0"
 					onChange={(e) => handleCount(e.target.value)}
 					type="number"
 					className="block w-24 rounded-md border-cyan-300 focus:border-cyan-600 focus:ring-cyan-600 sm:text-sm"

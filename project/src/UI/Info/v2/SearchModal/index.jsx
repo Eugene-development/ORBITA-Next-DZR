@@ -18,7 +18,7 @@ export default () => {
 			request.length >= 3
 			const query = request.toLowerCase()
 			const filtered = allProducts.product.filter(({ value }) =>
-				value.toLowerCase().includes(query)
+				value.toLowerCase()?.includes(query)
 			)
 			setFilteredProducts(filtered)
 		} else {

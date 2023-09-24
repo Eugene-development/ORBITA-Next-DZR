@@ -8,7 +8,7 @@ export default ({ productID, productName, productPrice, productUnit, productCoun
 	const { productsInCart, setCurrentProductInCart } = inCart()
 
 	const handleClick = () => {
-		if (!productsInCart.includes(productID))
+		if (!productsInCart?.includes(productID))
 			setCurrentProductInCart(productID, productName, productPrice, productUnit, productCount)
 	}
 
